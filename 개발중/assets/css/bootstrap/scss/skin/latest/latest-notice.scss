@@ -1,0 +1,56 @@
+/* Latest - basic */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+
+.latest-notice {
+    background-color: transparent;
+
+    a {
+        &:hover {
+            color: $gray-100;
+        }
+    }
+
+    .latest-title {
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 600;
+        padding: .5rem;
+    }
+
+    .lists {
+        padding: 0;
+        margin: 0;
+        max-width: 320px;
+
+        @include media-breakpoint-up(sm) {
+            max-width: 300px;
+        }
+    }
+
+    .lists,
+    .lists-group {
+        list-style: none;
+    }
+
+    .badge {
+        margin-right: .1rem;
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+
+    .lists-link {
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+
+    .text-bg-secondary {
+        font-weight: normal;
+    }
+
+    .empty-item {
+        min-height: 161px;
+    }
+}

@@ -1,0 +1,160 @@
+/* Shop Main Slider */
+@import "../functions";
+@import "../variables";
+@import "../variables-dark";
+@import "../custom";
+@import "../maps";
+@import "../mixins";
+@import "../utilities";
+
+//swierjs
+.shop-index-slider-wrap {
+    .shop-slier {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .swiper {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .thumb-wrapper {
+        display: none;
+
+        @include media-breakpoint-up(xl) {
+            display: block;
+        }
+
+        right: 5.5rem;
+        top: .5rem;
+        max-width: 144px;
+        width: auto;
+        height: 324px;
+        z-index: 2;
+
+        @include media-breakpoint-up(xxl) {
+            right: 5rem;
+            top: 1rem;
+            max-width: 160px;
+            width: auto;
+            height: 360px;
+        }
+
+        .thumb-shop-slier {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                width: auto;
+                height: auto;
+                opacity: 1;
+
+                img {
+                    max-width: 100%;
+                    width: 144px;
+                    height: 54px;
+                    cursor: pointer;
+
+                    @include media-breakpoint-up(xxl) {
+                        width: 160px;
+                        height: 60px;
+                    }
+
+                }
+            }
+
+            .swiper-slide-thumb-active {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+//Owl Slider
+.shop-index-owl-wrap {
+    .thumb-wrapper {
+        display: none;
+
+        @include media-breakpoint-up(xl) {
+            display: block;
+        }
+
+        right: 5.5rem;
+        top: .5rem;
+        max-width: 144px;
+        width: auto;
+        height: 324px;
+        z-index: 2;
+
+        @include media-breakpoint-up(xxl) {
+            right: 5rem;
+            top: 1rem;
+            max-width: 160px;
+            width: auto;
+            height: 360px;
+        }
+
+        .thumb-shop-slier {
+            width: 100%;
+            height: 100%;
+
+            .thumb-wrap {
+                width: auto;
+                height: auto;
+                opacity: 1;
+
+                .thumb-link {
+                    a {
+                        opacity: .75;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                img {
+                    max-width: 100%;
+                    width: 144px;
+                    height: 54px;
+                    cursor: pointer;
+
+                    @include media-breakpoint-up(xxl) {
+                        width: 160px;
+                        height: 60px;
+                    }
+
+                }
+            }
+
+            .swiper-slide-thumb-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .carousel-counter {
+        left: .5rem;
+        bottom: .5rem;
+        font-size: .75rem;
+        z-index: 2;
+        text-shadow: 1px 1px 1px rgba($color: $white, $alpha: 1.0);
+        font-weight: 600;
+        color: $gray-700;
+    }
+}

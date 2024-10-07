@@ -1,0 +1,41 @@
+/* Outlogin Basic */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+
+.outlogin-wrap.basic.before {
+    .input-group-sm>.form-control {
+        padding: .1rem .25rem;
+        font-size: .75rem;
+    }
+}
+
+.outlogin-wrap.basic.after {
+    .profile-image {
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .badge {
+        font-weight: 400;
+    }
+    color: $gray-700;
+}
+
+.offcanvas-top {
+    background-color: transparent !important;
+
+    .login-sns {
+        background-color: transparent !important;
+    }
+}
+
+#login-offcanvasTop {
+    border-bottom: none !important;
+}

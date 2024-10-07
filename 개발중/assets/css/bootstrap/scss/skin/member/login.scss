@@ -1,0 +1,40 @@
+/* Login Skin */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+
+.login-wrap {
+    .card {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            width: 500px;
+        }
+    }
+
+    label.input-group-text {
+        width: 106px;
+    }
+
+    .password-group,
+    .no-memober-password {
+        margin-top: -1px;
+    }
+
+    .login-button {
+        width: 100px;
+    }
+
+    .no-member,
+    .no-memober-password {
+
+        .alert,
+        label {
+            font-size: .875rem;
+        }
+    }
+}

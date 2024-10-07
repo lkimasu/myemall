@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* 인기검색어 */
+#popular{margin-bottom:20px;}
+#popular:after {display:block;visibility:hidden;clear:both;content:""}
+#popular h2{position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
+.popular-inner{display:inline-block;float:left;padding:10px;background:#e8e8e8;border:1px solid #d2d2d2;border-radius:3px 0 0 3px;color:#000;font-weight:bold;font-size:14px}
+.rolling-ticker {float:left;position:relative;width:165px;height:42px !important;background:#fff;border:1px solid #e3e3e3;border-left:none;overflow:hidden}
+.rolling-ticker ul{clear:both;position:absolute;left:0;background:#fff}
+.rolling-ticker ul li {display:block;width:100%;padding:10px;list-style:none;text-align:left}
+
+@media screen and (max-width: 75.000em){
+	.rolling-ticker{width:60%}
+}
+
+@media screen and (max-width: 44.375em)
+	#popular{display:none}
+}

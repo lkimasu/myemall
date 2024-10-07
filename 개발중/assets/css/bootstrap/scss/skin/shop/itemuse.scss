@@ -1,0 +1,16 @@
+/* itemuse */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+.item-use-wrap{
+    .use-reply-wrap{
+        background-color: $gray-100;
+    }
+    .reply-content{
+        font-size: .875rem;
+    }
+}

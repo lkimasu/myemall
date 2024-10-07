@@ -1,0 +1,48 @@
+/* itemuselist */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+
+.itemuselist-wrap{
+.item-info{
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(md){
+        margin-bottom: 0;
+    }
+}
+    .form-select{
+        flex: 0 0 auto;
+        width: 150px;
+    }
+    .item-image-link{
+        img{
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border: 1px solid $gray-200;
+        }
+    }
+    .item-title{
+        font-weight: 600;
+        color: $blue-400;
+    }
+    .accordion{
+        margin-top: -1px;
+        .accordion-body{
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .product{
+        font-size: .75rem;
+        @include media-breakpoint-up(md){
+            font-size: .875rem;
+        }
+    }
+}

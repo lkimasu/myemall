@@ -1,0 +1,28 @@
+/* Couponzone */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+
+.sct_admin {
+    text-align: right;
+}
+
+.couponzone-wrap {
+    .coupon-image{
+        width: 100%;
+        height: auto;
+    }
+    .coupon-title{
+        top: 42%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.25rem;
+        color: $gray-700;
+        font-weight: 600;
+    }
+}

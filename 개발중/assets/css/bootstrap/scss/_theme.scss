@@ -1,0 +1,474 @@
+@charset "utf-8";
+
+/* Bootstrap Basic Theme css */
+//공통 부분
+.paging-wrap {
+    .pg_wrap {
+        display: flex;
+        justify-content: center;
+
+        .pg {
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: row;
+
+            .pg_current,
+            .pg_page {
+                display: flex;
+                padding: .25rem;
+                font-size: .75rem;
+                padding: .5rem;
+                background-color: $gray-400;
+                margin-right: .25rem;
+                margin-bottom: .25rem;
+
+                &:hover {
+                    background-color: $gray-300;
+                }
+
+                @include media-breakpoint-up(md) {
+                    padding: .5rem;
+                    font-size: .875rem;
+                    padding: .5rem 1rem;
+                    background-color: $gray-400;
+                    margin-right: .25rem;
+                }
+            }
+
+            .pg_current {
+                color: $white;
+                background-color: $primary;
+
+                &:hover {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+
+//작성자
+.sv_member {
+    display: none;
+}
+
+.sv {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        font-size: .875rem;
+        padding: .25rem .5rem;
+        font-family: "Nanum Gothic", sans-serif;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+
+#copymove {
+    padding: 1rem;
+
+    .sound_only {
+        display: none;
+    }
+
+    .win_title {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 1rem;
+    }
+
+    /* 기본테이블 */
+    .tbl_wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0 5px;
+        background: #fff;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec
+    }
+
+    .tbl_wrap caption {
+        padding: 10px 0;
+        font-weight: bold;
+        text-align: left
+    }
+
+    .tbl_head01 {
+        margin: 0 0 10px
+    }
+
+    .tbl_head01 caption {
+        padding: 0;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden
+    }
+
+    .tbl_head01 thead th {
+        padding: 20px 0;
+        font-weight: normal;
+        text-align: center;
+        border-bottom: 1px solid #ececec;
+        height: 40px
+    }
+
+    .tbl_head01 thead th input {
+        vertical-align: top
+    }
+
+    /* middle 로 하면 게시판 읽기에서 목록 사용시 체크박스 라인 깨짐 */
+    .tbl_head01 tfoot th,
+    .tbl_head01 tfoot td {
+        padding: 10px 0;
+        border-top: 1px solid #c1d1d5;
+        border-bottom: 1px solid #c1d1d5;
+        background: #d7e0e2;
+        text-align: center
+    }
+
+    .tbl_head01 tbody th {
+        padding: 8px 0;
+        border-bottom: 1px solid #e8e8e8
+    }
+
+    .tbl_head01 td {
+        color: #666;
+        padding: 10px 5px;
+        border-top: 1px solid #ecf0f1;
+        border-bottom: 1px solid #ecf0f1;
+        line-height: 1.4em;
+        height: 60px;
+        word-break: break-all
+    }
+
+    .tbl_head01 tbody tr:hover td {
+        background: #fafafa
+    }
+
+    .tbl_head01 a:hover {
+        text-decoration: underline
+    }
+}
+
+#copymove .win_desc {
+    text-align: center;
+    display: block
+}
+
+#copymove .tbl_wrap {
+    margin: 20px
+}
+
+#copymove .win_btn {
+    padding: 0 20px 20px
+}
+
+.copymove_current {
+    float: right;
+    background: #ff3061;
+    padding: 5px;
+    color: #fff;
+    border-radius: 3px
+}
+
+.copymove_currentbg {
+    background: #f4f4f4
+}
+
+
+//Hero image
+
+$menu-height : 0px;
+$hero-height : 280px;
+
+.top-hero-section {
+    &::before {
+        //background: var(--herobackground) center center no-repeat;
+        //background: url(/images/trees-park.jpg) center center no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    //hero max-height animation
+    -webkit-transition: max-height .35s;
+    -moz-transition: max-height .35s;
+    -ms-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+
+    top: -$menu-height;
+    margin-bottom: -$menu-height !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+
+    height: $hero-height;
+    max-height: $hero-height;
+
+    @include media-breakpoint-up(md) {
+        top: -$menu-height;
+        margin-bottom: -$menu-height !important;
+        height: $hero-height * 1.6;
+        max-height: $hero-height * 1.6;
+    }
+
+    @include media-breakpoint-up(lg) {
+        top: -$menu-height;
+        margin-bottom: -$menu-height !important;
+        height: $hero-height * 2;
+        max-height: $hero-height * 2;
+    }
+
+    .hero-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-top: calc($menu-height / 2);
+
+        .hero-title {
+            font-weight: 900;
+            font-size: 2rem;
+            font-family: "Noto Sans KR", sans-serif;
+            text-shadow: 2px 2px .5rem rgba($color: $dark, $alpha: .5);
+
+            @include media-breakpoint-up(md) {
+                font-size: 3.5rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 4.5rem;
+            }
+
+            //fade in 텍스트 출력
+            -webkit-animation: fade-in 3s ease-out both;
+            animation: fade-in 3s ease-out both;
+        }
+
+        .lead-text {
+            text-shadow: 2px 2px .25rem rgba($color: $black, $alpha: .75);
+
+            //fade in 텍스트 출력
+            -webkit-animation: fade-in 3s ease-out both;
+            animation: fade-in 3s ease-out both;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+}
+
+.top-hero-section.background-zoom {
+    &::before {
+        -webkit-animation: kenburns-top-right 5s ease-out both;
+        animation: kenburns-top-right 5s ease-out both;
+        content: "";
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+}
+
+section.height-scale-down {
+    max-height: 250px;
+
+    @include media-breakpoint-up(md) {
+        max-height: 350px;
+    }
+}
+
+section.height-scale-down-subpage {
+    max-height: 150px !important;
+
+    @include media-breakpoint-up(md) {
+        max-height: 200px !important;
+    }
+}
+
+.top-hero-section.sub-page-hero {
+    height: calc($hero-height / 2);
+    max-height: calc($hero-height / 2);
+
+    @include media-breakpoint-up(md) {
+        top: -$menu-height;
+        margin-bottom: -$menu-height !important;
+        height: calc($hero-height * 1.6 / 2);
+        max-height: calc($hero-height * 1.6 / 2);
+    }
+
+    @include media-breakpoint-up(lg) {
+        top: -$menu-height;
+        margin-bottom: -$menu-height !important;
+        height: calc($hero-height * 2 / 2);
+        max-height: calc($hero-height * 2 /2);
+    }
+}
+
+.dropdown-menu {
+    z-index: 2000;
+}
+
+
+#sns_register {
+    .sns-wrap {
+        width: 100%;
+        height: auto;
+
+        @include media-breakpoint-up(md) {
+            width: auto;
+            height: 56px;
+        }
+
+        line-height: 53px;
+        margin: 0;
+        text-align: right;
+        padding: 0 20px;
+    }
+}
+
+.alert.alert-sm {
+    font-size: .75rem;
+}
+
+.ff-noto {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.ff-nanum {
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.large-image-wrap {
+    height: 100%;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+.pg_wrap {
+    display: flex;
+    justify-content: center;
+
+    .sound_only {
+        @include visually-hidden();
+    }
+
+    .pg {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+
+        .pg_current,
+        .pg_page {
+            display: flex;
+            padding: .25rem;
+            font-size: .75rem;
+            padding: .5rem;
+            background-color: $gray-400;
+            margin-right: .25rem;
+            margin-bottom: .25rem;
+
+            &:hover {
+                background-color: $gray-300;
+            }
+
+            @include media-breakpoint-up(md) {
+                padding: .5rem;
+                font-size: .875rem;
+                padding: .5rem 1rem;
+                background-color: $gray-400;
+                margin-right: .25rem;
+            }
+        }
+
+        .pg_current {
+            color: $white;
+            background-color: $primary;
+
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+//각종 수정버튼
+.sev_admin,
+.sct_admin,
+.sit_admin {
+    position: fixed;
+    background-color: $white;
+    border: 1px solid $gray-200;
+    box-shadow: 2px 2px 5px rgba($color: $black, $alpha: .15);
+
+    .sound_only {
+        @include visually-hidden();
+    }
+
+    z-index: 2;
+    top: 224px;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.sound_only {
+    @include visually-hidden;
+}

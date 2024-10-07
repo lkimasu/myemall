@@ -1,0 +1,17 @@
+/* FAQ - basic */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+
+.faq-content-wrap{
+    p{
+        margin-bottom: 0;
+    }
+    .accordion-button{
+        cursor: grab;
+    }
+}

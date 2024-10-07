@@ -1,0 +1,62 @@
+/* Latest Gallery */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+.latest-gallery {
+    background-color: $white;
+
+    .latest-title {
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 600;
+        padding: .75rem;
+    }
+
+    .lists {
+        padding: 0;
+        margin: 0;
+    }
+
+    .lists,
+    .lists-group {
+        list-style: none;
+    }
+
+    .badge {
+        margin-right: .1rem;
+        .bi{
+            font-size: .4rem;
+        }
+    }
+
+    .lists-link {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: .875rem;
+    }
+
+    .text-bg-secondary {
+        font-weight: normal;
+    }
+
+    .empty-item {
+        min-height: 161px;
+    }
+    .list-info{
+        bottom: .25rem;
+        right: .25rem;
+    }
+    .category {
+        left: .25rem;
+        bottom: .25rem;
+    }
+    .subject{
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 1rem;
+    }
+    .card{
+        border: none !important;
+    }
+}

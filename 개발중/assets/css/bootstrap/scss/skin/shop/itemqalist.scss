@@ -1,0 +1,30 @@
+/* itemqalist */
+@import "../../functions";
+@import "../../variables";
+@import "../../variables-dark";
+@import "../../custom";
+@import "../../maps";
+@import "../../mixins";
+@import "../../utilities";
+
+.itemqalist-wrap{
+    .form-select{
+        flex: 0 0 auto;
+        width: 150px;
+    }
+    .item-image-link{
+        img{
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border: 1px solid $gray-200;
+        }
+    }
+    .listqa-reply{
+        background-color: $gray-200;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
