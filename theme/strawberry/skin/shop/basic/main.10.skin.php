@@ -4,28 +4,25 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 0);
 add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>', 10);
+add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/swiper/swiper.min.css">', 0);
+add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10);
 ?>
+
+<div class="swiper-container sct_10">
+    <div class="swiper-wrapper">
 
 <!-- 상품진열 10 시작 { -->
 <?php
 for ($i=1; $row=sql_fetch_array($result); $i++) {
-    if ($this->list_mod >= 2) { // 1줄 이미지 : 2개 이상
-        if ($i%$this->list_mod == 0) $sct_last = 'sct_last'; // 줄 마지막
-        else if ($i%$this->list_mod == 1) $sct_last = 'sct_clear'; // 줄 첫번째
+    if ($this->list_mod >= 2) {
+        if ($i % $this->list_mod == 0) $sct_last = 'sct_last';
+        else if ($i % $this->list_mod == 1) $sct_last = 'sct_clear';
         else $sct_last = '';
-    } else { // 1줄 이미지 : 1개
+    } else {
         $sct_last = 'sct_clear';
     }
 
-    if ($i == 1) {
-        if ($this->css) {
-            echo "<ul class=\"{$this->css}\">\n";
-        } else {
-            echo "<ul class=\"sct sct_10\">\n";
-        }
-    }
-
-    echo "<li class=\"sct_li {$sct_last}\" >\n";
+    echo "<div class=\"swiper-slide sct_li {$sct_last}\" >\n";
 
     echo "<div class=\"sct_img\">\n";
 
@@ -45,8 +42,8 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         echo item_icon2($row);
     }
 
-    echo "<div class=\"sct_btn\"><div class=\"sct_btn_wr\"><button type=\"button\" class=\"btn_cart\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">장바구니</span><i class=\"fa  fa-shopping-cart\"></i></button><button type=\"button\" class=\"btn_wish\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">위시리스트</span><i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i></button><button type=\"button\" class=\"btn_share\"><i class=\"fa fa-share-alt\" aria-hidden=\"true\"></i><span class=\"sound_only\">sns공유</span></button>\n";
-
+    // 버튼 및 SNS 공유 관련 코드 유지
+    echo "<div class=\"sct_btn\"><div class=\"sct_btn_wr\"><button type=\"button\" class=\"btn_cart\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">장바구니</span><i class=\"fa fa-shopping-cart\"></i></button><button type=\"button\" class=\"btn_wish\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">위시리스트</span><i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i></button><button type=\"button\" class=\"btn_share\"><i class=\"fa fa-share-alt\" aria-hidden=\"true\"></i><span class=\"sound_only\">sns공유</span></button>\n";
     echo "</div>\n";
 
     if ($this->view_sns) {
@@ -60,15 +57,16 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         echo get_sns_share_link('kakaotalk', $sns_url, $sns_title, G5_MSHOP_SKIN_URL.'/img/sns_kakao.png');
         echo "</div><button type=\"button\" class=\"btn_close\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></button></div><div class=\"bg\"></div></div>\n";
     }
-    echo "</div>\n";
+    echo "</div>\n"; // .sct_img 끝
 
+    // 기타 정보 출력
     echo "<div class=\"sct_cartop\"></div>\n";
 
     if ($this->view_it_id) {
         echo "<div class=\"sct_id\">&lt;".stripslashes($row['it_id'])."&gt;</div>\n";
     }
 
-    echo "</div>\n";
+    echo "</div>\n"; // .sct_li 끝
 
     if ($this->href) {
         echo "<div class=\"sct_txt\">\n";
@@ -92,7 +90,6 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
     }
 
     if ($this->view_it_cust_price || $this->view_it_price) {
-
         echo "<div class=\"sct_cost\">\n";
 
         if ($this->view_it_price) {
@@ -102,6 +99,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         if ($this->view_it_cust_price && $row['it_cust_price']) {
             echo "<span class=\"sct_discount\">".display_price($row['it_cust_price'])."</span>\n";
         }
+        echo "</div>\n";
     }
 
     if ($this->view_it_icon) {
@@ -113,15 +111,15 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         echo "<span class=\"sct_star\"><img src=".G5_SHOP_URL."/img/s_star".$s_core.".png></span>"; 
     }
 
-    echo "</div>\n";
-
-    echo "</li>\n";
+    echo "</div>\n"; // .sct_li 끝
 }
 
-if ($i > 1) echo "</ul>\n";
-
+if ($i > 1) echo "</div>\n"; // swiper-wrapper 닫기
 if($i == 1) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\n";
 ?>
+
+    </div> <!-- swiper-wrapper 끝 -->
+</div> <!-- swiper-container 끝 -->
 
 <script>
 $('.btn_share').click(function(){
@@ -134,6 +132,16 @@ $('.sct_sns_wr .btn_close').click(function(){
 
 $('.sct_sns .bg').click(function(){
     $('.sct_sns').hide();
+});
+
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4, // 한 번에 보여줄 카드 수
+    spaceBetween: 10,  // 카드 간의 간격
+    loop: true,        // 무한 루프 설정
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 });
 </script>
 <!-- } 상품진열 10 끝 -->

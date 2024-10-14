@@ -200,17 +200,21 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_cartop .cartopt_close_btn:hover{color:#000}
 .sct_cartop .cartopt_cart_btn {margin-top:10px;width:100%}
 
-.sct_10 li .sct_sns{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;}
-.sct_10 li .sct_sns .bg{background:#000;background:rgba(0,0,0,0.3);width:100%;height:100%}
-.sct_10 li .sct_sns_wr {position:absolute;top:50%;left:50%;width:300px;height:160px;margin-left:-150px;margin-top:-80px;background:#fff;}
-.sct_10 li .sct_sns_wr div{text-align:center}
-.sct_10 li .sct_sns_wr .btn_close{position: absolute;  font-size:16px ;top: 0; right: 0;height: 60px;color: #aaa;background: none;border: 0; width: 50px;}
-.sct_10 li .sct_sns_wr .btn_close:hover{color:#000}
-.sct_10 li .sct_sns_wr h3{font-size:1.6em;line-height:20px;padding: 20px;text-align:left;font-weight:700;    border-bottom: 1px solid #f3f3f3;margin-bottom:20px}
+.sct_10 div .sct_sns{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;}
+.sct_10 div .sct_sns .bg{background:#000;background:rgba(0,0,0,0.3);width:100%;height:100%}
+.sct_10 div .sct_sns_wr {position:absolute;top:50%;left:50%;width:300px;height:160px;margin-left:-150px;margin-top:-80px;background:#fff;}
+.sct_10 div .sct_sns_wr div{text-align:center}
+.sct_10 div .sct_sns_wr .btn_close{position: absolute;  font-size:16px ;top: 0; right: 0;height: 60px;color: #aaa;background: none;border: 0; width: 50px;}
+.sct_10 div .sct_sns_wr .btn_close:hover{color:#000}
+.sct_10 div .sct_sns_wr h3{font-size:1.6em;line-height:20px;padding: 20px;text-align:left;font-weight:700;    border-bottom: 1px solid #f3f3f3;margin-bottom:20px}
 .sct_10 .sct_sns a{display:inline-block;border-radius:50%;margin:2px ;width:50px;text-align:center;height:50px;padding:15px 0;background:rgba(0,0,0,0.4)}
 .sct_10 .sct_sns .share-facebook{background:#415b92}
 .sct_10 .sct_sns .share-twitter{background:#35b3dc}
 .sct_10 .sct_sns .share-googleplus{background:#d5503a}
+
+
+.sct_10 .swiper-slide {position: relative; width: 25%; padding: 0 10px; }
+.sct_10 .swiper-slide.sct_last { margin: 0 0 15px !important; }
 
 
 /* 상품 목록 스킨 20 */
@@ -813,3 +817,4 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .couponzone_list ul li .coupon_btn .disabled {background: #ddd;border:1px;color:#999;border-color:#ddd}
 .couponzone_list ul li .coupon_btn .disabled:hover {background: #ddd;border:1px;color:#999;border-color:#ddd}
 .couponzone_list .no_coupon{position:relative;padding: 100px 0;text-align:center;color:#999}
+
