@@ -3,6 +3,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/swiper/swiper.min.css">', 0);
+add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10);
 ?>
 
 <?php if($config['cf_kakao_js_apikey']) { ?>
@@ -15,25 +17,12 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
 <?php } ?>
 
 <!-- 메인상품진열 10 시작 { -->
+<div class="swiper-container sct_10">
+    <div class="swiper-wrapper">
+
 <?php
-$li_width = intval(100 / $this->list_mod);
-$li_width_style = ' style="width:'.$li_width.'%;"';
-
 for ($i=0; $row=sql_fetch_array($result); $i++) {
-    if ($i == 0) {
-        if ($this->css) {
-            echo "<ul class=\"{$this->css}\">\n";
-        } else {
-            echo "<ul class=\"sct sct_10\">\n";
-        }
-    }
-
-    if($i % $this->list_mod == 0)
-        $li_clear = ' sct_clear';
-    else
-        $li_clear = '';
-
-    echo "<li class=\"sct_li{$li_clear}\"$li_width_style><div class=\"li_wr\">\n";
+    echo "<div class=\"swiper-slide\">\n"; // 슬라이드 시작
 
     if ($this->href) {
         echo "<div class=\"sct_img\"><a href=\"{$this->href}{$row['it_id']}\">\n";
@@ -85,11 +74,26 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
         echo "</div>\n";
     }
 
-    echo "</div></li>\n";
+    echo "</div>\n"; // 슬라이드 끝
 }
 
-if ($i > 0) echo "</ul>\n";
+if ($i > 0) echo "</div>\n"; // swiper-wrapper 닫기
 
 if($i == 0) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\n";
 ?>
+
+    </div> <!-- swiper-wrapper 끝 -->
+</div> <!-- swiper-container 끝 -->
+
+<script>
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 2, // 모바일 화면에서는 한 번에 보여줄 카드 수
+    spaceBetween: 10,  // 카드 간의 간격
+    loop: true,        // 무한 루프 설정
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+</script>
 <!-- } 상품진열 10 끝 -->
