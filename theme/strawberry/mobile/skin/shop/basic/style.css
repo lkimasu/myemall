@@ -99,8 +99,8 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 .sct_10 .sct_sns{margin:10px  0}
 .sct_10 .sct_icon {margin:5px 0 }
 
-.sct_10 .swiper-slide { position: relative; width: 25%; padding: 0 10px; }
-.sct_10 .swiper-slide.sct_last {margin: 0 0 15px !important; }
+.swiper-container { width: 100%; max-width: 1200px; }
+.swiper-slide {width: auto;}
 
 .li_more{text-align:center;padding:10px}   
 

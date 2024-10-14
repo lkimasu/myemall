@@ -94,6 +94,12 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
         clickable: true,
     },
+
+    autoplay: {
+        delay: 10000, // 10초마다 슬라이드 변경
+        disableOnInteraction: false, // 사용자가 슬라이드를 조작해도 autoplay가 중지되지 않도록 설정
+    },
+    
 });
 </script>
 <!-- } 상품진열 10 끝 -->
