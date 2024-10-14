@@ -17,7 +17,7 @@ add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10)
 <?php } ?>
 
 <!-- 메인상품진열 10 시작 { -->
-<div class="swiper-container sct_10">
+<div class="swiper-container sw1 sct_10">
     <div class="swiper-wrapper">
 
 <?php
@@ -87,7 +87,7 @@ if($i == 0) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.sw1', {
         slidesPerView: 2,
         spaceBetween: 10,
         loop: true,
