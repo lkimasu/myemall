@@ -212,9 +212,14 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_10 .sct_sns .share-twitter{background:#35b3dc}
 .sct_10 .sct_sns .share-googleplus{background:#d5503a}
 
+.sct_10 .swiper-slide {
+    width: calc(25% - 10px); /* 4개가 들어갈 수 있도록 너비 조정 */
+    padding: 0 5px; /* 간격 조정 */
+}
 
-.sct_10 .swiper-slide {position: relative; width: 25%; padding: 0 10px; }
-.sct_10 .swiper-slide.sct_last { margin: 0 0 15px !important; }
+.sct_10 .swiper-slide.sct_last {
+    margin-bottom: 15px !important; /* 마지막 슬라이드의 하단 여백 */
+}
 
 
 /* 상품 목록 스킨 20 */

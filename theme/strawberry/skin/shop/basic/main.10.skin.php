@@ -4,11 +4,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 0);
 add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>', 10);
+
 add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/swiper/swiper.min.css">', 0);
 add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10);
 ?>
 
-<div class="swiper-container sct_10">
+<div class="swiper-container sct_10"> <!-- sct_10 클래스 추가 -->
     <div class="swiper-wrapper">
 
 <!-- 상품진열 10 시작 { -->
@@ -135,13 +136,19 @@ $('.sct_sns .bg').click(function(){
 });
 
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 4, // 한 번에 보여줄 카드 수
+    slidesPerView: 3, // 한 번에 보여줄 카드 수 (초기 설정)
     spaceBetween: 10,  // 카드 간의 간격
     loop: true,        // 무한 루프 설정
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+    
+    autoplay: {
+        delay: 10000, // 10초마다 슬라이드 변경
+        disableOnInteraction: false, // 사용자가 슬라이드를 조작해도 autoplay가 중지되지 않도록 설정
+    },
+    
 });
 </script>
 <!-- } 상품진열 10 끝 -->
