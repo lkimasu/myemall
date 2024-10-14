@@ -135,20 +135,23 @@ $('.sct_sns .bg').click(function(){
     $('.sct_sns').hide();
 });
 
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3, // 한 번에 보여줄 카드 수 (초기 설정)
-    spaceBetween: 10,  // 카드 간의 간격
-    loop: true,        // 무한 루프 설정
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        autoplay: {
+        delay: 10000, // 10초 (10000ms) 간격
+        disableOnInteraction: false, // 사용자 인터랙션 후에도 autoplay가 계속 진행되도록 설정
     },
     
-    autoplay: {
-        delay: 10000, // 10초마다 슬라이드 변경
-        disableOnInteraction: false, // 사용자가 슬라이드를 조작해도 autoplay가 중지되지 않도록 설정
-    },
-    
+    });
 });
+
 </script>
 <!-- } 상품진열 10 끝 -->
