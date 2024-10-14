@@ -9,7 +9,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/swiper/swiper.min.css
 add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10);
 ?>
 
-<div class="swiper-container sct_10"> <!-- sct_10 클래스 추가 -->
+<div class="swiper-container sw1 sct_10"> <!-- sct_10 클래스 추가 -->
     <div class="swiper-wrapper">
 
 <!-- 상품진열 10 시작 { -->
@@ -136,7 +136,7 @@ $('.sct_sns .bg').click(function(){
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.sw1', {
         slidesPerView: 4,
         spaceBetween: 10,
         loop: true,
