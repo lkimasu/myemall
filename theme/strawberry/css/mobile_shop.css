@@ -215,6 +215,8 @@ box-shadow: 0 0 5px rgba(55,55,5,0.4);}
     color: #f9bb00;
 }
 
+
+
 /* 반응형 디자인 - 모바일 화면 (768px 이하) */
 @media (max-width: 768px) {
     .card {

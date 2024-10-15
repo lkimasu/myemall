@@ -8,7 +8,6 @@ include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 include_once(G5_LIB_PATH.'/latest.lib.php');
 add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
-
 ?>
 
 <title>
