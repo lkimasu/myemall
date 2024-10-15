@@ -9,7 +9,7 @@ add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10)
 ?>
 
 
-<div class="swiper-container">
+<div class="swiper-container sw2">
     <div class="swiper-wrapper">
         <?php
         // 카드 데이터 배열
@@ -47,7 +47,7 @@ add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10)
 
 <script>
 jQuery(function($) {
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.sw2', {
         slidesPerView: 1,
         spaceBetween: 10, // 카드 간의 간격
         loop: true,
