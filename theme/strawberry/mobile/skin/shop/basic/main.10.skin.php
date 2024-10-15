@@ -81,7 +81,8 @@ if ($i > 0) echo "</div>\n"; // swiper-wrapper 닫기
 
 if($i == 0) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\n";
 ?>
-
+<br><br><br>
+  <div class="swiper-pagination"></div>
     </div> <!-- swiper-wrapper 끝 -->
 </div> <!-- swiper-container 끝 -->
 
