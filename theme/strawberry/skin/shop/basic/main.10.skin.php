@@ -118,7 +118,8 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
 if ($i > 1) echo "</div>\n"; // swiper-wrapper 닫기
 if($i == 1) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\n";
 ?>
-
+<br>
+  <div class="swiper-pagination"></div>
     </div> <!-- swiper-wrapper 끝 -->
 </div> <!-- swiper-container 끝 -->
 
