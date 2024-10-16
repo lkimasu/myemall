@@ -54,8 +54,6 @@ for ($i=0; $row=sql_fetch_array($result); $i++)
 if ($i > 0) {
     echo '</div>'.PHP_EOL;
 
-    echo '<div class="swiper-pagination"></div>'.PHP_EOL;
-
     echo '</div>'.PHP_EOL;
 ?>
 
@@ -66,7 +64,6 @@ jQuery(function($){
         spaceBetween: 0,
         loop: true,
         autoplay: {delay: 100000, disableOnInteraction:false},
-        pagination: {el: '.swiper-pagination', clickable: true}
     });
 });
 </script>
