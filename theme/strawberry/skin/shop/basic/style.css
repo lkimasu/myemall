@@ -102,6 +102,10 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 
 
 
+.main_wrap h1 {text-align:center;font-size:38px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
+.main_wrap h2 {text-align:center;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
+.main_wrap h3 {text-align:center;font-size:16px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center;color: #f9bb00 ;}
+
 /* ##### main(nn).skin.php, list.(nn).skin.php 공통 적용 시작 ##### */
 /* 공통 */
 .sct_wrap {position:relative;margin:50px 0;zoom:1}
