@@ -120,6 +120,7 @@ if($i == 1) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\
 ?>
 <br>
   <div class="swiper-pagination"></div>
+  <br>
     </div> <!-- swiper-wrapper 끝 -->
 </div> <!-- swiper-container 끝 -->
 
