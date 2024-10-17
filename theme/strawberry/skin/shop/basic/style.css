@@ -108,9 +108,8 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_wrap .sctrl {position:absolute;top:0;right:0} /* 애니메이션 효과 사용 시 재생 정지 버튼 등 */
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
 .sct_wrap header {margin:0 0 20px;zoom:1}
-.sct_wrap h1 {text-align:center;font-size:27px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
 .sct_wrap h2 {text-align:center;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
-.sct_wrap h1 a {text-decoration:none}
+.sct_wrap h2 a {text-decoration:none}
 
 
 
@@ -213,14 +212,8 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_10 .sct_sns .share-twitter{background:#35b3dc}
 .sct_10 .sct_sns .share-googleplus{background:#d5503a}
 
-.sct_10 .swiper-slide {
-    width: calc(25% - 10px); /* 4개가 들어갈 수 있도록 너비 조정 */
-    padding: 0 5px; /* 간격 조정 */
-}
-
-.sct_10 .swiper-slide.sct_last {
-    margin-bottom: 15px !important; /* 마지막 슬라이드의 하단 여백 */
-}
+.sct_10 .swiper-slide {position: relative; width: 25%; padding: 0 10px; }
+.sct_10 .swiper-slide.sct_last { margin: 0 0 15px !important; }
 
 
 /* 상품 목록 스킨 20 */
@@ -823,4 +816,3 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .couponzone_list ul li .coupon_btn .disabled {background: #ddd;border:1px;color:#999;border-color:#ddd}
 .couponzone_list ul li .coupon_btn .disabled:hover {background: #ddd;border:1px;color:#999;border-color:#ddd}
 .couponzone_list .no_coupon{position:relative;padding: 100px 0;text-align:center;color:#999}
-
