@@ -26,7 +26,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         <h1> 거창한무역 상품모음 </h1>
     </div>
     
-    
     <!-- 최신상품 시작 -->
     <section class="sct_wrap">
       
