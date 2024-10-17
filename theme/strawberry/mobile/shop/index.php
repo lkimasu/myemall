@@ -50,7 +50,12 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 <?php } ?>
 
 <?php if($default['de_mobile_type3_list_use']) { ?>
-<div class="sct_wrap">
+
+    <div class ="main_wrap">
+        <h1> 거창한무역 상품모음 </h1>
+    </div>
+
+    <div class="sct_wrap">
 
     <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h2>
     <?php
@@ -104,9 +109,10 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 </div>
 <?php } ?>
 
-<div class="social-icons">
-<!-- SNS 배너 시작 -->
-<h2>거창한무역 현장 스토리</h2>
+    <div class="main_wrap">
+        <h2>거창한무역 현장 스토리</h2>
+        <h3>사진으로 만나는 거창한무역의 제품과 여정을 확인해보세요.</h3>
+    </div>
 
 <!-- 소셜 미디어 링크 -->
 
