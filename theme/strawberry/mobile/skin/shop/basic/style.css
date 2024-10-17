@@ -56,11 +56,13 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 
 /* ##### maint.(nn).skin.php, list.(nn).skin.php 공통 적용 시작 ##### */
 /* 공통 */
-.sct_wrap {margin:20px 0 ;zoom:1}
+.sct_wrap {position:relative;margin:50px 0;zoom:1}
+.sct_wrap .sctrl {position:absolute;top:0;right:0} /* 애니메이션 효과 사용 시 재생 정지 버튼 등 */
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
+.sct_wrap header {margin:0 0 20px;zoom:1}
 
-.sct_wrap h1 {text-align:center;font-size:30px;margin:10px 0 0 }
-.sct_wrap h2 {text-align:center;font-size:25px;margin:20px 0 0 }
+.sct_wrap h2 {text-align:center;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
+.sct_wrap h2 a {text-decoration:none}
 
 .sct {margin: 10px 0 ;padding:0;list-style:none;zoom:1;clear:both;}
 .sct:after {display:block;visibility:hidden;clear:both;content:""}
