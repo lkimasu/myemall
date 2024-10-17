@@ -51,7 +51,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 
 <?php if($default['de_mobile_type3_list_use']) { ?>
 <div class="sct_wrap">
-    <h1>거창한무역의 상품 모음</h1>
 
     <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h2>
     <?php
