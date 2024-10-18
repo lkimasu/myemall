@@ -51,13 +51,10 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 
 <?php if($default['de_mobile_type3_list_use']) { ?>
 
-    <div class ="main_wrap">
-        <h1> 거창한무역 상품모음 </h1>
-    </div>
 
     <div class="sct_wrap">
 
-    <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h2>
+        <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h1>
     <?php
     $list = new item_list();
     $list->set_mobile(true);
