@@ -115,7 +115,7 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     </div>
 
 <!-- 소셜 미디어 링크 -->
-
+ <div class="social-icons">
     <a href="https://blog.naver.com/wpdlf943" target="_blank">
         <img src="/theme\strawberry\shop\img\sns_icons_blog.png" alt="네이버 블로그" width="80">
     </a>
