@@ -94,7 +94,7 @@ box-shadow: 0 0 5px rgba(55,55,5,0.4);}
 #hd_tnb li:nth-child(2n+1){border-right:1px solid #eee}
 
 /*하단 고정 메뉴*/
-#nav{position:fixed;bottom:0;left:0;width:100%;height:55px;background:#111;background:rgba(0,0,0,0.8);transition: bottom 0.3s;z-index:50}
+#nav{display:none; position:fixed;bottom:0;left:0;width:100%;height:55px;background:#111;background:rgba(0,0,0,0.8);transition: bottom 0.3s;z-index:50}
 #nav ul:after {display:block;visibility:hidden;clear:both;content:""}
 #nav .nav_li{float:left;width:20%;padding:10px 0 5px;text-align:center}
 #nav .nav_li i{font-size:18px;height:20px;color:#fff}
