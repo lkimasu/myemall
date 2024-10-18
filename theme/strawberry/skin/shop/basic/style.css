@@ -112,6 +112,8 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_wrap .sctrl {position:absolute;top:0;right:0} /* 애니메이션 효과 사용 시 재생 정지 버튼 등 */
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
 .sct_wrap header {margin:0 0 20px;zoom:1}
+
+.sct_wrap h1 {text-align:center;font-size:30px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
 .sct_wrap h2 {text-align:center;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
 .sct_wrap h2 a {text-decoration:none}
 
@@ -163,8 +165,11 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_10 .sct_icon {margin:10px 0}
 .sct_10 .sct_cost {margin:10px 0;font-size:22px;font-weight:bold;color: red; border-top: 1px solid #e5e5e5;}
 .sct_10 .sct_cost .sct_discount{display:inline-block;color:#999;font-size:0.92em;text-decoration:line-through;font-weight:normal}
+.sct_10 .sct_cost h3 {margin:10px 0;font-size:22px;font-weight:bold;color: red;}
 .sct_10 .sct_txt{margin: 10px 0;font-size: 18px;font-weight: 400;display: -webkit-box; -webkit-box-orient: vertical;height: 3.6em; /* 2줄 높이 계산 */ line-height: 1.8em; /* 한 줄의 높이 */}
+.sct_10 .sct_txt h2 {margin: 10px 0;font-size: 18px;font-weight: 400;display: -webkit-box; height: 3.6em; /* 2줄 높이 계산 */ line-height: 1.8em; /* 한 줄의 높이 */}
 .sct_10 .sct_basic{color:#888;margin:5px 0;font-size:0.92em}
+.sct_10 .sct_basic h3 {color:#888;margin:5px 0;font-size:0.92em}
 .sct_10 .sct_star {display:none; margin-top:5px;width:75px}
 .sct_10 .sct_star img{width:100%;height:auto}
 

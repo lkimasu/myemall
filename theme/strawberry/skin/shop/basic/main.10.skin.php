@@ -70,7 +70,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
     echo "</div>\n"; // .sct_li 끝
 
     if ($this->href) {
-        echo "<div class=\"sct_txt\">\n";
+        echo "<div class=\"sct_txt\"><h2>\n";
     }
 
     if ($this->href) {
@@ -82,16 +82,16 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
     }
 
     if ($this->href) {
-        echo "</a>\n";
+        echo "</a></h2>\n";
     }
     echo "</div>\n";
 
     if ($this->view_it_basic) {
-        echo "<div class=\"sct_basic\">".stripslashes($row['it_basic'])."</div>\n";
+        echo "<div class=\"sct_basic\"><h3>".stripslashes($row['it_basic'])."</div></h3>\n";
     }
 
     if ($this->view_it_cust_price || $this->view_it_price) {
-        echo "<div class=\"sct_cost\">\n";
+        echo "<div class=\"sct_cost\"><h3>\n";
 
         if ($this->view_it_price) {
             echo display_price(get_price($row), $row['it_tel_inq'])."\n";
@@ -100,7 +100,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         if ($this->view_it_cust_price && $row['it_cust_price']) {
             echo "<span class=\"sct_discount\">".display_price($row['it_cust_price'])."</span>\n";
         }
-        echo "</div>\n";
+        echo "</div></h3>\n";
     }
 
     if ($this->view_it_icon) {
