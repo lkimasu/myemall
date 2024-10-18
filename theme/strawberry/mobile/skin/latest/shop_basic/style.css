@@ -7,4 +7,6 @@
 .lat li .fa-heart{color:#ff0000}
 .lat li .new_icon{display:inline-block;padding: 0 3px;line-height:14px ;font-size:0.833em;color:#fff;background:#c56bed}
 .lat li .cnt_cmt{color:#ff3970}
-.lat_title {display:block;;font-size:1.167em;float:left;width:25%}
+
+.lat_title h2 {display:block;;font-size:17px ;float:left;width:25%}
+.lat_title h3 {display:block;;font-size:17px;float:left;width:25%}
