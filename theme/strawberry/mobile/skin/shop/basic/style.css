@@ -63,7 +63,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 
 /* ##### maint.(nn).skin.php, list.(nn).skin.php 공통 적용 시작 ##### */
 /* 공통 */
-.sct_wrap {margin:20px 0 ;zoom:1}
+.sct_wrap {margin:10px 0 ;zoom:1}
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
 
 .sct_wrap h1 {text-align:center;font-size:30px;margin:10px 0 0 }
