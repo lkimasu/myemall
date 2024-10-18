@@ -104,7 +104,11 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 .sct_10 .sct_clear{clear:both}
 .sct_10 .sct_id{margin:5px  10px;font-size:0.92em;color:#666 }
 .sct_10 .sct_txt{margin:10px 0;font-size:15px; font-weight:400; }
+.sct_10 .sct_txt h2 {margin:10px 0;font-size:15px; font-weight:400; display: -webkit-box}
+
+
 .sct_10 .sct_cost{display: block; font-weight:bold;margin:5px 0; font-size:16px; color: red; border-top: 2px solid #e5e5e5;}
+.sct_10 .sct_cost h3 {display: block; font-weight:bold;margin:5px 0; font-size:16px; color: red;}
 .sct_10 .sct_sns{margin:10px  0}
 .sct_10 .sct_icon {margin:5px 0 }
 
