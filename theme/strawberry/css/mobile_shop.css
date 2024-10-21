@@ -115,7 +115,7 @@ box-shadow: 0 0 5px rgba(55,55,5,0.4);}
 #ppl_word ol .word-rank{display:inline-block;background:#42328a;color:#fff;width:20px;line-height:20px;text-align:center;margin-right:5px}
 
 /* 중간 레이아웃 */
-#container {padding:50px 0 0}
+#container {padding:40px 0 0}
 #container_title {display:none; font-size:1.5em;text-align:center;font-weight:bold;padding:0 0px;font-size:1.25em;line-height:50px;border-bottom:1px solid #ddd;position:relative;background:#fff}
 #container_title a{position:absolute;top:0;left:0;line-height:50px;width:30px;text-align:center;font-size:20px;color:#888}
 /* 내용관리 */
