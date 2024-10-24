@@ -2,11 +2,10 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/swiper/swiper.min.css">', 1); // 순서 변경
 add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>', 10);
-
-add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/swiper/swiper.min.css">', 0);
-add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10);
+add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 11); // 순서 변경
 ?>
 
 <div class="swiper-container sw1 sct_10"> <!-- sct_10 클래스 추가 -->
@@ -87,7 +86,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
     echo "</div>\n";
 
     if ($this->view_it_basic) {
-        echo "<div class=\"sct_basic\"><h3>".stripslashes($row['it_basic'])."</div></h3>\n"; // 기본 설명에 h3 추가
+        echo "<div class=\"sct_basic\"><h3>".stripslashes($row['it_basic'])."</h3></div>\n"; // h3 태그 제대로 닫음
     }
 
     if ($this->view_it_cust_price || $this->view_it_price) {
@@ -100,7 +99,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         if ($this->view_it_cust_price && $row['it_cust_price']) {
             echo "<span class=\"sct_discount\">".display_price($row['it_cust_price'])."</span>\n";
         }
-        echo "</div></h3>\n"; // 가격에 h3 태그 추가
+        echo "</h3></div>\n"; // h3 태그 제대로 닫음
     }
 
     if ($this->view_it_icon) {
@@ -119,10 +118,20 @@ if ($i > 1) echo "</div>\n"; // swiper-wrapper 닫기
 if($i == 1) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\n";
 ?>
 <br>
-  <div class="swiper-pagination"></div>
-  <br>
-    </div> <!-- swiper-wrapper 끝 -->
+<div class="swiper-pagination"></div>
+<br>
+</div> <!-- swiper-wrapper 끝 -->
 </div> <!-- swiper-container 끝 -->
+
+
+<?php if($config['cf_kakao_js_apikey']) { ?>
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="<?php echo G5_JS_URL; ?>/kakaolink.js"></script>
+<script>
+    // 사용할 앱의 Javascript 키를 설정해 주세요.
+    Kakao.init("<?php echo $config['cf_kakao_js_apikey']; ?>");
+</script>
+<?php } ?>
 
 <script>
 $('.btn_share').click(function(){
@@ -146,12 +155,10 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-pagination',
             clickable: true,
         },
-
         autoplay: {
-        delay: 10000, // 10초 (10000ms) 간격
-        disableOnInteraction: false, // 사용자 인터랙션 후에도 autoplay가 계속 진행되도록 설정
-    },
-    
+            delay: 10000, // 10초 (10000ms) 간격
+            disableOnInteraction: false, // 사용자 인터랙션 후에도 autoplay가 계속 진행되도록 설정
+        },
     });
 });
 </script>
