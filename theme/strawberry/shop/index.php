@@ -26,6 +26,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         <header>
             <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h1>
         </header>
+        
         <?php
         $list = new item_list();
         $list->set_type(3);
@@ -153,7 +154,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     </a>
 </div>
 
-<div class="container">
+<div class="container_card">
     <!-- 카드 슬라이더 시작 -->
     <?php include_once(G5_SHOP_SKIN_PATH.'/card_slider.skin.php'); ?>
     <!-- 카드 슬라이더 끝 -->
@@ -164,5 +165,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 </script>
 
 <?php
+
 include_once(G5_THEME_SHOP_PATH.'/shop.tail.php');
 ?>
