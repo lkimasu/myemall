@@ -100,7 +100,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         if ($this->view_it_cust_price && $row['it_cust_price']) {
             echo "<span class=\"sct_discount\">".display_price($row['it_cust_price'])."</span>\n";
         }
-        echo "</div></h3>\n";
+        echo "</h3></div>\n";
     }
 
     if ($this->view_it_icon) {
