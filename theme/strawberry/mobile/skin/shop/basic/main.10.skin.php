@@ -42,7 +42,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
     if ($this->view_it_icon) {
         echo item_icon2($row);
     }
-    
+
     if ($this->view_sns) {
         $sns_top = $this->img_height + 10;
         $sns_url  = G5_SHOP_URL.'/item.php?it_id='.$row['it_id'];
@@ -112,7 +112,7 @@ if($i == 1) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\
 ?>
 <br>
 <div class="swiper-pagination"></div>
-<br>
+
 </div> <!-- swiper-wrapper 끝 -->
 </div> <!-- swiper-container 끝 -->
 
@@ -142,7 +142,7 @@ $('.sct_sns .bg').click(function(){
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.sw1', {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 5,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
