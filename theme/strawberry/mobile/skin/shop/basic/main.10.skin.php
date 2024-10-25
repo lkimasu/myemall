@@ -38,23 +38,17 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         echo "</a>\n";
     }
 
+    // 버튼 및 SNS 공유 관련 코드 유지
     if ($this->view_it_icon) {
         echo item_icon2($row);
     }
-
-    // 버튼 및 SNS 공유 관련 코드 유지
-    echo "<div class=\"sct_btn\"><div class=\"sct_btn_wr\"><button type=\"button\" class=\"btn_cart\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">장바구니</span><i class=\"fa fa-shopping-cart\"></i></button><button type=\"button\" class=\"btn_wish\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">위시리스트</span><i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i></button><button type=\"button\" class=\"btn_share\"><i class=\"fa fa-share-alt\" aria-hidden=\"true\"></i><span class=\"sound_only\">sns공유</span></button>\n";
-    echo "</div>\n";
-
+    
     if ($this->view_sns) {
         $sns_top = $this->img_height + 10;
         $sns_url  = G5_SHOP_URL.'/item.php?it_id='.$row['it_id'];
         $sns_title = get_text($row['it_name']).' | '.get_text($config['cf_title']);
         echo "<div class=\"sct_sns\"><div class=\"sct_sns_wr\"><h3>SNS 공유</h3><div>";
-        echo get_sns_share_link('facebook', $sns_url, $sns_title, G5_MSHOP_SKIN_URL.'/img/facebook.png');
-        echo get_sns_share_link('twitter', $sns_url, $sns_title, G5_MSHOP_SKIN_URL.'/img/twitter.png');
-        echo get_sns_share_link('googleplus', $sns_url, $sns_title, G5_MSHOP_SKIN_URL.'/img/gplus.png');
-        echo get_sns_share_link('kakaotalk', $sns_url, $sns_title, G5_MSHOP_SKIN_URL.'/img/sns_kakao.png');
+     
         echo "</div><button type=\"button\" class=\"btn_close\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></button></div><div class=\"bg\"></div></div>\n";
     }
     echo "</div>\n"; // .sct_img 끝
@@ -66,7 +60,6 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         echo "<div class=\"sct_id\">&lt;".stripslashes($row['it_id'])."&gt;</div>\n";
     }
 
-    echo "</div>\n"; // .sct_li 끝
 
     if ($this->href) {
         echo "<div class=\"sct_txt\"><h2>\n"; // 상품명에 h2 추가
