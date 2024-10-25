@@ -139,5 +139,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 <!-- 이벤트 섹션 끝 -->
 
 <?php
+echo 
 include_once(G5_THEME_MSHOP_PATH.'/shop.tail.php');
 ?>
