@@ -46,7 +46,14 @@ if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
 
+<?php
 
+if (!$meta_description){
+    $meta_description = "신선하고 건강한 농산물을 산지 직송으로 제공하는 쇼핑몰. 사과, 양파, 수입과일, 샤인머스켓, 고구마 등의 다양한 상품을 무료배송으로 만나보세요.";
+    $meta_keywords = "농산물 쇼핑몰, 신선 식품, 사과, 양파, 수입과일, 샤인머스켓, 고구마, 무료배송, 산지직송";
+}
+
+?>
 <meta name="description" content="<?php echo $meta_description; ?>">
 <meta name="keywords" content="<?php echo $meta_keywords; ?>">
 
