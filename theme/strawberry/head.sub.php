@@ -1,3 +1,33 @@
+<?php
+// 이 파일은 새로운 파일 생성시 반드시 포함되어야 함
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
+$begin_time = get_microtime();
+
+if (!isset($g5['title'])) {
+    $g5['title'] = $config['cf_title'];
+    $g5_head_title = $g5['title'];
+}
+else {
+    $g5_head_title = $g5['title']; // 상태바에 표시될 제목
+    $g5_head_title .= " | ".$config['cf_title'];
+}
+
+// 현재 접속자
+// 게시판 제목에 ' 포함되면 오류 발생
+$g5['lo_location'] = addslashes($g5['title']);
+if (!$g5['lo_location'])
+    $g5['lo_location'] = addslashes(clean_xss_tags($_SERVER['REQUEST_URI']));
+$g5['lo_url'] = addslashes(clean_xss_tags($_SERVER['REQUEST_URI']));
+if (strstr($g5['lo_url'], '/'.G5_ADMIN_DIR.'/') || $is_admin == 'super') $g5['lo_url'] = '';
+
+/*
+// 만료된 페이지로 사용하시는 경우
+header("Cache-Control: no-cache"); // HTTP/1.1
+header("Expires: 0"); // rfc2616 - Section 14.21
+header("Pragma: no-cache"); // HTTP/1.0
+*/
+?>
 <!doctype html>
 <html lang="ko">
 <head>
@@ -15,16 +45,7 @@ if (G5_IS_MOBILE) {
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
-
-<?php
-$title = isset($g5['title']) && $g5['title'] ? $g5['title'] : '거창한무역';
-$description = $title !== '거창한무역' ? $title : '싱싱한 먹거리를 믿고 살 수 있는 거창한무역 쇼핑몰';
-?>
-<meta name="description" content="<?php echo $description ?>">
-<meta property="og:title" content="<?php echo $title ?>">
-<meta property="og:description" content="<?php echo $description ?>">
-
-
+<title><?php echo $g5_head_title; ?></title>
 <?php
 $shop_css = '';
 if (defined('_SHOP_')) $shop_css = '_shop';

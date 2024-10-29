@@ -72,7 +72,7 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
         echo "</div>\n"; // sct_img 닫기
 
         if ($this->href) {
-            echo "<div class=\"sct_txt\">\n";
+            echo "<div class=\"sct_txt\"><h2>\n";
             echo "<a href=\"{$this->href}{$row['it_id']}\" class=\"sct_tit\" title=\"".htmlspecialchars(stripslashes($row['it_name']))."\">\n";
         }
 
@@ -103,7 +103,7 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
             echo "<span class=\"sct_star\"><img src=\"" . G5_SHOP_URL . "/img/s_star" . $s_core . ".png\"></span>";
         }
 
-        echo "</div>\n"; // sct_txt 닫기
+        echo "</div></h2>\n"; // sct_txt 닫기
 
         echo "</li>\n";
     }
