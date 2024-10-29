@@ -5,6 +5,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 0);
 ?>
 
+
+<title> 로그인 - 거창한무역 </title>
+
 <div id="mb_login" class="mbskin">
     <h1><?php echo $g5['title'] ?></h1>
 
