@@ -45,7 +45,12 @@ if (G5_IS_MOBILE) {
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
-<title><?php echo $g5_head_title; ?></title>
+
+
+<meta name="description" content="<?php echo $meta_description; ?>">
+<meta name="keywords" content="<?php echo $meta_keywords; ?>">
+
+
 <?php
 $shop_css = '';
 if (defined('_SHOP_')) $shop_css = '_shop';
