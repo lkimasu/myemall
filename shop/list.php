@@ -4,6 +4,41 @@ include_once('./_common.php');
 $ca_id = isset($_REQUEST['ca_id']) ? safe_replace_regex($_REQUEST['ca_id'], 'ca_id') : '';
 $skin = isset($_REQUEST['skin']) ? safe_replace_regex($_REQUEST['skin'], 'skin') : '';
 
+
+switch ($ca_id) {
+
+    case '10': // 사과
+        $meta_description = "신선하고 달콤한 사과, 산지 직송과 무료배송으로 만나보세요.";
+        $meta_keywords = "사과, 시나노골드,홍로,부사,아오리,홍로사과,시나노사과,사과10KG,사과5KG,거창사과,꿀사과,선물세트";
+        break;
+    case '20': // 사과주스
+        $meta_description = "싱싱한 사과로 만든 사과주스 무료배송";
+        $meta_keywords = "사과주스, 과일주스, 건강 음료, 신선한 주스,사과즙,HACCP 사과주스";
+        break;
+    case '30': // 포도
+        $meta_description = "맛있는 포도, 다양한 종류의 포도를 구입하세요.";
+        $meta_keywords = "포도, 신선한 포도, 과일, 샤인머스켓,선물세트,과일선물세트,수출용,샤인머스켓2KG,샤인머스켓4KG";
+        break;
+    case '40': // 수입과일
+        $meta_description = "신선하고 다양한 수입과일을 만나보세요.";
+        $meta_keywords = "수입과일, 해외 과일, 다양한 과일, 과일 시장,용과";
+        break;
+    case '50': // 양파
+        $meta_description = "양파, 신선한 양파를 저렴하게 제공합니다.";
+        $meta_keywords = "양파, 국내산 양파, 신선한 양파, 채소,소 사이즈 양파,대 사이즈 양파,장아찌 사이즈 양파,수입산 양파";
+        break;
+    case '60': // 기타 상품
+        $meta_description = "다양한 기타 농산물을 한눈에 확인하세요.";
+        $meta_keywords = "농산물, 신선 식품, 다양한 농산물, 직거래 상품,고구마";
+        break;
+    default: // 기본값
+        $meta_description = "다양한 상품을 만나보세요.";
+        $meta_keywords = "농산물, 신선 식품, 과일, 채소, 쇼핑몰";
+        break;
+}
+
+
+
 // 상품 리스트에서 다른 필드로 정렬을 하려면 아래의 배열 코드에서 해당 필드를 추가하세요.
 if( isset($sort) && ! in_array($sort, array('it_name', 'it_sum_qty', 'it_price', 'it_use_avg', 'it_use_cnt', 'it_update_time')) ){
     $sort='';
@@ -35,16 +70,14 @@ if(!$is_admin && $config['cf_cert_use']) {
         alert($msg, G5_SHOP_URL);
 }
 
-$g5['title'] = $ca['ca_name'].' 상품리스트';
-
-$meta_title = "상품 리스트 - ".$ca['ca_name']; // 페이지의 제목
-$meta_description = "다양한 ".$ca['ca_name']." 상품을 만나보세요."; // 페이지의 설명
+$g5['title'] = $ca['ca_name'].' - 거창한무역';
 
 
 if ($ca['ca_include_head'] && is_include_path_check($ca['ca_include_head']))
     @include_once($ca['ca_include_head']);
 else
     include_once(G5_SHOP_PATH.'/_head.php');
+
 
 // 스킨경로
 $skin_dir = G5_SHOP_SKIN_PATH;
@@ -70,10 +103,6 @@ define('G5_SHOP_CSS_URL', str_replace(G5_PATH, G5_URL, $skin_dir));
 if ($is_admin)
     echo '<div class="sct_admin"><a href="'.G5_ADMIN_URL.'/shop_admin/categoryform.php?w=u&amp;ca_id='.$ca_id.'" class="btn_admin btn"><span class="sound_only">분류 관리</span><i class="fa fa-cog fa-spin fa-fw"></i></a></div>';
 ?>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="<?php echo $description; ?>">
 
 <script>
 var itemlist_ca_id = "<?php echo $ca_id; ?>";
