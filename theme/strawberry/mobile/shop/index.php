@@ -113,19 +113,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
         <h3>사진으로 만나는 거창한무역의 제품과 여정을 확인해보세요.</h3>
     </div>
 
-<!-- 소셜 미디어 링크 -->
- <div class="social-icons">
-    <a href="https://blog.naver.com/wpdlf943" target="_blank">
-        <img src="/theme\strawberry\shop\img\sns_icons_blog.png" alt="네이버 블로그" width="80">
-    </a>
-    <a href="https://www.instagram.com/wpdlf943/" target="_blank">
-        <img src="/theme\strawberry\shop\img\sns_icons_insta.png" alt="인스타그램" width="40">
-    </a>
-    <a href="https://pf.kakao.com/_zKdQxj/" target="_blank">
-        <img src="/theme\strawberry\shop\img\sns_icons_kakao.png" alt="카카오채널" width="40">
-    </a>
-</div>
-
 <div class="container">
     <!-- 카드 슬라이더 시작 -->
     <?php include_once(G5_MSHOP_SKIN_PATH.'/card_slider.skin.php'); ?>
