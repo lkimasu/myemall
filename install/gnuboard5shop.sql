@@ -23,6 +23,17 @@ CREATE TABLE IF NOT EXISTS `g5_shop_banner` (
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `g5_shop_story`;
+CREATE TABLE IF NOT EXISTS `g5_shop_story` (
+   `story_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `story_alt` VARCHAR(255) NOT NULL,
+    `story_url` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`story_id`)
+
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+
 --
 -- Table structure for table `g5_shop_cart`
 --
