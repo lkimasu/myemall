@@ -29,22 +29,6 @@ header("Pragma: no-cache"); // HTTP/1.0
 
 */
 
-if (isset($it_id)) {
-    // 상품 정보에 따라 SEO 메타태그 생성
-    $meta_title = stripslashes($it['it_name']) . " | " . $it['it_brand'] . " - 쇼핑몰명";
-    $meta_description = stripslashes($it['it_name']) . " - 지금 바로 구매하세요!";
-    $meta_keywords = $it['it_name'];
-} else {
-    // 기본 메타태그 설정
-    $meta_description = "신선하고 건강한 농산물을 산지 직송으로 제공하는 쇼핑몰. 사과, 양파, 수입과일, 샤인머스켓, 고구마 등의 다양한 상품을 무료배송으로 만나보세요.";
-    $meta_keywords = "농산물 쇼핑몰, 신선 식품, 사과, 양파, 수입과일, 샤인머스켓, 고구마, 무료배송, 산지직송";
-}
-
-// SEO 메타태그 출력
-echo '<meta name="description" content="' . htmlspecialchars($meta_description) . '">';
-echo '<meta name="keywords" content="' . htmlspecialchars($meta_keywords) . '">';
-
-
 ?>
 <!doctype html>
 <html lang="ko">
@@ -62,6 +46,22 @@ if (G5_IS_MOBILE) {
 
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
+
+    if (isset($it_id)) {
+        // 상품 정보에 따라 SEO 메타태그 생성
+        $meta_title = stripslashes($it['it_name']) . " | " . $it['it_brand'] . " - 쇼핑몰명";
+        $meta_description = stripslashes($it['it_name']) . " - 지금 바로 구매하세요!";
+        $meta_keywords = $it['it_name'];
+    } else {
+        // 기본 메타태그 설정
+        $meta_description = "신선하고 건강한 농산물을 산지 직송으로 제공하는 쇼핑몰. 사과, 양파, 수입과일, 샤인머스켓, 고구마 등의 다양한 상품을 무료배송으로 만나보세요.";
+        $meta_keywords = "농산물 쇼핑몰, 신선 식품, 사과, 양파, 수입과일, 샤인머스켓, 고구마, 무료배송, 산지직송";
+    }
+    
+    // SEO 메타태그 출력
+    echo '<meta name="description" content="' . htmlspecialchars($meta_description) . '">';
+    echo '<meta name="keywords" content="' . htmlspecialchars($meta_keywords) . '">';
+        
 ?>
 
 <?php
