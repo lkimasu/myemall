@@ -10,6 +10,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
     <h2>쇼핑몰 카테고리</h2>
     <ul id="gnb_1dul">
         <li class="gnb_1dli"><button type="button" id="menu_open"><i class="fa fa-bars" aria-hidden="true"></i> <span class="sound_only">카테고리</span></button></li>
+        <!--
         <li class="gnb_1dli"><a href="<?php echo G5_SHOP_URL; ?>/index.php" class="gnb_1da">홈</a></li>
         <li class="gnb_1dli">
             <a href="#" class="gnb_1da gnb_1dam">거창한무역</a>
@@ -21,6 +22,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
         </li>
         <li class="gnb_1dli"><a href="/bbs/board.php?bo_table=gallery" class="gnb_1da">갤러리</a></li>
         <li class="gnb_1dli"><a href="https://blog.naver.com/wpdlf943" class="gnb_1da">블로그</a></li>
+
+            -->
         <?php
         // 1단계 분류 판매 가능한 것만
         $hsql = "SELECT ca_id, ca_name FROM {$g5['g5_shop_category_table']} WHERE LENGTH(ca_id) = '2' AND ca_use = '1' ORDER BY ca_order, ca_id";
