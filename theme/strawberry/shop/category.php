@@ -15,43 +15,38 @@ function get_mshop_category($ca_id, $len)
 }
 ?>
 <div id="category">
-
     <div class="ct_wr">
-        <button type="button" class="close_btn"> 카테고리<span class="sound_only">닫기</span><i class="fa fa-times" aria-hidden="true"></i></button>
-        <?php
-        $mshop_ca_href = G5_SHOP_URL.'/list.php?ca_id=';
-        $mshop_ca_res1 = sql_query(get_mshop_category('', 2));
-        for($i=0; $mshop_ca_row1=sql_fetch_array($mshop_ca_res1); $i++) {
-            if($i == 0)
-                echo '<ul class="cate">'.PHP_EOL;
-        ?>
-            <li class="cate_li_1">
-                <a href="<?php echo $mshop_ca_href.$mshop_ca_row1['ca_id']; ?>" class="cate_li_1_a"><?php echo get_text($mshop_ca_row1['ca_name']); ?></a>
-                <?php
-                $mshop_ca_res2 = sql_query(get_mshop_category($mshop_ca_row1['ca_id'], 4));
+    <button type="button" class="close_btn1"><span class="center_text">카테고리</span><span class="sound_only">닫기</span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
 
-                for($j=0; $mshop_ca_row2=sql_fetch_array($mshop_ca_res2); $j++) {
-                    if($j == 0)
-                        echo '<ul class="sub_cate sub_cate1">'.PHP_EOL;
-                ?>
-                    <li class="cate_li_2">
-                        <a href="<?php echo $mshop_ca_href.$mshop_ca_row2['ca_id']; ?>"><?php echo get_text($mshop_ca_row2['ca_name']); ?></a>
-                    </li>
+        <div class="main_product_menu">
+            <!-- 첫 번째 열: 홈, 거창한무역, 갤러리, 블로그 -->
+            <ul class="cate main_menu">
+                <li><a href="<?php echo G5_SHOP_URL; ?>/index.php" class="gnb_1da_cat">홈</a></li>
+                <li>
+                    <a href="#" class="gnb_1da_cat gnb_1dam" id="toggle_menu">거창한무역</a>
+                    <ul class="sub_cate" id="mshop_submenu" style="display: none;">
+                        <li><a href="/bbs/content.php?co_id=company" class="gnb_2da">회사소개</a></li>
+                        <li><a href="/bbs/content.php?co_id=history" class="gnb_2da">연혁</a></li>
+                        <li><a href="/bbs/content.php?co_id=maps" class="gnb_2da">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs/board.php?bo_table=gallery" class="gnb_1da_cat">갤러리</a></li>
+                <li><a href="https://blog.naver.com/wpdlf943" class="gnb_1da_cat">블로그</a></li>
+            </ul>
+
+            <!-- 두 번째 열: 제품 카테고리 -->
+            <ul class="cate product_menu">
                 <?php
+                $mshop_ca_href = G5_SHOP_URL.'/list.php?ca_id=';
+                $mshop_ca_res1 = sql_query(get_mshop_category('', 2));
+                while($mshop_ca_row1 = sql_fetch_array($mshop_ca_res1)) {
+                    echo '<li><a href="'.$mshop_ca_href.$mshop_ca_row1['ca_id'].'" class="cate_li_1_a">'.get_text($mshop_ca_row1['ca_name']).'</a></li>';
                 }
-
-                if($j > 0)
-                    echo '</ul>'.PHP_EOL;
                 ?>
-            </li>
-        <?php
-        }
-
-        if($i > 0)
-            echo '</ul>'.PHP_EOL;
-        else
-            echo '<p class="no-cate">등록된 분류가 없습니다.</p>'.PHP_EOL;
-        ?>
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -63,13 +58,19 @@ $(function (){
         $category.css("display","block");
     });
 
-    $("#category .close_btn").on("click", function(){
+    $("#category .close_btn1").on("click", function(){
         $category.css("display","none");
     });
+
+    // 거창한무역 클릭 시 하위 메뉴 토글
+    $("#toggle_menu").on("click", function(e) {
+        e.preventDefault();  // 링크 기본 동작 방지
+        $("#mshop_submenu").slideToggle();  // 하위 메뉴 토글
+    });
 });
+
 $(document).mouseup(function (e){
-	var container = $("#category");
-	if( container.has(e.target).length === 0)
-	container.hide();
+    var container = $("#category");
+    if(container.has(e.target).length === 0) container.hide();
 });
 </script>
