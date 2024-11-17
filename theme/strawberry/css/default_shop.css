@@ -110,43 +110,29 @@ transition: all .2s ease-in-out;}
 #hd_menu li:last-child{border-left:1px solid #ddd}
 #hd_menu li a{display:block;padding:0 10px}
 
-#category{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;background:rgba(0,0,0,0.5)}
-#category .ct_wr{margin:40px auto;max-width:1200px;border:1px solid #000;background:#fff}
+#category{position:fixed;top:0;right:0;width:400px;background:#fff;;z-index:100;text-align:left; height:100%;
+    -moz-box-shadow:  0px 2px 38px  rgba(0,0,0,0.2);
+    -webkit-box-shadow:  0px 2px 38px  rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 38px  rgba(0,0,0,0.2);}
+#category h2{padding: 20px;line-height: 20px;font-size: 16px;border-bottom: 1px solid #efefef;}
+#category .ct_wr{}
 #category ul:after {display:block;visibility:hidden;clear:both;content:""}
-#category .cate{line-height:20px;}
-#category .cate_li_1{float:left;text-align:left;width:20%;min-height:200px;border-left:1px solid #eee;padding:20px}
-#category .cate_li_1:nth-child(5n+1){clear:both;border-left:0}
-#category .cate_li_1_a{display:block;padding:0 20px;font-weight:bold;font-size: 16px; color: #333; text-decoration:none;vertical-align:top;}
-#category .cate_li_2 {width:100%;float:none;;line-height:20px;;margin:0}
-#category .cate_li_2  a {color:#6d6d6d;display:block;}
+#category .cate{line-height:20px;margin:10px 0;position:relative;}
+#category .cate_li_1{position:relative;text-align:left;padding:0 20px}
+#category .cate_li_1_a{font-size:14px;font-weight:600;line-height:45px}
+#category .cate_li_1:hover{background: -moz-linear-gradient(-45deg, rgba(247,248,249,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(247,248,249,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(247,248,249,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+#category .sub_cate {display:none;padding:10px 0}
+#category .cate_li_2  a {color:#6d6d6d;display:block;padding:0 5px;line-height:30px}
 #category a:hover{color:#c92033}
-#category .close_btn{position:relative;font-weight: bold;font-size: 1.4em;border:0;background:transparent;width:100%;line-height: 20px; padding: 20px; text-align: left;font-weight: 700;border-bottom: 1px solid #ddd;}
-#category .close_btn1 {display: flex;               /* 플렉스 컨테이너로 설정 */
-    align-items: center;         /* 세로 가운데 정렬 */
-    justify-content: center;     /* 기본적으로 가운데 정렬 */
-    font-weight: bold;
-    font-size: 1.4em;
-    border: 0;
-    background: transparent;
-    width: 100%;
-    line-height: 20px;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    position: relative;}
-
-#category .close_btn1 .center_text {
-flex-grow: 1; /* 중앙 텍스트를 가운데 정렬 */text-align: center;}    
-#category .close_btn i{position: absolute;
-    right: 20px;                 /* 오른쪽 끝에서 간격 조정 */
-    font-size: 16px;
-    color: #aaa;
-    background: none;
-    border: 0;}
-#category .close_btn i:hover{color:#000}
+#category .close_btn{position: absolute; top: 0;  right: 0;width: 60px;height: 60px;background: #fff;border: 0;color: #ccc;font-size: 18px;}
+#category .ct_sb_btn {position:absolute;top:0;right:0;width:40px;height:40px;border:0;background:none;font-size:15px}
 
 
 /*퀵메뉴*/
-#quick{height:100%;position:fixed;top:0;right:0;;z-index:990;padding-left:50px;background:#111;}
+#quick{display: none;  height:100%;position:fixed;top:0;right:0;;z-index:990;padding-left:50px;background:#111;}
 #quick .qk_btn{position:absolute;top:0;left:0;;width:50px;background:#111;}
 #quick .qk_btn li{position:relative;width:50px;line-height:50px;border:0;text-align:center;color:#ccc;cursor:pointer}
 #quick .qk_btn .qk_tit {display:none;position:absolute;top:50%;right:60px;white-space:pre;padding:0 10px;margin-top:-15px;line-height:30px;color:#fff;background:#000;background:rgba(0,0,0,0.7);border-radius:3px;font-size:11px}
@@ -1011,5 +997,7 @@ html.no-overflowscrolling #sc_coupon_frm, html.no-overflowscrolling #od_coupon_f
 #personal_pay .card_icon{background:url('../../../img/pay_icon4.png') no-repeat 17px 50% #fff}
 #personal_pay .btn_submit{width:100%;height:40px;font-weight: bold;font-size: 1.25em;margin:10px 0 5px}
 #personal_pay .btn01{width:100%;height:40px;line-height:38px;font-weight: bold;font-size: 1.25em;}
+
+
 
 
