@@ -75,12 +75,12 @@ function get_mshop_category($ca_id, $len)
 $(function (){
     var $category = $("#category");
 
-    $(".hd_menu_btn").on("click", function() {
-        $category.css("display","block");
+    $("#menu_open").on("click", function() {
+        $category.show(); // display를 show로 바꾸어 메뉴가 보이게 처리
     });
 
     $("#category .close_btn").on("click", function(){
-        $category.css("display","none");
+        $category.hide(); // 카테고리 숨기기
     });
 
     $("#category .ct_sb_btn").on("click", function(){
