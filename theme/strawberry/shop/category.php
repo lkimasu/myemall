@@ -72,26 +72,32 @@ function get_mshop_category($ca_id, $len)
 </div>
 
 <script>
-$(function (){
+$(function () {
     var $category = $("#category");
 
+    // 페이지 로드 시 카테고리 기본적으로 숨겨둔다
+    $category.hide();
+
+    // 메뉴 열기 버튼 클릭 시 카테고리 표시 (애니메이션 추가)
     $("#menu_open").on("click", function() {
-        $category.show(); // display를 show로 바꾸어 메뉴가 보이게 처리
+        $category.fadeIn(300); // 300ms 동안 부드럽게 보이게 처리
     });
 
+    // 카테고리 닫기 버튼 클릭 시 카테고리 숨기기 (애니메이션 추가)
     $("#category .close_btn").on("click", function(){
-        $category.hide(); // 카테고리 숨기기
+        $category.fadeOut(300); // 300ms 동안 부드럽게 숨기기
     });
 
+    // 서브 카테고리 토글 버튼 클릭 시 서브 카테고리 보이기/숨기기
     $("#category .ct_sb_btn").on("click", function(){
         $(this).next(".sub_cate").toggle();
     });
-
-
 });
+
+// 문서 밖을 클릭하면 카테고리 숨기기
 $(document).mouseup(function (e){
-	var container = $("#category");
-	if( container.has(e.target).length === 0)
-	container.hide();
+    var container = $("#category");
+    if(container.has(e.target).length === 0)
+        container.fadeOut(300); // 300ms 동안 부드럽게 숨기기
 });
 </script>
