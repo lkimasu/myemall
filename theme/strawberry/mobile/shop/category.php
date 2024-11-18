@@ -24,6 +24,22 @@ function get_mshop_category($ca_id, $len)
         </button>
         <?php echo outlogin('theme/shop_basic'); // 외부 로그인 ?>
         <div class="con">
+
+        <ul class="cate">
+            <li class="cate_li_1">
+                <a href="/index.php" class="cate_li_1_a">거창한무역</a>
+                <button type="button" class="ct_sb_btn"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                <ul class="sub_cate sub_cate1">
+                    <li class="cate_li_2"><a href="/bbs/content.php?co_id=company">회사소개</a></li>
+                    <li class="cate_li_2"><a href="/bbs/content.php?co_id=history">연혁</a></li>
+                    <li class="cate_li_2"><a href="/bbs/content.php?co_id=maps">오시는길</a></li>
+                    <li class="cate_li_2"><a href="/bbs/board.php?bo_table=gallery">갤러리</a></li>
+                    <li class="cate_li_2"><a href="https://blog.naver.com/wpdlf943">블로그</a></li>
+                </ul>
+            </li>
+    </ul>
+
+
             <?php
             $mshop_ca_href = G5_SHOP_URL.'/list.php?ca_id=';
             $mshop_ca_res1 = sql_query(get_mshop_category('', 2));
@@ -104,11 +120,6 @@ function get_mshop_category($ca_id, $len)
         </div>
         <div class="con">
             <ul id="hd_tnb" class="cate">
-                <li class="bd"><a href="/bbs/content.php?co_id=company">회사소개</a></li>
-                <li class="bd"><a href="/bbs/content.php?co_id=history">연혁</a></li>
-                <li class="bd"><a href="/bbs/content.php?co_id=maps">오시는길</a></li>
-                <li class="bd"><a href="/bbs/board.php?bo_table=gallery">갤러리</a></li>
-                <li class="bd"><a href="https://blog.naver.com/wpdlf943">블로그</a></li>
                 <li class="bd"><a href="<?php echo G5_SHOP_URL; ?>/mypage.php">마이페이지</a></li>
                 <li class="bd"><a href="<?php echo G5_SHOP_URL; ?>/orderinquiry.php">주문내역</a></li>
                 <li class="bd"><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php">쿠폰존</a></li>
@@ -141,5 +152,10 @@ $(function (){
             $sub_ul.toggle();
         }
     });
+        // 서브 카테고리 토글 버튼 클릭 시 서브 카테고리 보이기/숨기기
+        $("#category .ct_sb_btn").on("click", function(){
+        $(this).next(".sub_cate").slideToggle(200); // 서브 카테고리 페이드 토글
+    });
+
 });
 </script>
