@@ -63,7 +63,10 @@ jQuery(function($){
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
-        autoplay: {delay: 100000, disableOnInteraction:false},
+        autoplay: {     //자동슬라이드 (false-비활성화)          
+            delay: 3000, // 시간 설정          
+            disableOnInteraction: false, 
+          },
     });
 });
 </script>
