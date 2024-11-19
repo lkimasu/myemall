@@ -106,7 +106,7 @@ jQuery(function($){
         nav:false,
         autoHeight:true,
         autoplay:true,
-        autoplayTimeout:5000,   // 5000은 5초
+        autoplayTimeout:3000,   // 3000은 3초
         autoplayHoverPause:true,
         dotsContainer: '.carousel-custom-dots',
         onChanged:function(event){
