@@ -20,6 +20,12 @@ $it = array(
 'it_type3'=>0,
 'it_type4'=>0,
 'it_type5'=>0,
+'it_type6'=>0,
+'it_type7'=>0,
+'it_type8'=>0,
+'it_type9'=>0,
+'it_type10'=>0,
+'it_type11'=>0,
 'it_brand'=>'',
 'it_model'=>'',
 'it_tel_inq'=>0,
@@ -177,6 +183,39 @@ if(!sql_query(" select ec_mall_pid from {$g5['g5_shop_item_table']} limit 1 ", f
     sql_query(" ALTER TABLE `{$g5['g5_shop_item_table']}`
                     ADD `ec_mall_pid` varchar(255) NOT NULL AFTER `it_shop_memo` ", true);
 }
+
+if(!sql_query(" select it_type6 from {$g5['g5_shop_item_table']} limit 1 ", false)) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_item_table']}`
+                    ADD `it_type6` tinyint(4) NOT NULL DEFAULT '0' AFTER `it_type5` ", true);
+}
+
+if(!sql_query(" select it_type7 from {$g5['g5_shop_item_table']} limit 1 ", false)) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_item_table']}`
+                    ADD `it_type7` tinyint(4) NOT NULL DEFAULT '0' AFTER `it_type6` ", true);
+}
+
+if(!sql_query(" select it_type8 from {$g5['g5_shop_item_table']} limit 1 ", false)) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_item_table']}`
+                    ADD `it_type8` tinyint(4) NOT NULL DEFAULT '0' AFTER `it_type7` ", true);
+}
+
+if(!sql_query(" select it_type9 from {$g5['g5_shop_item_table']} limit 1 ", false)) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_item_table']}`
+                    ADD `it_type9` tinyint(4) NOT NULL DEFAULT '0' AFTER `it_type8` ", true);
+}
+
+if(!sql_query(" select it_type10 from {$g5['g5_shop_item_table']} limit 1 ", false)) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_item_table']}`
+                    ADD `it_type10` tinyint(4) NOT NULL DEFAULT '0' AFTER `it_type9` ", true);
+}
+
+if(!sql_query(" select it_type11 from {$g5['g5_shop_item_table']} limit 1 ", false)) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_item_table']}`
+                    ADD `it_type11` tinyint(4) NOT NULL DEFAULT '0' AFTER `it_type10` ", true);
+}
+
+
+
 
 $pg_anchor ='<ul class="anchor">
 <li><a href="#anc_sitfrm_cate">상품분류</a></li>
@@ -390,6 +429,20 @@ if(!sql_query(" select it_skin from {$g5['g5_shop_item_table']} limit 1", false)
                 <label for="it_type4">인기 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_best.gif" alt=""></label>
                 <input type="checkbox" name="it_type5" value="1" <?php echo ($it['it_type5'] ? "checked" : ""); ?> id="it_type5">
                 <label for="it_type5">할인 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_discount.gif" alt=""></label>
+                <input type="checkbox" name="it_type6" value="1" <?php echo ($it['it_type6'] ? "checked" : ""); ?> id="it_type6">
+                <label for="it_type6">국산과일 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_discount.gif" alt=""></label>
+                <input type="checkbox" name="it_type7" value="1" <?php echo ($it['it_type7'] ? "checked" : ""); ?> id="it_type7">
+                <label for="it_type7">수입과일 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_discount.gif" alt=""></label>
+                <input type="checkbox" name="it_type8" value="1" <?php echo ($it['it_type8'] ? "checked" : ""); ?> id="it_type8">
+                <label for="it_type8">과일선물 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_discount.gif" alt=""></label>
+                <input type="checkbox" name="it_type9" value="1" <?php echo ($it['it_type9'] ? "checked" : ""); ?> id="it_type9">
+                <label for="it_type9">과일주스 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_discount.gif" alt=""></label>
+                <input type="checkbox" name="it_type10" value="1" <?php echo ($it['it_type10'] ? "checked" : ""); ?> id="it_type10">
+                <label for="it_type10">대용량 과일 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_discount.gif" alt=""></label>
+                <input type="checkbox" name="it_type11" value="1" <?php echo ($it['it_type11'] ? "checked" : ""); ?> id="it_type11">
+                <label for="it_type11">제철과일 <img src="<?php echo G5_SHOP_URL; ?>/img/icon_discount.gif" alt=""></label>
+ 
+                
             </td>
             <td class="td_grpset">
                 <input type="checkbox" name="chk_ca_it_type" value="1" id="chk_ca_it_type">

@@ -207,6 +207,104 @@ if( ! isset($default['de_inicis_iniapi_key']) ){
     sql_query($sql, false);
 }
 
+
+if(!isset($default['de_type6_list_use'])) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_default_table']}`
+                    ADD `de_type6_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_type5_img_height`,
+                    ADD `de_type6_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_type6_list_use`,
+                    ADD `de_type6_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_type6_list_skin`,
+                    ADD `de_type6_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_type6_list_mod`,
+                    ADD `de_type6_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_type6_list_row`,
+                    ADD `de_type6_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_type6_img_width`,
+                    ADD `de_mobile_type6_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_mobile_type5_img_height`,
+                    ADD `de_mobile_type6_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_mobile_type6_list_use`,
+                    ADD `de_mobile_type6_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type6_list_skin`,
+                    ADD `de_mobile_type6_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type6_list_mod`,
+                    ADD `de_mobile_type6_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type6_list_row`,
+                    ADD `de_mobile_type6_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type6_img_width` ", true);
+}
+
+if(!isset($default['de_type7_list_use'])) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_default_table']}`
+                    ADD `de_type7_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_type6_img_height`,
+                    ADD `de_type7_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_type7_list_use`,
+                    ADD `de_type7_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_type7_list_skin`,
+                    ADD `de_type7_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_type7_list_mod`,
+                    ADD `de_type7_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_type7_list_row`,
+                    ADD `de_type7_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_type7_img_width`,
+                    ADD `de_mobile_type7_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_mobile_type6_img_height`,
+                    ADD `de_mobile_type7_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_mobile_type7_list_use`,
+                    ADD `de_mobile_type7_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type7_list_skin`,
+                    ADD `de_mobile_type7_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type7_list_mod`,
+                    ADD `de_mobile_type7_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type7_list_row`,
+                    ADD `de_mobile_type7_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type7_img_width` ", true);
+}
+
+if(!isset($default['de_type8_list_use'])) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_default_table']}`
+                    ADD `de_type8_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_type7_img_height`,
+                    ADD `de_type8_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_type8_list_use`,
+                    ADD `de_type8_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_type8_list_skin`,
+                    ADD `de_type8_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_type8_list_mod`,
+                    ADD `de_type8_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_type8_list_row`,
+                    ADD `de_type8_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_type8_img_width`,
+                    ADD `de_mobile_type8_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_mobile_type7_img_height`,
+                    ADD `de_mobile_type8_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_mobile_type8_list_use`,
+                    ADD `de_mobile_type8_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type8_list_skin`,
+                    ADD `de_mobile_type8_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type8_list_mod`,
+                    ADD `de_mobile_type8_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type8_list_row`,
+                    ADD `de_mobile_type8_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type8_img_width` ", true);
+}
+
+if(!isset($default['de_type9_list_use'])) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_default_table']}`
+                    ADD `de_type9_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_type8_img_height`,
+                    ADD `de_type9_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_type9_list_use`,
+                    ADD `de_type9_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_type9_list_skin`,
+                    ADD `de_type9_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_type9_list_mod`,
+                    ADD `de_type9_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_type9_list_row`,
+                    ADD `de_type9_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_type9_img_width`,
+                    ADD `de_mobile_type9_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_mobile_type8_img_height`,
+                    ADD `de_mobile_type9_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_mobile_type9_list_use`,
+                    ADD `de_mobile_type9_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type9_list_skin`,
+                    ADD `de_mobile_type9_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type9_list_mod`,
+                    ADD `de_mobile_type9_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type9_list_row`,
+                    ADD `de_mobile_type9_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type9_img_width` ", true);
+}
+
+if(!isset($default['de_type10_list_use'])) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_default_table']}`
+                    ADD `de_type10_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_type9_img_height`,
+                    ADD `de_type10_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_type10_list_use`,
+                    ADD `de_type10_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_type10_list_skin`,
+                    ADD `de_type10_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_type10_list_mod`,
+                    ADD `de_type10_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_type10_list_row`,
+                    ADD `de_type10_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_type10_img_width`,
+                    ADD `de_mobile_type10_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_mobile_type9_img_height`,
+                    ADD `de_mobile_type10_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_mobile_type10_list_use`,
+                    ADD `de_mobile_type10_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type10_list_skin`,
+                    ADD `de_mobile_type10_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type10_list_mod`,
+                    ADD `de_mobile_type10_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type10_list_row`,
+                    ADD `de_mobile_type10_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type10_img_width` ", true);
+}
+
+if(!isset($default['de_type11_list_use'])) {
+    sql_query(" ALTER TABLE `{$g5['g5_shop_default_table']}`
+                    ADD `de_type11_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_type10_img_height`,
+                    ADD `de_type11_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_type11_list_use`,
+                    ADD `de_type11_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_type11_list_skin`,
+                    ADD `de_type11_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_type11_list_mod`,
+                    ADD `de_type11_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_type11_list_row`,
+                    ADD `de_type11_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_type11_img_width`,
+                    ADD `de_mobile_type11_list_use` TINYINT(4) NOT NULL DEFAULT '0' AFTER `de_mobile_type10_img_height`,
+                    ADD `de_mobile_type11_list_skin` VARCHAR(255) NOT NULL DEFAULT '0' AFTER `de_mobile_type11_list_use`,
+                    ADD `de_mobile_type11_list_mod` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type11_list_skin`,
+                    ADD `de_mobile_type11_list_row` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type11_list_mod`,
+                    ADD `de_mobile_type11_img_width` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type11_list_row`,
+                    ADD `de_mobile_type11_img_height` INT(11) NOT NULL DEFAULT '0' AFTER `de_mobile_type11_img_width` ", true);
+}
+
+
 if( function_exists('pg_setting_check') ){
     pg_setting_check(true);
 }
@@ -447,6 +545,124 @@ if(!$default['de_kakaopay_cancelpwd']){
                 <input type="text" name="de_type5_img_height" value="<?php echo get_sanitize_input($default['de_type5_img_height']); ?>" id="de_type5_img_height" class="frm_input" size="3">
             </td>
         </tr>
+
+        <tr>
+            <th scope="row">국산과일</th>
+            <td>
+                <label for="de_type6_list_use">출력</label>
+                <input type="checkbox" name="de_type6_list_use" value="1" id="de_type6_list_use" <?php echo $default['de_type6_list_use']?"checked":""; ?>>
+                <label for="de_type6_list_skin">스킨</label>
+                <select name="de_type6_list_skin" id="de_type6_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_SHOP_SKIN_PATH, $default['de_type6_list_skin']); ?>
+                </select>
+                <label for="de_type6_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_type6_list_mod" value="<?php echo $default['de_type6_list_mod']; ?>" id="de_type6_list_mod" class="frm_input" size="3">
+                <label for="de_type6_list_row">출력할 줄 수</label>
+                <input type="text" name="de_type6_list_row" value="<?php echo $default['de_type6_list_row']; ?>" id="de_type6_list_row" class="frm_input" size="3">
+                <label for="de_type6_img_width">이미지 폭</label>
+                <input type="text" name="de_type6_img_width" value="<?php echo $default['de_type6_img_width']; ?>" id="de_type6_img_width" class="frm_input" size="3">
+                <label for="de_type6_img_height">이미지 높이</label>
+                <input type="text" name="de_type6_img_height" value="<?php echo $default['de_type6_img_height']; ?>" id="de_type6_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">수입과일</th>
+            <td>
+                <label for="de_type7_list_use">출력</label>
+                <input type="checkbox" name="de_type7_list_use" value="1" id="de_type7_list_use" <?php echo $default['de_type7_list_use']?"checked":""; ?>>
+                <label for="de_type7_list_skin">스킨</label>
+                <select name="de_type7_list_skin" id="de_type7_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_SHOP_SKIN_PATH, $default['de_type7_list_skin']); ?>
+                </select>
+                <label for="de_type7_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_type7_list_mod" value="<?php echo get_sanitize_input($default['de_type7_list_mod']); ?>" id="de_type7_list_mod" class="frm_input" size="3">
+                <label for="de_type7_list_row">출력할 줄 수</label>
+                <input type="text" name="de_type7_list_row" value="<?php echo get_sanitize_input($default['de_type7_list_row']); ?>" id="de_type7_list_row" class="frm_input" size="3">
+                <label for="de_type7_img_width">이미지 폭</label>
+                <input type="text" name="de_type7_img_width" value="<?php echo get_sanitize_input($default['de_type7_img_width']); ?>" id="de_type7_img_width" class="frm_input" size="3">
+                <label for="de_type7_img_height">이미지 높이</label>
+                <input type="text" name="de_type7_img_height" value="<?php echo get_sanitize_input($default['de_type7_img_height']); ?>" id="de_type7_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">과일선물</th>
+            <td>
+                <label for="de_type8_list_use">출력</label>
+                <input type="checkbox" name="de_type8_list_use" value="1" id="de_type8_list_use" <?php echo $default['de_type8_list_use']?"checked":""; ?>>
+                <label for="de_type8_list_skin">스킨</label>
+                <select name="de_type8_list_skin" id="de_type8_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_SHOP_SKIN_PATH, $default['de_type8_list_skin']); ?>
+                </select>
+                <label for="de_type8_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_type8_list_mod" value="<?php echo get_sanitize_input($default['de_type8_list_mod']); ?>" id="de_type8_list_mod" class="frm_input" size="3">
+                <label for="de_type8_list_row">출력할 줄 수</label>
+                <input type="text" name="de_type8_list_row" value="<?php echo get_sanitize_input($default['de_type8_list_row']); ?>" id="de_type8_list_row" class="frm_input" size="3">
+                <label for="de_type8_img_width">이미지 폭</label>
+                <input type="text" name="de_type8_img_width" value="<?php echo get_sanitize_input($default['de_type8_img_width']); ?>" id="de_type8_img_width" class="frm_input" size="3">
+                <label for="de_type8_img_height">이미지 높이</label>
+                <input type="text" name="de_type8_img_height" value="<?php echo get_sanitize_input($default['de_type8_img_height']); ?>" id="de_type8_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">과일주스</th>
+            <td>
+                <label for="de_type9_list_use">출력</label>
+                <input type="checkbox" name="de_type9_list_use" value="1" id="de_type9_list_use" <?php echo $default['de_type9_list_use']?"checked":""; ?>>
+                <label for="de_type9_list_skin">스킨</label>
+                <select name="de_type9_list_skin" id="de_type9_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_SHOP_SKIN_PATH, $default['de_type9_list_skin']); ?>
+                </select>
+                <label for="de_type9_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_type9_list_mod" value="<?php echo get_sanitize_input($default['de_type9_list_mod']); ?>" id="de_type9_list_mod" class="frm_input" size="3">
+                <label for="de_type9_list_row">출력할 줄 수</label>
+                <input type="text" name="de_type9_list_row" value="<?php echo get_sanitize_input($default['de_type9_list_row']); ?>" id="de_type9_list_row" class="frm_input" size="3">
+                <label for="de_type9_img_width">이미지 폭</label>
+                <input type="text" name="de_type9_img_width" value="<?php echo get_sanitize_input($default['de_type9_img_width']); ?>" id="de_type9_img_width" class="frm_input" size="3">
+                <label for="de_type9_img_height">이미지 높이</label>
+                <input type="text" name="de_type9_img_height" value="<?php echo get_sanitize_input($default['de_type9_img_height']); ?>" id="de_type9_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">대용량과일</th>
+            <td>
+                <label for="de_type10_list_use">출력</label>
+                <input type="checkbox" name="de_type10_list_use" value="1" id="de_type10_list_use" <?php echo $default['de_type10_list_use']?"checked":""; ?>>
+                <label for="de_type10_list_skin">스킨</label>
+                <select name="de_type10_list_skin" id="de_type10_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_SHOP_SKIN_PATH, $default['de_type10_list_skin']); ?>
+                </select>
+                <label for="de_type10_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_type10_list_mod" value="<?php echo get_sanitize_input($default['de_type10_list_mod']); ?>" id="de_type10_list_mod" class="frm_input" size="3">
+                <label for="de_type10_list_row">출력할 줄 수</label>
+                <input type="text" name="de_type10_list_row" value="<?php echo get_sanitize_input($default['de_type10_list_row']); ?>" id="de_type10_list_row" class="frm_input" size="3">
+                <label for="de_type10_img_width">이미지 폭</label>
+                <input type="text" name="de_type10_img_width" value="<?php echo get_sanitize_input($default['de_type10_img_width']); ?>" id="de_type10_img_width" class="frm_input" size="3">
+                <label for="de_type10_img_height">이미지 높이</label>
+                <input type="text" name="de_type10_img_height" value="<?php echo get_sanitize_input($default['de_type10_img_height']); ?>" id="de_type10_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">제철과일</th>
+            <td>
+                <label for="de_type11_list_use">출력</label>
+                <input type="checkbox" name="de_type11_list_use" value="1" id="de_type11_list_use" <?php echo $default['de_type11_list_use']?"checked":""; ?>>
+                <label for="de_type11_list_skin">스킨</label>
+                <select name="de_type11_list_skin" id="de_type11_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_SHOP_SKIN_PATH, $default['de_type11_list_skin']); ?>
+                </select>
+                <label for="de_type11_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_type11_list_mod" value="<?php echo get_sanitize_input($default['de_type11_list_mod']); ?>" id="de_type11_list_mod" class="frm_input" size="3">
+                <label for="de_type11_list_row">출력할 줄 수</label>
+                <input type="text" name="de_type11_list_row" value="<?php echo get_sanitize_input($default['de_type11_list_row']); ?>" id="de_type11_list_row" class="frm_input" size="3">
+                <label for="de_type11_img_width">이미지 폭</label>
+                <input type="text" name="de_type11_img_width" value="<?php echo get_sanitize_input($default['de_type11_img_width']); ?>" id="de_type11_img_width" class="frm_input" size="3">
+                <label for="de_type11_img_height">이미지 높이</label>
+                <input type="text" name="de_type11_img_height" value="<?php echo get_sanitize_input($default['de_type11_img_height']); ?>" id="de_type11_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+
+
         </tbody>
         </table>
     </div>
@@ -566,6 +782,127 @@ if(!$default['de_kakaopay_cancelpwd']){
                 <input type="text" name="de_mobile_type5_img_height" value="<?php echo get_sanitize_input($default['de_mobile_type5_img_height']); ?>" id="de_mobile_type5_img_height" class="frm_input" size="3">
             </td>
         </tr>
+
+        <tr>
+            <th scope="row">국산과일</th>
+            <td>
+                <label for="de_mobile_type6_list_use">출력</label>
+                <input type="checkbox" name="de_mobile_type6_list_use" value="1" id="de_mobile_type6_list_use" <?php echo $default['de_mobile_type6_list_use']?"checked":""; ?>>
+                <label for="de_mobile_type6_list_skin">스킨</label>
+                <select id="de_mobile_type6_list_skin" name="de_mobile_type6_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_MSHOP_SKIN_PATH, $default['de_mobile_type6_list_skin']); ?>
+                </select>
+                <label for="de_mobile_type6_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_mobile_type6_list_mod" value="<?php echo get_sanitize_input($default['de_mobile_type6_list_mod']); ?>" id="de_mobile_type6_list_mod" class="frm_input" size="3">
+                 <label for="de_mobile_type6_list_row">출력할 줄 수</label>
+                <input type="text" name="de_mobile_type6_list_row" value="<?php echo get_sanitize_input($default['de_mobile_type6_list_row']); ?>" id="de_mobile_type6_list_row" class="frm_input" size="3">
+                <label for="de_mobile_type6_img_width">이미지 폭</label>
+                <input type="text" name="de_mobile_type6_img_width" value="<?php echo get_sanitize_input($default['de_mobile_type6_img_width']); ?>" id="de_mobile_type6_img_width" class="frm_input" size="3">
+                <label for="de_mobile_type6_img_height">이미지 높이</label>
+                <input type="text" name="de_mobile_type6_img_height" value="<?php echo get_sanitize_input($default['de_mobile_type6_img_height']); ?>" id="de_mobile_type6_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">수입과일</th>
+            <td>
+                <label for="de_mobile_type7_list_use">출력</label>
+                <input type="checkbox" name="de_mobile_type7_list_use" value="1" id="de_mobile_type7_list_use" <?php echo $default['de_mobile_type7_list_use']?"checked":""; ?>>
+                <label for="de_mobile_type7_list_skin">스킨</label>
+                <select id="de_mobile_type7_list_skin" name="de_mobile_type7_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_MSHOP_SKIN_PATH, $default['de_mobile_type7_list_skin']); ?>
+                </select>
+                <label for="de_mobile_type7_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_mobile_type7_list_mod" value="<?php echo get_sanitize_input($default['de_mobile_type7_list_mod']); ?>" id="de_mobile_type7_list_mod" class="frm_input" size="3">
+                 <label for="de_mobile_type7_list_row">출력할 줄 수</label>
+                <input type="text" name="de_mobile_type7_list_row" value="<?php echo get_sanitize_input($default['de_mobile_type7_list_row']); ?>" id="de_mobile_type7_list_row" class="frm_input" size="3">
+                <label for="de_mobile_type7_img_width">이미지 폭</label>
+                <input type="text" name="de_mobile_type7_img_width" value="<?php echo get_sanitize_input($default['de_mobile_type7_img_width']); ?>" id="de_mobile_type7_img_width" class="frm_input" size="3">
+                <label for="de_mobile_type7_img_height">이미지 높이</label>
+                <input type="text" name="de_mobile_type7_img_height" value="<?php echo get_sanitize_input($default['de_mobile_type7_img_height']); ?>" id="de_mobile_type7_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">과일선물</th>
+            <td>
+                <label for="de_mobile_type8_list_use">출력</label>
+                <input type="checkbox" name="de_mobile_type8_list_use" value="1" id="de_mobile_type8_list_use" <?php echo $default['de_mobile_type8_list_use']?"checked":""; ?>>
+                <label for="de_mobile_type8_list_skin">스킨</label>
+                <select id="de_mobile_type8_list_skin" name="de_mobile_type8_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_MSHOP_SKIN_PATH, $default['de_mobile_type8_list_skin']); ?>
+                </select>
+                <label for="de_mobile_type8_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_mobile_type8_list_mod" value="<?php echo get_sanitize_input($default['de_mobile_type8_list_mod']); ?>" id="de_mobile_type8_list_mod" class="frm_input" size="3">
+                 <label for="de_mobile_type8_list_row">출력할 줄 수</label>
+                <input type="text" name="de_mobile_type8_list_row" value="<?php echo get_sanitize_input($default['de_mobile_type8_list_row']); ?>" id="de_mobile_type8_list_row" class="frm_input" size="3">
+                <label for="de_mobile_type8_img_width">이미지 폭</label>
+                <input type="text" name="de_mobile_type8_img_width" value="<?php echo get_sanitize_input($default['de_mobile_type8_img_width']); ?>" id="de_mobile_type8_img_width" class="frm_input" size="3">
+                <label for="de_mobile_type8_img_height">이미지 높이</label>
+                <input type="text" name="de_mobile_type8_img_height" value="<?php echo get_sanitize_input($default['de_mobile_type8_img_height']); ?>" id="de_mobile_type8_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">과일주스</th>
+            <td>
+                <label for="de_mobile_type9_list_use">출력</label>
+                <input type="checkbox" name="de_mobile_type9_list_use" value="1" id="de_mobile_type9_list_use" <?php echo $default['de_mobile_type9_list_use']?"checked":""; ?>>
+                <label for="de_mobile_type9_list_skin">스킨</label>
+                <select id="de_mobile_type9_list_skin" name="de_mobile_type9_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_MSHOP_SKIN_PATH, $default['de_mobile_type9_list_skin']); ?>
+                </select>
+                <label for="de_mobile_type9_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_mobile_type9_list_mod" value="<?php echo get_sanitize_input($default['de_mobile_type9_list_mod']); ?>" id="de_mobile_type9_list_mod" class="frm_input" size="3">
+                 <label for="de_mobile_type9_list_row">출력할 줄 수</label>
+                <input type="text" name="de_mobile_type9_list_row" value="<?php echo get_sanitize_input($default['de_mobile_type9_list_row']); ?>" id="de_mobile_type9_list_row" class="frm_input" size="3">
+                <label for="de_mobile_type9_img_width">이미지 폭</label>
+                <input type="text" name="de_mobile_type9_img_width" value="<?php echo get_sanitize_input($default['de_mobile_type9_img_width']); ?>" id="de_mobile_type9_img_width" class="frm_input" size="3">
+                <label for="de_mobile_type9_img_height">이미지 높이</label>
+                <input type="text" name="de_mobile_type9_img_height" value="<?php echo get_sanitize_input($default['de_mobile_type9_img_height']); ?>" id="de_mobile_type9_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">대용량 과일</th>
+            <td>
+                <label for="de_mobile_type10_list_use">출력</label>
+                <input type="checkbox" name="de_mobile_type10_list_use" value="1" id="de_mobile_type10_list_use" <?php echo $default['de_mobile_type10_list_use']?"checked":""; ?>>
+                <label for="de_mobile_type10_list_skin">스킨</label>
+                <select id="de_mobile_type10_list_skin" name="de_mobile_type10_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_MSHOP_SKIN_PATH, $default['de_mobile_type10_list_skin']); ?>
+                </select>
+                <label for="de_mobile_type10_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_mobile_type10_list_mod" value="<?php echo get_sanitize_input($default['de_mobile_type10_list_mod']); ?>" id="de_mobile_type10_list_mod" class="frm_input" size="3">
+                 <label for="de_mobile_type10_list_row">출력할 줄 수</label>
+                <input type="text" name="de_mobile_type10_list_row" value="<?php echo get_sanitize_input($default['de_mobile_type10_list_row']); ?>" id="de_mobile_type10_list_row" class="frm_input" size="3">
+                <label for="de_mobile_type10_img_width">이미지 폭</label>
+                <input type="text" name="de_mobile_type10_img_width" value="<?php echo get_sanitize_input($default['de_mobile_type10_img_width']); ?>" id="de_mobile_type10_img_width" class="frm_input" size="3">
+                <label for="de_mobile_type10_img_height">이미지 높이</label>
+                <input type="text" name="de_mobile_type10_img_height" value="<?php echo get_sanitize_input($default['de_mobile_type10_img_height']); ?>" id="de_mobile_type10_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+
+        <tr>
+            <th scope="row">제철과일</th>
+            <td>
+                <label for="de_mobile_type11_list_use">출력</label>
+                <input type="checkbox" name="de_mobile_type11_list_use" value="1" id="de_mobile_type11_list_use" <?php echo $default['de_mobile_type11_list_use']?"checked":""; ?>>
+                <label for="de_mobile_type11_list_skin">스킨</label>
+                <select id="de_mobile_type11_list_skin" name="de_mobile_type11_list_skin">
+                    <?php echo get_list_skin_options("^main.[0-9]+\.skin\.php", G5_MSHOP_SKIN_PATH, $default['de_mobile_type11_list_skin']); ?>
+                </select>
+                <label for="de_mobile_type11_list_mod">1줄당 이미지 수</label>
+                <input type="text" name="de_mobile_type11_list_mod" value="<?php echo get_sanitize_input($default['de_mobile_type11_list_mod']); ?>" id="de_mobile_type11_list_mod" class="frm_input" size="3">
+                 <label for="de_mobile_type11_list_row">출력할 줄 수</label>
+                <input type="text" name="de_mobile_type11_list_row" value="<?php echo get_sanitize_input($default['de_mobile_type11_list_row']); ?>" id="de_mobile_type11_list_row" class="frm_input" size="3">
+                <label for="de_mobile_type11_img_width">이미지 폭</label>
+                <input type="text" name="de_mobile_type11_img_width" value="<?php echo get_sanitize_input($default['de_mobile_type11_img_width']); ?>" id="de_mobile_type11_img_width" class="frm_input" size="3">
+                <label for="de_mobile_type11_img_height">이미지 높이</label>
+                <input type="text" name="de_mobile_type11_img_height" value="<?php echo get_sanitize_input($default['de_mobile_type11_img_height']); ?>" id="de_mobile_type11_img_height" class="frm_input" size="3">
+            </td>
+        </tr>
+        
         </tbody>
         </table>
     </div>

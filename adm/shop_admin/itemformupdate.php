@@ -325,6 +325,12 @@ $check_sanitize_keys = array(
 'it_type3',             // 상품유형(신상품)
 'it_type4',             // 상품유형(인기)
 'it_type5',             // 상품유형(할인)
+'it_type6',
+'it_type7',
+'it_type8',
+'it_type9',
+'it_type10',
+'it_type11'
 );
 
 foreach( $check_sanitize_keys as $key ){
@@ -354,6 +360,12 @@ $sql_common = " ca_id               = '$ca_id',
                 it_type3            = '$it_type3',
                 it_type4            = '$it_type4',
                 it_type5            = '$it_type5',
+                it_type6            = '$it_type6',
+                it_type7            = '$it_type7',
+                it_type8            = '$it_type8',
+                it_type9            = '$it_type9',
+                it_type10            = '$it_type10',
+                it_type11            = '$it_type11',
                 it_basic            = '$it_basic',
                 it_explan           = '$it_explan',
                 it_explan2          = '".strip_tags(trim(clean_xss_attributes($it_explan)))."',
@@ -537,7 +549,7 @@ if(is_checked('chk_ca_it_skin'))                $ca_fields .= " , it_skin = '$it
 if(is_checked('chk_ca_it_mobile_skin'))         $ca_fields .= " , it_mobile_skin = '$it_mobile_skin' ";
 if(is_checked('chk_ca_it_basic'))               $ca_fields .= " , it_basic = '$it_basic' ";
 if(is_checked('chk_ca_it_order'))               $ca_fields .= " , it_order = '$it_order' ";
-if(is_checked('chk_ca_it_type'))                $ca_fields .= " , it_type1 = '$it_type1', it_type2 = '$it_type2', it_type3 = '$it_type3', it_type4 = '$it_type4', it_type5 = '$it_type5' ";
+if(is_checked('chk_ca_it_type'))                $ca_fields .= " , it_type1 = '$it_type1', it_type2 = '$it_type2', it_type3 = '$it_type3', it_type4 = '$it_type4', it_type5 = '$it_type5' , it_type6 = '$it_type6', it_type7 = '$it_type7,'it_type8 = '$it_type8' , it_type9 = '$it_type9', it_type10 = '$it_type10' , it_type11 = '$it_type11'";
 if(is_checked('chk_ca_it_maker'))               $ca_fields .= " , it_maker = '$it_maker' ";
 if(is_checked('chk_ca_it_origin'))              $ca_fields .= " , it_origin = '$it_origin' ";
 if(is_checked('chk_ca_it_brand'))               $ca_fields .= " , it_brand = '$it_brand' ";
@@ -589,7 +601,7 @@ if(is_checked('chk_all_it_skin'))                $all_fields .= " , it_skin = '$
 if(is_checked('chk_all_it_mobile_skin'))         $all_fields .= " , it_mobile_skin = '$it_mobile_skin' ";
 if(is_checked('chk_all_it_basic'))               $all_fields .= " , it_basic = '$it_basic' ";
 if(is_checked('chk_all_it_order'))               $all_fields .= " , it_order = '$it_order' ";
-if(is_checked('chk_all_it_type'))                $all_fields .= " , it_type1 = '$it_type1', it_type2 = '$it_type2', it_type3 = '$it_type3', it_type4 = '$it_type4', it_type5 = '$it_type5' ";
+if(is_checked('chk_all_it_type'))                $all_fields .= " , it_type1 = '$it_type1', it_type2 = '$it_type2', it_type3 = '$it_type3', it_type4 = '$it_type4', it_type5 = '$it_type5' , it_type6 = '$it_type6', it_type7 = '$it_type7,'it_type8 = '$it_type8' , it_type9 = '$it_type9', it_type10 = '$it_type10' , it_type11 = '$it_type11'";
 if(is_checked('chk_all_it_maker'))               $all_fields .= " , it_maker = '$it_maker' ";
 if(is_checked('chk_all_it_origin'))              $all_fields .= " , it_origin = '$it_origin' ";
 if(is_checked('chk_all_it_brand'))               $all_fields .= " , it_brand = '$it_brand' ";

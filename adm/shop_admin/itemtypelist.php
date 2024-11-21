@@ -68,6 +68,12 @@ $sql  = " select it_id,
                  it_type3,
                  it_type4,
                  it_type5,
+                 it_type6,
+                 it_type7,
+                 it_type8,
+                 it_type9,
+                 it_type10,
+                 it_type11,
                  ca_id
           $sql_common
           $sql_order
@@ -135,6 +141,12 @@ $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목�
         <th scope="col"><?php echo subject_sort_link("it_type3", $qstr, 1); ?>신규<br>상품</a></th>
         <th scope="col"><?php echo subject_sort_link("it_type4", $qstr, 1); ?>인기<br>상품</a></th>
         <th scope="col"><?php echo subject_sort_link("it_type5", $qstr, 1); ?>할인<br>상품</a></th>
+        <th scope="col"><?php echo subject_sort_link("it_type6", $qstr, 1); ?>국산과일</a></th>
+        <th scope="col"><?php echo subject_sort_link("it_type5", $qstr, 1); ?>수입과일</a></th>
+        <th scope="col"><?php echo subject_sort_link("it_type5", $qstr, 1); ?>과일선물</a></th>
+        <th scope="col"><?php echo subject_sort_link("it_type5", $qstr, 1); ?>과일주스</a></th>
+        <th scope="col"><?php echo subject_sort_link("it_type5", $qstr, 1); ?>대용량과일</a></th>
+        <th scope="col"><?php echo subject_sort_link("it_type5", $qstr, 1); ?>제철과일</a></th>
         <th scope="col">관리</th>
     </tr>
     </thead>
@@ -169,6 +181,30 @@ $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목�
         <td class="td_chk2">
             <label for="type5_<?php echo $i; ?>" class="sound_only">할인상품</label>
             <input type="checkbox" name="it_type5[<?php echo $i; ?>]" value="1" id="type5_<?php echo $i; ?>" <?php echo ($row['it_type5'] ? 'checked' : ''); ?>>
+        </td>
+        <td class="td_chk2">
+            <label for="type6_<?php echo $i; ?>" class="sound_only">국산과일</label>
+            <input type="checkbox" name="it_type6[<?php echo $i; ?>]" value="1" id="type6_<?php echo $i; ?>" <?php echo ($row['it_type6'] ? 'checked' : ''); ?>>
+        </td>
+        <td class="td_chk2">
+            <label for="type7_<?php echo $i; ?>" class="sound_only">수입과일</label>
+            <input type="checkbox" name="it_type7[<?php echo $i; ?>]" value="1" id="type7_<?php echo $i; ?>" <?php echo ($row['it_type7'] ? 'checked' : ''); ?>>
+        </td>
+        <td class="td_chk2">
+            <label for="type8_<?php echo $i; ?>" class="sound_only">과일선물</label>
+            <input type="checkbox" name="it_type8[<?php echo $i; ?>]" value="1" id="type8_<?php echo $i; ?>" <?php echo ($row['it_type8'] ? 'checked' : ''); ?>>
+        </td>
+        <td class="td_chk2">
+            <label for="type9_<?php echo $i; ?>" class="sound_only">과일주스</label>
+            <input type="checkbox" name="it_type9[<?php echo $i; ?>]" value="1" id="type9_<?php echo $i; ?>" <?php echo ($row['it_type9'] ? 'checked' : ''); ?>>
+        </td>
+        <td class="td_chk2">
+            <label for="type10_<?php echo $i; ?>" class="sound_only">대용량과일</label>
+            <input type="checkbox" name="it_type10[<?php echo $i; ?>]" value="1" id="type10_<?php echo $i; ?>" <?php echo ($row['it_type10'] ? 'checked' : ''); ?>>
+        </td>
+        <td class="td_chk2">
+            <label for="type11_<?php echo $i; ?>" class="sound_only">제철과일</label>
+            <input type="checkbox" name="it_type11[<?php echo $i; ?>]" value="1" id="type11_<?php echo $i; ?>" <?php echo ($row['it_type11'] ? 'checked' : ''); ?>>
         </td>
         <td class="td_mng td_mng_s">
             <a href="./itemform.php?w=u&amp;it_id=<?php echo $row['it_id']; ?>&amp;ca_id=<?php echo $row['ca_id']; ?>&amp;<?php echo $qstr; ?>" class="btn btn_03"><span class="sound_only"><?php echo cut_str(stripslashes($row['it_name']), 60, "&#133"); ?> </span>수정</a>
