@@ -17,6 +17,18 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 </div>
 <!-- 메인 배너 끝 -->
 
+
+<div class="main_wrap">
+        <h2>카테고리별 추천 상품</h2>
+</div>
+
+<div class="container">
+    <!-- 카테고리별 추천 상품 시작 -->
+    <?php include_once(G5_SHOP_SKIN_PATH.'/category_recommendation.php'); ?>
+    <!-- 카테고리별 추천 상품 시작 -->
+</div>
+
+
 <div class="container">
     <?php if($default['de_type3_list_use']) { ?>
 
@@ -132,7 +144,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     </section>
     <!-- 할인상품 끝 -->
     <?php } ?>
-</div>
+
 
 <!-- SNS 배너 시작 -->
     <div class="main_wrap">
@@ -140,11 +152,13 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         <h3>사진으로 만나는 거창한무역의 제품과 여정을 확인해보세요.</h3>
     </div>
 
-<div class="container_card">
-    <!-- 카드 슬라이더 시작 -->
-    <?php include_once(G5_SHOP_SKIN_PATH.'/card_slider.skin.php'); ?>
-    <!-- 카드 슬라이더 끝 -->
+    <div class="container_card">
+        <!-- 카드 슬라이더 시작 -->
+        <?php include_once(G5_SHOP_SKIN_PATH.'/card_slider.skin.php'); ?>
+        <!-- 카드 슬라이더 끝 -->
+    </div>
 </div>
+
 
 <script>
     $("#container").removeClass("container").addClass("idx-container");

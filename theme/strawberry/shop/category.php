@@ -75,22 +75,22 @@ function get_mshop_category($ca_id, $len)
 $(function () {
     var $category = $("#category");
 
-    // 페이지 로드 시 카테고리 기본적으로 숨겨둔다
+    // 페이지 로드 시 카테고리를 기본적으로 숨김
     $category.hide();
 
-    // 메뉴 열기 버튼 클릭 시 카테고리 표시 (애니메이션 추가)
+    // 메뉴 열기 버튼 클릭 시 카테고리 표시
     $("#menu_open").on("click", function() {
-        $category.fadeIn(300); // 300ms 동안 부드럽게 보이게 처리
+        $category.fadeIn(200); // 페이드인 효과로 카테고리를 보이게 함
     });
 
-    // 카테고리 닫기 버튼 클릭 시 카테고리 숨기기 (애니메이션 추가)
+    // 카테고리 닫기 버튼 클릭 시 카테고리 숨기기
     $("#category .close_btn").on("click", function(){
-        $category.fadeOut(300); // 300ms 동안 부드럽게 숨기기
+        $category.fadeOut(200); // 페이드아웃 효과로 카테고리를 숨김
     });
 
     // 서브 카테고리 토글 버튼 클릭 시 서브 카테고리 보이기/숨기기
     $("#category .ct_sb_btn").on("click", function(){
-        $(this).next(".sub_cate").toggle();
+        $(this).next(".sub_cate").slideToggle(200); // 서브 카테고리 페이드 토글
     });
 });
 
@@ -98,6 +98,6 @@ $(function () {
 $(document).mouseup(function (e){
     var container = $("#category");
     if(container.has(e.target).length === 0)
-        container.fadeOut(300); // 300ms 동안 부드럽게 숨기기
+        container.hide();
 });
 </script>
