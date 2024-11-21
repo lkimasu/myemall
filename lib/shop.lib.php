@@ -1796,7 +1796,13 @@ function get_sendcost($cart_id, $selected=1)
         $send_cost_limit = explode(";", $default['de_send_cost_limit']);
         $send_cost_list  = explode(";", $default['de_send_cost_list']);
         $send_cost = 0;
-       
+        for ($k=0; $k<count($send_cost_limit); $k++) {
+            // 총판매금액이 배송비 상한가 보다 작다면
+            if ($total_price < preg_replace('/[^0-9]/', '', $send_cost_limit[$k])) {
+                $send_cost = preg_replace('/[^0-9]/', '', $send_cost_list[$k]);
+                break;
+            }
+        }
     }
 
     return ($total_send_cost + $send_cost);
@@ -1937,8 +1943,9 @@ function is_soldout($it_id, $is_cache=false)
     // 상품정보
     $it = get_shop_item($it_id, $is_cache);
 
-    if($it['it_soldout'] || $it['it_stock_qty'] <= 0)
+    if ($it['it_soldout']) {
         return true;
+    }
 
     $count = 0;
     $soldout = false;
@@ -1947,7 +1954,7 @@ function is_soldout($it_id, $is_cache=false)
     $sql = " select count(*) as cnt from {$g5['g5_shop_item_option_table']} where it_id = '$it_id' and io_type = '0' ";
     $row = sql_fetch($sql);
 
-    if($row['cnt']) {
+    if (isset($row['cnt']) && $row['cnt']) {
         $sql = " select io_id, io_type, io_stock_qty
                     from {$g5['g5_shop_item_option_table']}
                     where it_id = '$it_id'
@@ -1966,12 +1973,18 @@ function is_soldout($it_id, $is_cache=false)
         // 모든 선택옵션 품절이면 상품 품절
         if($i == $count)
             $soldout = true;
-    } else {
-        // 상품 재고수량
-        $stock_qty = get_it_stock_qty($it_id);
 
-        if($stock_qty <= 0)
+    } else {
+
+        if ($it['it_stock_qty'] <= 0) {
             $soldout = true;
+        } else {
+            // 상품 재고수량
+            $stock_qty = get_it_stock_qty($it_id);
+
+            if($stock_qty <= 0)
+                $soldout = true;
+        }
     }
     
     $cache[$key] = $soldout;
@@ -2474,6 +2487,15 @@ function shop_is_taxsave($od, $is_view_receipt=false){
 	return 0;
 }
 
+// 해당 주문에 현금영수증이 발급되었다면 마이페이지 주문
+function is_order_cashreceipt($od) {
+    if ($od['od_cash'] && $od['od_cash_no'] && $od['od_cash_info'] && $od['od_receipt_price'] && in_array($od['od_settle_case'], array('무통장', '계좌이체', '가상계좌'))) {
+        return true;
+    }
+
+    return false;
+}
+
 // 장바구니 금액 체크 $is_price_update 가 true 이면 장바구니 가격 업데이트한다. 
 function before_check_cart_price($s_cart_id, $is_ct_select_condition=false, $is_price_update=false, $is_item_cache=false){
     global $g5, $default, $config;
@@ -2629,6 +2651,15 @@ function make_order_field($data, $exclude)
     return $field;
 }
 
+function shop_order_data_fields($is_personal=0) {
+
+    if ($is_personal){
+        return array('pp_name', 'pp_email', 'pp_hp', 'pp_settle_case');
+    }
+
+    return array('od_price', 'od_name', 'od_tel', 'od_hp', 'od_email', 'od_memo', 'od_settle_case', 'max_temp_point', 'od_temp_point', 'od_bank_account', 'od_deposit_name', 'od_test', 'od_ip', 'od_zip', 'od_addr1', 'od_addr2', 'od_addr3', 'od_addr_jibeon', 'od_b_name', 'od_b_tel', 'od_b_hp', 'od_b_addr1', 'od_b_addr2', 'od_b_addr3', 'od_b_addr_jibeon', 'od_b_zip', 'od_send_cost', 'od_send_cost2', 'od_hope_date');
+}
+
 // 주문요청기록 로그를 남깁니다.
 function add_order_post_log($msg='', $code='error'){
     global $g5, $member;
@@ -2716,7 +2747,7 @@ function is_inicis_order_pay($type){
     return false;
 }
 
-function get_item_images_info($it, $size=array(), $image_width, $image_height){
+function get_item_images_info($it, $size=array(), $image_width=0, $image_height=0){
     
     if( !(is_array($it) && $it) ) return array();
     $images = array();
@@ -2737,6 +2768,39 @@ function get_item_images_info($it, $size=array(), $image_width, $image_height){
         }
     }
     return $images; 
+}
+
+function check_payment_method($od_settle_case) {
+    global $default;
+
+    $is_block = 0;
+
+    if ($od_settle_case === '무통장') {
+        if (! $default['de_bank_use']) {
+            $is_block = 1;
+        }
+    } else if ($od_settle_case === '계좌이체') {
+        if (! $default['de_iche_use']) {
+            $is_block = 1;
+        }
+    } else if ($od_settle_case === '가상계좌') {
+        if (! $default['de_vbank_use']) {
+            $is_block = 1;
+        }
+    } else if ($od_settle_case === '휴대폰') {
+        if (! $default['de_hp_use']) {
+            $is_block = 1;
+        }
+    } else if ($od_settle_case === '신용카드') {
+        if (! $default['de_card_use']) {
+            $is_block = 1;
+        }
+    }
+
+    if ($is_block) {
+        alert($od_settle_case.' 은 결제수단에서 사용이 금지되어 있습니다.', G5_SHOP_URL);
+        die('');
+    }
 }
 
 //결제방식 이름을 체크하여 치환 대상인 문자열은 따로 리턴합니다.
