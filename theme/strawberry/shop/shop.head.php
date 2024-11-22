@@ -45,13 +45,16 @@ $q = isset($_GET['q']) ? clean_xss_tags($_GET['q'], 1, 1) : '';
             <li class="tnb_left"><a href="<?php echo G5_SHOP_URL; ?>/itemuselist.php">사용후기</a></li>
             <li class="tnb_left"><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php">쿠폰존</a></li>
              <?php if ($is_member) { ?>
-
+            <li><a href="<?php echo G5_SHOP_URL; ?>/cart.php">장바구니</a></li>
+            <li><a href="<?php echo G5_SHOP_URL; ?>/mypage.php">마이페이지</a></li>
             <li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php">정보수정</a></li>
             <li><a href="<?php echo G5_BBS_URL; ?>/logout.php?url=shop">로그아웃</a></li>
             <?php if ($is_admin == 'super') {  ?>
             <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL; ?>/shop_admin/"><b>관리자</b></a></li>
             <?php }  ?>
             <?php } else { ?>
+            <li><a href="<?php echo G5_SHOP_URL; ?>/cart.php">장바구니</a></li>
+            <li><a href="<?php echo G5_SHOP_URL; ?>/mypage.php">마이페이지</a></li>
             <li><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a></li>
             <li><a href="<?php echo G5_BBS_URL; ?>/login.php?url=<?php echo $urlencode; ?>"><b>로그인</b></a></li>
             <?php } ?>

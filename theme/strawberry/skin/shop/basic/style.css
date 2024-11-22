@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* aside:gnb */
-#gnb {background:#fff;border-bottom:1px solid #d9d9d9;position:relative;}
+#gnb {background:#fff;border-bottom:1px solid #d9d9d9;position:relative; border-top: 1px solid #d9d9d9;}
 #gnb h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #gnb button{border:0;background:none;height:50px;width:60px;font-size:15px;border-left:1px solid #e8e8e8;border-right:1px solid #e8e8e8;vertical-align:top;color:#ff0837;}
 #gnb_1dul{margin:0 auto;max-width:1200px;position:relative}

@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* 새글 스킨 (latest) */
-.lat {position:relative;width:1200px;margin:0 auto;line-height:60px}
+.lat {display: none; position:relative;width:1200px;margin:0 auto;line-height:60px}
 .lat:after {display:block;visibility:hidden;clear:both;content:""} 
 .lat .bx-wrapper {float:left;width:1000px;margin:0 0 10px;padding:0;list-style:none;}
 
