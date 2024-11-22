@@ -55,16 +55,16 @@ outline: none;
 #hd_qnb h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #hd_qnb div {text-align:center;letter-spacing:-4px}
 #hd_qnb a {letter-spacing:0}
-#hd_wrapper {position:relative;margin:0 auto;padding:20px 0;height:115px;width:1200px;zoom:1}
+#hd_wrapper {position:relative;margin:0 auto;padding:20px 0;width:1200px;zoom:1}
 #hd_wrapper:after {display:block;visibility:hidden;clear:both;content:""}
 #logo {float:left;padding:10px 0 0}
 
-#hd_sch {position:absolute;top:35px;left:50%;width:430px;margin-left:-215px;background:#fff;border-radius:50px}
+#hd_sch {position:absolute;top:60px;left:50%;width:430px;margin-left:-215px;background:#fff;border-radius:50px}
 #hd_sch h3 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #hd_sch #sch_str {padding-left:20px;height:45px;background:transparent;border:0;width:380px;float:left;font-size:1.25em;vertical-align:top}
 #hd_sch #sch_submit {height:45px;border:0;background:transparent;border:0;border-left:0;color:#ff0837;width:50px;float:left;cursor:pointer;;font-size:18px;vertical-align:top}
 
-#hd_btn{float:right;margin-top:10px}
+#hd_btn{float:right;margin-top:40px}
 #hd_btn a{display:inline-block;text-align:center;width:50px;height:50px;border:0;vertical-align:top}
 #hd_btn .btn_cart .icon{margin-top:18px;position:relative;width:22px;line-height:19px;border:1px solid #fff;display:inline-block;border-radius:0 0 3px 3px;color:#fff;font-size:0.92em;  
 -webkit-transition: all .2s ease-in-out;
@@ -167,6 +167,7 @@ border-color: transparent transparent transparent rgba(0,0,0,0.7);}
 .container {position:relative;height:auto !important;margin:20px auto;width:1240px;zoom:1;}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 .view-container #wrapper_title,.view-container #sct_location {display:none}
+
 
 /* 텍스트 크기 조절 */
 #text_size {display:none;position:absolute;top:-31px;left:-1px}

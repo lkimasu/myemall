@@ -11,6 +11,8 @@ if (!defined('_INDEX_')) define('_INDEX_', true);
 include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 ?>
 
+
+<div class="container">
 <!-- 메인 배너 시작 -->
 <div class="main-banner">
     <?php echo display_banner('메인', 'mainbanner.10.skin.php'); ?>
@@ -20,16 +22,13 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 
 <!-- <div class="main_wrap">
         <h2>카테고리별 추천 상품</h2>
-</div>
-
-<div class="container"> -->
-    <!-- 카테고리별 추천 상품 시작 -->
-    <?php /* include_once(G5_SHOP_SKIN_PATH.'/category_recommendation.php'); */ ?>
-    <!-- 카테고리별 추천 상품 시작 -->
-<!-- </div> -->
+</div> -->
 
 
-<div class="container">
+<!-- 카테고리별 추천 상품 시작 -->
+<?php /* include_once(G5_SHOP_SKIN_PATH.'/category_recommendation.php'); */ ?>
+<!-- 카테고리별 추천 상품 시작 -->
+
     <?php if($default['de_type3_list_use']) { ?>
 
     <!-- 최신상품 시작 -->

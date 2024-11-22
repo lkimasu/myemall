@@ -1,54 +1,11 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카테고리별 추천 상품</title>
-    <style>
-        /* 기본 스타일 */
-        .category-menu {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
+<?php
+if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
-        .category-menu button {
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            cursor: pointer;
-        }
+// 스타일과 스크립트 추가
+add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 0);
+?>
 
-        .category-menu button:hover {
-            background-color: #ddd;
-        }
-
-        .category-content {
-            padding: 10px;
-            display: none;
-        }
-
-        .category-content.active {
-            display: block;
-        }
-
-        .styled-link{
-            display: block;
-            width: 1240px;
-            height: 46px;
-            margin: 20px auto 0px;
-            background: #fff;
-            border: 1px solid #eee;
-            color: var(--font-black-color01);
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 44px;
-            text-align: center;
-        }
-
-
-    </style>
-    <script>
+<script>
         // 카테고리 이름과 타입 숫자 매핑
         const categoryMap = {
             '국산과일': 6,
@@ -79,6 +36,15 @@
 
             // 링크 업데이트
             updateLink();
+
+            // 모든 버튼에서 active 클래스 제거
+            document.querySelectorAll('.category-menu button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // 클릭된 버튼에 active 클래스 추가
+            const selectedButton = document.querySelector(`.category-menu button[onclick="showCategoryContent('${category}')"]`);
+            selectedButton.classList.add('active');
         }
 
         // 링크 업데이트
@@ -92,9 +58,7 @@
         window.onload = function() {
             showCategoryContent('국산과일'); // 기본값으로 "국산과일" 표시
         };
-    </script>
-</head>
-<body>
+</script>
 
 <div class="category-menu">
     <button onclick="showCategoryContent('국산과일')">국산과일</button>
@@ -197,5 +161,3 @@
         과일 전체보기(링크)
     </a>
 </div>
-
-
