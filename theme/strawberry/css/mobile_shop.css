@@ -98,6 +98,7 @@ box-shadow: 0 0 5px rgba(55,55,5,0.4);}
 .menu .menu_close {position:absolute;top:0;right:0;width:50px;height:50px;background:none;color:#ccc;font-size:15px;border:0;z-index:199999}
 .menu .con{background:#fff;border-bottom: 1px solid #eaeaea;margin:10px 0}
 
+
 .cate a {display:block;color:#333;padding:0 20px;}
 .cate li{position:relative;line-height:45px;border-bottom:1px solid #efefef;}
 .cate li button{position:absolute;top:0;right:0;background:url;border:0;width:30px;height:50px;overflow:hidden;border:0;background:url(../img/mobile/gnb_bg.png) no-repeat 50% 50%;text-indent:-9999px}

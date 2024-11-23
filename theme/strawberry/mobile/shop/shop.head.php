@@ -74,7 +74,7 @@ add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
             </script>
         </div>
     </div>
-    <?php include_once(G5_MSHOP_SKIN_PATH.'/boxcategory.skin.php'); // 상품분류 ?>
+    <?php  include_once(G5_MSHOP_SKIN_PATH.'/boxcategory.skin.php'); // 상품분류?>
     <?php include_once(G5_THEME_MSHOP_PATH.'/category.php'); // 분류 ?>
 
 
