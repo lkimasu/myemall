@@ -15,7 +15,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 </div>
 <!-- 메인 배너 끝 -->
 
-
 <!--<div class="main_wrap">
         <h2>카테고리별 추천 상품</h2>
 </div>

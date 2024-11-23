@@ -79,17 +79,6 @@ add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
 
 
     <script>
-    $( document ).ready( function() {
-        var jbOffset = $( '#hd_wr' ).offset();
-        $( window ).scroll( function() {
-            if ( $( document ).scrollTop() > jbOffset.top ) {
-                $( '#hd_wr' ).addClass( 'fixed' );
-            }
-            else {
-                $( '#hd_wr' ).removeClass( 'fixed' );
-            }
-        });
-    });
 
     $("#btn_hdcate").on("click", function() {
         $("#category").show();
