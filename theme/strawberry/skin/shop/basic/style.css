@@ -18,6 +18,11 @@
 .gnb_1dli_over .gnb_2da {display:block;padding:5px 10px;line-height:20px;font-size:1.083em}
 .gnb_2da:focus, .gnb_2da:hover {text-decoration:none;color:#be334a}
 
+
+
+
+
+
 /* 오늘 본 상품 */
 #stv{position:relative}
 #stv_pg {display:block;;text-align:center;margin:10px 0 0;line-height:20px}
@@ -44,7 +49,7 @@
 #scomm{padding:20px;}
 #scomm h2{margin:0 0 5px;}
 #scomm li {display:block;margin:3px}
-#scomm li a{line-height:25px;color:#555}main_bn
+#scomm li a{line-height:25px;color:#555}
 #scomm li a:hover{color:#be334a}
 
 /* 메인배너 */

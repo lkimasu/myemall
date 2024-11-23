@@ -1,7 +1,7 @@
 <?php
 include_once('./_common.php');
 
-define("_INDEX_", TRUE);
+
 
 include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 ?>
@@ -25,8 +25,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     <?php /* include_once(G5_MSHOP_SKIN_PATH.'/category_recommendation.php'); */ ?>
     <!-- 카테고리별 추천 상품 시작 -->
 <!-- </div> -->
-
-
 
 <?php if($default['de_mobile_type1_list_use']) { ?>
 <div class="sct_wrap">

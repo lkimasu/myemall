@@ -91,7 +91,7 @@ $q = isset($_GET['q']) ? clean_xss_tags($_GET['q'], 1, 1) : '';
      
     </div>
     <?php include_once(G5_SHOP_SKIN_PATH.'/boxcategory.skin.php'); // 상품분류 ?>
-     <?php include_once(G5_THEME_SHOP_PATH.'/category.php'); // 분류 ?>
+    <?php include_once(G5_THEME_SHOP_PATH.'/category.php'); // 분류 ?>
 </div>
 
 <div id="wrapper">

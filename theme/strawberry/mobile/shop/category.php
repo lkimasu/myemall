@@ -133,14 +133,16 @@ function get_mshop_category($ca_id, $len)
 </div>
 
 <script>
-$(function (){
+$(function () {
+    var $category = $("#category");
+
+    // 버튼 클릭 시 서브 카테고리 보이기/숨기기
     $("button.sub_ct_toggle").on("click", function() {
         var $this = $(this);
         var $sub_ul = $this.closest("li").children("ul.sub_cate");
 
         if ($sub_ul.length > 0) {
             var txt = $this.text();
-
             if ($sub_ul.is(":visible")) {
                 txt = txt.replace(/닫기$/, "열기");
                 $this.removeClass("ct_cl").text(txt);
@@ -148,14 +150,31 @@ $(function (){
                 txt = txt.replace(/열기$/, "닫기");
                 $this.addClass("ct_cl").text(txt);
             }
-
             $sub_ul.toggle();
         }
     });
-        // 서브 카테고리 토글 버튼 클릭 시 서브 카테고리 보이기/숨기기
-        $("#category .ct_sb_btn").on("click", function(){
-        $(this).next(".sub_cate").slideToggle(200); // 서브 카테고리 페이드 토글
+
+    // 메뉴 열기 버튼 클릭 시 카테고리 표시
+    $("#menu_open").on("click", function() {
+        $category.fadeIn(200); // 페이드인 효과로 카테고리를 보이게 함
     });
 
+    // 카테고리 닫기 버튼 클릭 시 카테고리 숨기기
+    $("#category .close_btn").on("click", function(){
+        $category.fadeOut(200); // 페이드아웃 효과로 카테고리를 숨김
+    });
+
+    // 서브 카테고리 토글 버튼 클릭 시 서브 카테고리 보이기/숨기기
+    $("#category .ct_sb_btn").on("click", function(){
+        $(this).next(".sub_cate").slideToggle(200);
+    });
+
+    // 문서 밖을 클릭하면 카테고리 숨기기
+    $(document).mouseup(function (e) {
+        if ($category.has(e.target).length === 0) {
+            $category.hide();
+        }
+    });
 });
+
 </script>

@@ -1,5 +1,27 @@
 @charset "utf-8";
 
+
+
+#gnb {background:#fff;border-bottom:1px solid #d9d9d9;position:relative; border-top: 1px solid #d9d9d9;}
+#gnb h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
+#gnb button{border:0;background:none;height:50px;width:60px;font-size:15px;border-left:1px solid #e8e8e8;border-right:1px solid #e8e8e8;vertical-align:top;color:#ff0837;}
+#gnb_1dul{margin:0 auto;max-width:100%;position:relative}
+#gnb_1dul:after {display:block;visibility:hidden;clear:both;content:""}
+.gnb_1dli {float:left;display:inline-block; word-wrap: break-word;position:relative;vertical-align:top}
+.gnb_1dli_on {color:#fff;text-decoration:none}
+.gnb_1da {display:block;padding:0 20px;line-height:50px;font-weight:bold;font-size: 16px; color: #333; text-decoration:none;vertical-align:top;}
+.gnb_1da_cat {display:block;padding:0 20px;font-weight:bold;font-size: 16px; color: #333; text-decoration:none;vertical-align:top;}
+.gnb_1dam {background:url('img/gnb_bg.png')  center right no-repeat}
+.gnb_1dli_on .gnb_1da {position:relative;background-color:#f9fafb;color:#ff0837;text-decoration:none}
+.gnb_1dli_on .gnb_1dam {text-decoration:none}
+.gnb_2dul {display:none;z-index:1000;position:absolute;border:1px solid #787f89;padding:10px}
+.gnb_1dli_over .gnb_2dul, .gnb_1dli_over2 .gnb_2dul {display:block;width:150px;background:#fff}
+.gnb_2da {display:none}
+.gnb_1dli_over .gnb_2da {display:block;padding:5px 10px;line-height:20px;font-size:1.083em}
+.gnb_2da:focus, .gnb_2da:hover {text-decoration:none;color:#be334a}
+
+
+
 /* 오늘 본 상품 */
 #stv{display:none;position:absolute;bottom:55px;left:0;width:100%;z-index:60;background:#fff;padding:20px;border-top: 1px solid #e5e5e5;box-shadow: 0 -5px 5px rgba(0,0,0,0.06);}
 #stv h2 {font-size:1.25em}
@@ -15,7 +37,7 @@
 #stv .li_empty{text-align:center;padding:50px 0;color:#666;}
 #stv .btn_close{position:absolute;top:0;right:0;width:50px;height:50px;background:none;border:0;color:#ccc;font-size:15px}
 /*메인배너*/
-#main_bn{position:relative;}
+#main_bn{padding:80px 0; margin: 0 auto; max-width: 1200px; position: relative;}
 #main_bn img{width:100%;height:auto}
 #main_bn .bx-prev{position:absolute;top:50%;z-index:10;left:0;margin-top:-20px;background:url(img/btn_prev.png) no-repeat 50% 50%;width:40px;height:40px;background-size:50%;text-indent:-999px;overflow:hidden;opacity:0.6}
 #main_bn .bx-next{position:absolute;top:50%;z-index:10;right:0;margin-top:-20px;background:url(img/btn_next.png) no-repeat 50% 50%;width:40px;height:40px;background-size:50%;text-indent:-999px;overflow:hidden;opacity:0.6}
