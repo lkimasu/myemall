@@ -20,22 +20,11 @@
 .gnb_1dli_over .gnb_2da {display:block;padding:5px 10px;line-height:20px;font-size:1.083em}
 .gnb_2da:focus, .gnb_2da:hover {text-decoration:none;color:#be334a}
 
-.gnb-scroll {
-    display: flex;
-    overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
-    white-space: nowrap; /* 요소가 한 줄로 정렬되도록 설정 */
-    -webkit-overflow-scrolling: touch; /* iOS 스크롤 부드럽게 */
-    scrollbar-width: none; /* Firefox에서 스크롤 바 숨기기 */
-}
+.gnb-scroll {display: flex;overflow-x: auto; /* 가로 스크롤 가능하게 설정 */white-space: nowrap; /* 요소가 한 줄로 정렬되도록 설정 */-webkit-overflow-scrolling: touch; /* iOS 스크롤 부드럽게 */scrollbar-width: none; /* Firefox에서 스크롤 바 숨기기 */}
 
-.gnb-scroll::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
-}
+.gnb-scroll::-webkit-scrollbar {display: none; /* Chrome, Safari, Edge */}
 
-.gnb-scroll li {
-    flex: 0 0 auto; /* 각 카테고리가 내용에 맞게 너비를 가짐 */
-    margin-right: 10px; /* 각 카테고리 간격 조정 */
-}
+.gnb-scroll li {flex: 0 0 auto; /* 각 카테고리가 내용에 맞게 너비를 가짐 */margin-right: 10px; /* 각 카테고리 간격 조정 */}
 
 
 
@@ -93,6 +82,14 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 #sev .bx-prev {display: inline-block;position: absolute;top: 0;left: 0;width: 30px;height: 30px;margin-top: -40px;border: 1px solid #ddd;text-indent: -999px;overflow: hidden;background: url(img/btn_prev.png) no-repeat 50% 50% #fff;background-size: 20%;}
 #sev .bx-next {display: inline-block;position: absolute;top: 0;right: 0;width: 30px;height: 30px;margin-top: -40px;border: 1px solid #ddd;text-indent: -999px;overflow: hidden;background: url(img/btn_next.png) no-repeat 50% 50% #fff;background-size: 20%;}
 
+.category-menu {display: flex;gap: 5px;margin-bottom: 10px;justify-content: center; overflow-x: auto; /* 가로 스크롤 가능하게 설정 */ white-space: nowrap; /* 한 줄로 나열되도록 설정 */ -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */scrollbar-width: none; /* Firefox에서 스크롤 바 숨기기 */ }
+.category-menu::-webkit-scrollbar {display: none;}
+.category-menu button {flex: 0 0 auto; /* 버튼들이 한 줄에 나열되도록 설정 */padding: 8px; font-size: 14px;  border: none;  background: none;  cursor: pointer;}
+.category-menu button.active {color: #8dc63f; /* 초록색 글자 */border-bottom: 2px solid #8dc63f; /* 초록색 밑줄 */font-weight: bold;}
+.category-menu button:hover {background-color: #ddd;}
+.category-content {padding: 10px;display: none;}
+.category-content.active {display: block;}
+.styled-link {display: block;width: 90%; height: 40px;margin: 15px auto;background: #fff;border: 1px solid #eee;color: #333;font-size: 14px;font-weight: 500;line-height: 38px;text-align: center;}
 
 
 .main_wrap h1 {text-align:center;font-size:38px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}

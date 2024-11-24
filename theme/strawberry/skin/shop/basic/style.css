@@ -19,10 +19,6 @@
 .gnb_2da:focus, .gnb_2da:hover {text-decoration:none;color:#be334a}
 
 
-
-
-
-
 /* 오늘 본 상품 */
 #stv{position:relative}
 #stv_pg {display:block;;text-align:center;margin:10px 0 0;line-height:20px}

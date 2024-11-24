@@ -15,15 +15,15 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 </div>
 <!-- 메인 배너 끝 -->
 
-<!-- <div class="main_wrap">
+<div class="main_wrap">
         <h2>카테고리별 추천 상품</h2>
 </div>
 
-<div class="container"> -->
+<div class="container">
     <!-- 카테고리별 추천 상품 시작 -->
-    <?php /* include_once(G5_MSHOP_SKIN_PATH.'/category_recommendation.php'); */ ?>
+    <?php include_once(G5_MSHOP_SKIN_PATH.'/category_recommendation.php');?>
     <!-- 카테고리별 추천 상품 시작 -->
-<!-- </div> --> 
+</div>
 
 <?php if($default['de_mobile_type1_list_use']) { ?>
 <div class="sct_wrap">
