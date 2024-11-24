@@ -73,9 +73,9 @@ border: 1px solid #558ab7 !important;
 #tnb .tnb_shop a {color: #d50c0c;border-bottom: 1px solid #fff;}
 
 
-#hd_sch {position:absolute;top:50px;right:0%;width:300px;background:#eceae4;border-radius:50px; }
+#hd_sch {position:absolute;top:50px;right:0%;width:200px;background:#eceae4;border-radius:50px; }
 #hd_sch h3 {position:absolute;font-size:0;line-height:0;overflow:hidden}
-#hd_sch #sch_str {padding-left:15px;height:35px;background:transparent;border:0;width:250px;float:left;font-size:1.25em;vertical-align:top}
+#hd_sch #sch_str {padding-left:15px;height:35px;background:transparent;border:0;width:150px;float:left;font-size:1.25em;vertical-align:top}
 #hd_sch #sch_submit {height:35px;border:0;background:transparent;border:0;border-left:0;color:#ff0837;width:45px;float:left;cursor:pointer;;font-size:18px;vertical-align:top}
 
 
