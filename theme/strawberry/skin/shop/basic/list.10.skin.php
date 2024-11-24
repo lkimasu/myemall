@@ -31,6 +31,8 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
 
         echo "<div class=\"sct_img\">\n";
 
+        
+
         if ($this->href) {
             echo "<a href=\"{$this->href}{$row['it_id']}\" title=\"" . htmlspecialchars(stripslashes($row['it_name'])) . "\">\n";
         }
@@ -43,10 +45,12 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
             echo "</a>\n";
         }
 
+        
         if ($this->view_it_icon) {
             echo item_icon2($row);
         }
 
+    
         echo "<div class=\"sct_btn\"><div class=\"sct_btn_wr\"><button type=\"button\" class=\"btn_cart\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">장바구니</span><i class=\"fa fa-shopping-cart\"></i></button><button type=\"button\" class=\"btn_wish\" data-it_id=\"{$row['it_id']}\"><span class=\"sound_only\">위시리스트</span><i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i></button><button type=\"button\" class=\"btn_share\"><i class=\"fa fa-share-alt\" aria-hidden=\"true\"></i><span class=\"sound_only\">sns공유</span></button></div>\n";
 
         if ($this->view_sns) {
@@ -63,6 +67,8 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
 
         echo "</div>\n"; // sct_btn 닫기
 
+        
+
         echo "<div class=\"sct_cartop\"></div>\n";
 
         if ($this->view_it_id) {
@@ -76,6 +82,10 @@ add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>'
             echo "<a href=\"{$this->href}{$row['it_id']}\" class=\"sct_tit\" title=\"".htmlspecialchars(stripslashes($row['it_name']))."\">\n";
         }
 
+        if ($this->view_it_name) {
+            echo stripslashes($row['it_name'])."\n";
+        }
+        
         if ($this->view_it_basic) {
             echo "<div class=\"sct_basic\">" . htmlspecialchars($row['it_basic']) . "</div>\n";
         }
