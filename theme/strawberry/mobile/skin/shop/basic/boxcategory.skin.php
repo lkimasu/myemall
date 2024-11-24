@@ -10,8 +10,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
 <!-- 쇼핑몰 카테고리 시작 { -->
 <nav id="gnb">
     <h2>쇼핑몰 카테고리</h2>
-    <ul id="gnb_1dul">
-        <li class="gnb_1dli"><button type="button" id="menu_open"><i class="fa fa-bars" aria-hidden="true"></i> <span class="sound_only">카테고리</span></button></li>
+    <li class="gnb_1dli"><button type="button" id="menu_open"><i class="fa fa-bars" aria-hidden="true"></i> <span class="sound_only">카테고리</span></button></li>
+    <ul id="gnb_1dul" class="gnb-scroll">
         <?php
         // 1단계 분류 판매 가능한 것만
         $hsql = " select ca_id, ca_name from {$g5['g5_shop_category_table']} where length(ca_id) = '2' and ca_use = '1' order by ca_order, ca_id ";

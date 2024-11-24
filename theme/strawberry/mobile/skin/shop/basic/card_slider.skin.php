@@ -43,7 +43,7 @@ jQuery(function($) {
     var swiper = new Swiper('.sw2', {
         slidesPerView: 1,
         spaceBetween: 10, // 카드 간의 간격
-        loop: true,
+        loop: false,
         autoplay: {
             delay: 5000, // 5초마다 슬라이드
             disableOnInteraction: false,

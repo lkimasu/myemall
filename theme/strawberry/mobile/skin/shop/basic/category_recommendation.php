@@ -1,53 +1,68 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카테고리별 추천 상품</title>
-    <style>
-        /* 기본 스타일 */
+<?php
+if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
+
+// add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
+add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">', 0);
+?>
+
+<style>
+    /* 모바일용 기본 스타일 */
+    .category-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .category-menu button {
+        flex: 1 1 auto;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        cursor: pointer;
+    }
+
+    .category-menu button:hover {
+        background-color: #ddd;
+    }
+
+    .category-content {
+        padding: 10px;
+        display: none;
+    }
+
+    .category-content.active {
+        display: block;
+    }
+
+    .styled-link {
+        display: block;
+        width: 90%; /* 모바일 화면에 맞게 링크 크기 조정 */
+        height: 40px;
+        margin: 15px auto;
+        background: #fff;
+        border: 1px solid #eee;
+        color: #333;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 38px;
+        text-align: center;
+    }
+
+    /* 추가 반응형 스타일 */
+    @media (min-width: 480px) {
         .category-menu {
-            display: flex;
             gap: 10px;
-            margin-bottom: 10px;
         }
-
-        .category-menu button {
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            cursor: pointer;
-        }
-
-        .category-menu button:hover {
-            background-color: #ddd;
-        }
-
-        .category-content {
-            padding: 10px;
-            display: none;
-        }
-
-        .category-content.active {
-            display: block;
-        }
-
-        .styled-link{
-            display: block;
-            width: 670px;
-            height: 46px;
-            margin: 20px auto 0px;
-            background: #fff;
-            border: 1px solid #eee;
-            color: var(--font-black-color01);
+        
+        .styled-link {
+            width: 70%;
             font-size: 15px;
-            font-weight: 500;
-            line-height: 44px;
-            text-align: center;
         }
-
-
-    </style>
+    }
+</style>
     <script>
         // 카테고리 이름과 타입 숫자 매핑
         const categoryMap = {
@@ -93,8 +108,6 @@
             showCategoryContent('국산과일'); // 기본값으로 "국산과일" 표시
         };
     </script>
-</head>
-<body>
 
 <div class="category-menu">
     <button onclick="showCategoryContent('국산과일')">국산과일</button>

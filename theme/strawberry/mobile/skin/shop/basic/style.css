@@ -20,6 +20,23 @@
 .gnb_1dli_over .gnb_2da {display:block;padding:5px 10px;line-height:20px;font-size:1.083em}
 .gnb_2da:focus, .gnb_2da:hover {text-decoration:none;color:#be334a}
 
+.gnb-scroll {
+    display: flex;
+    overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
+    white-space: nowrap; /* 요소가 한 줄로 정렬되도록 설정 */
+    -webkit-overflow-scrolling: touch; /* iOS 스크롤 부드럽게 */
+    scrollbar-width: none; /* Firefox에서 스크롤 바 숨기기 */
+}
+
+.gnb-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.gnb-scroll li {
+    flex: 0 0 auto; /* 각 카테고리가 내용에 맞게 너비를 가짐 */
+    margin-right: 10px; /* 각 카테고리 간격 조정 */
+}
+
 
 
 /* 오늘 본 상품 */

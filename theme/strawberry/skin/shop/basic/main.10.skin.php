@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.sw1', {
         slidesPerView: 4,
         spaceBetween: 10,
-        loop: true,
+        loop: false,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
