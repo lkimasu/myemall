@@ -23,6 +23,12 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 <?php include_once(G5_MSHOP_SKIN_PATH.'/category_recommendation.php');?>
 <!-- 카테고리별 추천 상품 시작 -->
 
+<div class="main_wrap">
+        <h2>실시간 후기</h2>
+</div>
+
+<?php include(G5_MSHOP_SKIN_PATH.'/reviews.php');?>
+
 
 <?php if($default['de_mobile_type1_list_use']) { ?>
 <div class="sct_wrap">
@@ -36,7 +42,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     $list->set_view('it_cust_price', true);
     $list->set_view('it_price', true);
     $list->set_view('it_icon', true);
-    $list->set_view('sns', false);
     echo $list->run();
     ?>
 </div>
@@ -54,7 +59,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     $list->set_view('it_cust_price', true);
     $list->set_view('it_price', true);
     $list->set_view('it_icon', true);
-    $list->set_view('sns', false);
     echo $list->run();
     ?>
 </div>
@@ -75,7 +79,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     $list->set_view('it_cust_price', true);
     $list->set_view('it_price', true);
     $list->set_view('it_icon', true);
-    $list->set_view('sns', false);
     echo $list->run();
     ?>
 </div>
@@ -93,7 +96,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     $list->set_view('it_cust_price', false);
     $list->set_view('it_price', true);
     $list->set_view('it_icon', true);
-    $list->set_view('sns', false);
     echo $list->run();
     ?>
 </div>
@@ -111,7 +113,6 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     $list->set_view('it_cust_price', false);
     $list->set_view('it_price', true);
     $list->set_view('it_icon', true);
-    $list->set_view('sns', false);
     echo $list->run();
     ?>
 </div>

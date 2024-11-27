@@ -99,10 +99,10 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
         echo item_icon3($row);
     }
 
-    $s_core  =  (int)$row['it_use_avg']; 
+   /* $s_core  =  (int)$row['it_use_avg']; 
     if ($s_core > 0 ) { 
         echo "<span class=\"sct_star\"><img src=".G5_SHOP_URL."/img/s_star".$s_core.".png></span>"; 
-    }
+    } */
 
     echo "</div>\n"; // .sct_li 끝
 }

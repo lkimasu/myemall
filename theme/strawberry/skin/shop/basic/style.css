@@ -837,3 +837,12 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .couponzone_list ul li .coupon_btn .disabled {background: #ddd;border:1px;color:#999;border-color:#ddd}
 .couponzone_list ul li .coupon_btn .disabled:hover {background: #ddd;border:1px;color:#999;border-color:#ddd}
 .couponzone_list .no_coupon{position:relative;padding: 100px 0;text-align:center;color:#999}
+
+/*실시간 후기*/
+.review-list {display: flex;flex-wrap: wrap;gap: 20px; max-width: 1240px; margin: 0 auto;}
+.review-item {padding: 10px; width: 25%; margin: 10px 10px 0 0;}
+.review-thumbnail img { width: 100%;height: auto;}
+.review-details {margin-top: 10px;}
+.review-title {font-weight: bold;margin-bottom: 5px;}
+.review-score {color: #ff9900; font-size: 14px;}
+.review-author { color: #888; font-size: 12px;}

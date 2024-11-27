@@ -82,19 +82,19 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 #sev .bx-prev {display: inline-block;position: absolute;top: 0;left: 0;width: 30px;height: 30px;margin-top: -40px;border: 1px solid #ddd;text-indent: -999px;overflow: hidden;background: url(img/btn_prev.png) no-repeat 50% 50% #fff;background-size: 20%;}
 #sev .bx-next {display: inline-block;position: absolute;top: 0;right: 0;width: 30px;height: 30px;margin-top: -40px;border: 1px solid #ddd;text-indent: -999px;overflow: hidden;background: url(img/btn_next.png) no-repeat 50% 50% #fff;background-size: 20%;}
 
-.category-menu {display: flex;gap: 5px;margin-bottom: 10px;justify-content: center; overflow-x: auto; /* 가로 스크롤 가능하게 설정 */ white-space: nowrap; /* 한 줄로 나열되도록 설정 */ -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */scrollbar-width: none; /* Firefox에서 스크롤 바 숨기기 */ }
+.category-menu {display: flex;gap: 5px;margin-bottom: 10px;justify-content: left; overflow-x: auto; /* 가로 스크롤 가능하게 설정 */ white-space: nowrap; /* 한 줄로 나열되도록 설정 */ -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */scrollbar-width: none; /* Firefox에서 스크롤 바 숨기기 */ }
 .category-menu::-webkit-scrollbar {display: none;}
 .category-menu button {flex: 0 0 auto; /* 버튼들이 한 줄에 나열되도록 설정 */padding: 8px; font-size: 14px;  border: none;  background: none;  cursor: pointer;}
 .category-menu button.active {color: #8dc63f; /* 초록색 글자 */border-bottom: 2px solid #8dc63f; /* 초록색 밑줄 */font-weight: bold;}
 .category-menu button:hover {background-color: #ddd;}
 .category-content {padding: 10px;display: none;}
 .category-content.active {display: block;}
-.styled-link {display: block;width: 90%; height: 40px;margin: 15px auto;background: #fff;border: 1px solid #eee;color: #333;font-size: 14px;font-weight: 500;line-height: 38px;text-align: center;}
+.styled-link {display: block;width: 100%; height: 40px;margin: 15px auto;background: #fff;border: 1px solid #eee;color: #333;font-size: 14px;font-weight: 500;line-height: 38px;text-align: center;}
 
 
-.main_wrap h1 {text-align:center;font-size:38px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
-.main_wrap h2 {text-align:center;font-size:25px;margin:0 0 15px;letter-spacing:-0.1em;line-height:1em; padding: 15px;}
-.main_wrap h3 {text-align:center;font-size:16px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center;color: #f9bb00 ;}
+.main_wrap h1 {text-align:left;font-size:38px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;}
+.main_wrap h2 {text-align:left;font-size:25px;margin:0 0 15px;letter-spacing:-0.1em;line-height:1em; padding: 15px;}
+.main_wrap h3 {text-align:left;font-size:16px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em; color: #f9bb00 ;}
 
 
 /* ##### maint.(nn).skin.php, list.(nn).skin.php 공통 적용 시작 ##### */
@@ -694,3 +694,15 @@ background:url(./img/select_bg.png) no-repeat right 50%}
     .couponzone_list ul li{width:25%;float:left;padding:10px}
     .couponzone_list ul li:nth-child(4n+1){clear:both;}
 }
+
+
+
+/*실시간 후기 */
+
+.review-list {display: flex;flex-wrap: wrap;gap: 20px;max-width: 1240px; margin: 0 auto;}
+.review-item {padding: 10px; width: 50%; margin: 10px 10px 0 0;}
+.review-thumbnail img {width: 100%; height: auto;}
+.review-details {margin-top: 10px;}
+.review-title {font-weight: bold; margin-bottom: 5px;}
+.review-score {color: #ff9900;  font-size: 14px;}
+.review-author {color: #888;  font-size: 12px;}
