@@ -24,7 +24,7 @@
 
 .gnb-scroll::-webkit-scrollbar {display: none; /* Chrome, Safari, Edge */}
 
-.gnb-scroll li {flex: 0 0 auto; /* 각 카테고리가 내용에 맞게 너비를 가짐 */margin-right: 10px; /* 각 카테고리 간격 조정 */}
+.gnb-scroll li {flex: 0 0 auto; /* 각 카테고리가 내용에 맞게 너비를 가짐 */}
 
 
 
@@ -93,7 +93,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 
 
 .main_wrap h1 {text-align:center;font-size:38px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
-.main_wrap h2 {text-align:center;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
+.main_wrap h2 {text-align:center;font-size:25px;margin:0 0 15px;letter-spacing:-0.1em;line-height:1em; padding: 15px;}
 .main_wrap h3 {text-align:center;font-size:16px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center;color: #f9bb00 ;}
 
 
@@ -102,7 +102,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 .sct_wrap {margin:10px 0 ;zoom:1}
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
 
-.sct_wrap h1 {text-align:center;font-size:25px;margin:10px 0 0 }
+.sct_wrap h1 {text-align:center;font-size:25px;margin:10px 0 0; padding: 15px;}
 .sct_wrap h2 {text-align:center;font-size:20px;margin:20px 0 0 } 
 
 .sct {margin: 10px 0 ;padding:0;list-style:none;zoom:1;clear:both;}

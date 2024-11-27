@@ -19,11 +19,10 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
         <h2>카테고리별 추천 상품</h2>
 </div>
 
-<div class="container">
-    <!-- 카테고리별 추천 상품 시작 -->
-    <?php include_once(G5_MSHOP_SKIN_PATH.'/category_recommendation.php');?>
-    <!-- 카테고리별 추천 상품 시작 -->
-</div>
+<!-- 카테고리별 추천 상품 시작 -->
+<?php include_once(G5_MSHOP_SKIN_PATH.'/category_recommendation.php');?>
+<!-- 카테고리별 추천 상품 시작 -->
+
 
 <?php if($default['de_mobile_type1_list_use']) { ?>
 <div class="sct_wrap">

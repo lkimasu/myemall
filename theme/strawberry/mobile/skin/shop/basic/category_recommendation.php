@@ -157,7 +157,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
 
 <!-- 전체 보기 링크 -->
 <div class="link-container">
-    <a id="dynamic-link" href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=6" class="styled-link">
+    <a id="dynamic-link" href="<?php echo G5_MSHOP_URL; ?>/listtype.php?type=6" class="styled-link">
         과일 전체보기(링크)
     </a>
 </div>

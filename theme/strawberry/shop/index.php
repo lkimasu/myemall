@@ -24,10 +24,18 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         <h2>카테고리별 추천 상품</h2>
 </div>
 
-
 <!-- 카테고리별 추천 상품 시작 -->
 <?php include_once(G5_SHOP_SKIN_PATH.'/category_recommendation.php');?>
 <!-- 카테고리별 추천 상품 시작 -->
+
+
+<div class="main_wrap">
+        <h2>실시간 후기</h2>
+</div>
+
+<?php include(G5_SHOP_SKIN_PATH.'/reviews.php');?>
+
+
 
     <?php if($default['de_type3_list_use']) { ?>
 
@@ -35,7 +43,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <section class="sct_wrap">
       
         <header>
-            <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h1>
+            <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h2>
         </header>
         
         <?php
@@ -148,7 +156,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 <!-- SNS 배너 시작 -->
     <div class="main_wrap">
         <h2>거창한무역 현장 스토리</h2>
-        <h3>사진으로 만나는 거창한무역의 제품과 여정을 확인해보세요.</h3>
     </div>
 
     <div class="container_card">

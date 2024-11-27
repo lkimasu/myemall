@@ -104,9 +104,10 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 
 
 
-.main_wrap h1 {text-align:center;font-size:38px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
-.main_wrap h2 {text-align:center;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center}
-.main_wrap h3 {text-align:center;font-size:16px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;text-align:center;color: #f9bb00 ;}
+.main_wrap {position:relative;height:auto !important;margin:20px auto;width:1240px;zoom:1;}
+.main_wrap h1 {text-align:left;font-size:38px;letter-spacing:-0.1em;line-height:1em;}
+.main_wrap h2 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:1em;}
+.main_wrap h3 {text-align:left;font-size:16px;letter-spacing:-0.1em;line-height:1em;color: #f9bb00 ;}
 
 /* ##### main(nn).skin.php, list.(nn).skin.php 공통 적용 시작 ##### */
 /* 공통 */
@@ -115,8 +116,8 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
 .sct_wrap header {margin:0 0 20px;zoom:1}
 
-.sct_wrap h1 {text-align:center;font-size:30px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;}
-.sct_wrap h2 {text-align:center;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;}
+.sct_wrap h1 {text-align:left;font-size:30px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;}
+.sct_wrap h2 {text-align:left;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;}
 .sct_wrap h2 a {text-decoration:none}
 
 
@@ -138,12 +139,12 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 
 
 /*카테고리 추천 상품*/
-.category-menu {display: flex;gap: 20px;justify-content: center;margin-bottom: 10px;}
+.category-menu {display: flex;gap: 20px;justify-content: left;padding-bottom: 10px;}
 .category-menu button {padding: 12px 20px; border: none; background: none; color: #666;font-size: 16px;cursor: pointer;transition: color 0.3s, border-bottom 0.3s;}
 .category-menu button.active {color: #8dc63f; /* 초록색 글자 */border-bottom: 2px solid #8dc63f; /* 초록색 밑줄 */font-weight: bold;}
 .category-content {position:relative;height:auto !important;margin:20px auto;width:1240px;zoom:1; display: none;}
 .category-content.active {display: block;}
-.styled-link {display: block;width: 1240px;height: 46px;margin: 20px auto 0px;background: #fff;border: 1px solid #eee;color: var(--font-black-color01);font-size: 15px;font-weight: 500;line-height: 44px;text-align: center;}
+.styled-link {display: block;width: 360px;height: 40px;margin: 20px auto 0px;background: #fff;border: 1px solid #eee;color: var(--font-black-color01);font-size: 15px;font-weight: 500;line-height: 44px;text-align: center;}
 
 
 /* 재생/정지/이전/다음 버튼 */
