@@ -35,8 +35,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 
 <?php include(G5_SHOP_SKIN_PATH.'/reviews.php');?>
 
-
-
     <?php if($default['de_type3_list_use']) { ?>
 
     <!-- 최신상품 시작 -->
@@ -61,6 +59,12 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     </section>
     <!-- 최신상품 끝 -->
     <?php } ?>
+
+    <div class="link-container">
+    <a id="dynamic-link" href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3" class="styled-link">
+        전체보기(링크)
+    </a>
+    </div>
 
     <?php if($default['de_type4_list_use']) { ?>
     <!-- 인기상품 시작 -->

@@ -198,18 +198,17 @@ border-color: transparent transparent transparent rgba(0,0,0,0.7);}
 
 /* 카드 섹션 스타일 */
 .container_card {
-    justify-content: space-between;  /* 카드들 간의 간격을 동일하게 */
-    flex-wrap: wrap;                 /* 화면이 작아질 때 자동으로 다음 줄로 넘어가게 함 */
-    padding: 20px;
+    justify-content: space-between;  
+    flex-wrap: wrap;                 
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
 .card {
     width: 30%;                      /* 카드의 너비를 30%로 설정하여 한 줄에 3개 배치 */
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 20px;             /* 각 카드 사이의 세로 간격 */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
