@@ -99,8 +99,7 @@ $(function () {
 });
 </script>
 <div id="ft">  
-    <?php echo latest('theme/shop_basic', 'notice', 5, 30); ?>
- 
+
     <div class="ft_wr">
         <div class="ft_c">
             <ul class="ft_ul">

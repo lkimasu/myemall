@@ -11,14 +11,12 @@ if (!defined('_INDEX_')) define('_INDEX_', true);
 include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 ?>
 
-
 <div class="container">
 <!-- 메인 배너 시작 -->
 <div class="main-banner">
     <?php echo display_banner('메인', 'mainbanner.10.skin.php'); ?>
 </div>
 <!-- 메인 배너 끝 -->
-
 
 <div class="main_wrap">
         <h2>카테고리별 추천 상품</h2>
@@ -60,12 +58,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <!-- 최신상품 끝 -->
     <?php } ?>
 
-    <div class="link-container">
-    <a id="dynamic-link" href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3" class="styled-link">
-        전체보기(링크)
-    </a>
-    </div>
-
     <?php if($default['de_type4_list_use']) { ?>
     <!-- 인기상품 시작 -->
     <section class="sct_wrap">
@@ -87,6 +79,12 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     </section>
     <!-- 인기상품 끝 -->
     <?php } ?>
+
+    <div class="link-container">
+    <a id="dynamic-link" href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4" class="styled-link">
+        전체보기(링크)
+    </a>
+    </div>
 
     <?php include_once(G5_SHOP_SKIN_PATH.'/boxevent.skin.php'); // 이벤트 ?>
 
@@ -167,8 +165,11 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         <?php include_once(G5_SHOP_SKIN_PATH.'/card_slider.skin.php'); ?>
         <!-- 카드 슬라이더 끝 -->
     </div>
-</div>
 
+    <div>
+        <?php include_once(G5_SHOP_SKIN_PATH. '/footer_box.php'); ?>
+    </div>
+</div>
 
 <script>
     $("#container").removeClass("container").addClass("idx-container");
