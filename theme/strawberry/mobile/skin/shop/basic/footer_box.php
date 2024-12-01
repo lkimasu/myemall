@@ -7,19 +7,19 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
 ?>
 
 <div class="footer_list">
-    <!-- 첫 번째 영역 -->
-    <div class="footer_div">
+    <!-- 첫 번째 영역: 공지사항 -->
+    <div class="footer_div" style="width: 100%;">
         <h3 class="icon-text-group">
             <img src="/theme/strawberry/shop/img/icon-notice.png">
             <a href="/bbs/board.php?bo_table=notice">
             공지사항
             </a>
         </h3>
-	    <?php echo latest('theme/shop_basic', 'notice', 3, 30); ?>
+        <?php echo latest('theme/shop_basic', 'notice', 3, 30); ?>
     </div>
 
-    <!-- 두 번째 영역 -->
-    <div class="footer_div">
+    <!-- 두 번째 영역: 고객센터 -->
+    <div class="footer_div half-width">
         <h3 class="icon-text-group">
             <img src="/theme/strawberry/shop/img/icon-cscenter.png">
             고객센터
@@ -31,8 +31,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
         </div>
     </div>
 
-    <!-- 세 번째 영역 -->
-    <div class="footer_div">
+    <!-- 세 번째 영역: 계좌안내 -->
+    <div class="footer_div half-width">
         <h3 class="icon-text-group">
             <img src="/theme/strawberry/shop/img/icon-bamk.png">
             계좌안내
