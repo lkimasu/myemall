@@ -135,6 +135,11 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     <!-- 카드 슬라이더 끝 -->
 </div>
 
+<div>
+        <?php include_once(G5_MSHOP_SKIN_PATH. '/footer_box.php'); ?>
+</div>
+
+
 <!-- 이벤트 섹션 시작 -->
 <div class="event-section">
     <?php include_once(G5_MSHOP_SKIN_PATH.'/main.event.skin.php'); ?>
