@@ -10,18 +10,18 @@ if (G5_IS_MOBILE) {
     return;
 }
 
-if ($type === 1)      $g5['title'] = '히트상품';
-else if ($type === 2) $g5['title'] = '추천상품';
-else if ($type === 3) $g5['title'] = '최신상품';
-else if ($type === 4) $g5['title'] = '인기상품';
-else if ($type === 5) $g5['title'] = '할인상품';
-else if ($type === 5) $g5['title'] = '할인상품';
-else if ($type === 6) $g5['title'] = '국산과일';
-else if ($type === 7) $g5['title'] = '수입과일';
-else if ($type === 8) $g5['title'] = '과일선물';
-else if ($type === 9) $g5['title'] = '과일주스';
-else if ($type === 10) $g5['title'] = '대용량과일';
-else if ($type === 11) $g5['title'] = '제철과일';
+if ($type === 1)      $g5['title'] = '히트상품 - 거창한무역';
+else if ($type === 2) $g5['title'] = '추천상품 - 거창한무역';
+else if ($type === 3) $g5['title'] = '최신상품 - 거창한무역';
+else if ($type === 4) $g5['title'] = '인기상품 - 거창한무역';
+else if ($type === 5) $g5['title'] = '할인상품 - 거창한무역';
+else if ($type === 5) $g5['title'] = '할인상품 - 거창한무역';
+else if ($type === 6) $g5['title'] = '국산과일 - 거창한무역';
+else if ($type === 7) $g5['title'] = '수입과일 - 거창한무역';
+else if ($type === 8) $g5['title'] = '과일선물 - 거창한무역';
+else if ($type === 9) $g5['title'] = '과일주스 - 거창한무역';
+else if ($type === 10) $g5['title'] = '대용량과일 - 거창한무역';
+else if ($type === 11) $g5['title'] = '제철과일 - 거창한무역';
 else
     alert('상품유형이 아닙니다.');
 
