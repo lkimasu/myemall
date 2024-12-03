@@ -122,7 +122,7 @@ if ($page_type === 'main') {
 if ($page_type == 'product') {
     $it_url = shop_item_url($it['it_id']); // 상품 URL 생성
     $it_img = $it['it_img1']; // 대표 이미지 URL
-    $it_description = strip_tags(conv_content($it['it_explan'], 1)); // HTML 제거
+    $it_description = strip_tags(conv_content($it['it_basic'], 1)); // HTML 제거
     $it_price = $it['it_price']; // 상품 가격
     $it_name = $it['it_name']; // 상품 이름
     $it_sku = $it['it_id']; // 상품 SKU
