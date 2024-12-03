@@ -87,7 +87,16 @@ echo "<meta name=\"robots\" content=\"index, follow\">\r\n";
 ////////////////////////////////////////////////////////////////////
 
 
-if ($page_type === 'organization') {
+if (isset($it_id)) {
+    $page_type = 'product'; // 상품 상세 페이지
+} elseif (isset($ca_id)) {
+    $page_type = 'category'; // 카테고리 페이지
+} else {
+    $page_type = 'main'; // 메인 페이지
+}
+
+
+if ($page_type === 'main') {
     echo '<script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -110,5 +119,36 @@ if ($page_type === 'organization') {
     </script>';
 }
 
+if ($page_type == 'product') {
+    $it_url = shop_item_url($it['it_id']); // 상품 URL 생성
+    $it_img = $it['it_img1']; // 대표 이미지 URL
+    $it_description = strip_tags(conv_content($it['it_explan'], 1)); // HTML 제거
+    $it_price = $it['it_price']; // 상품 가격
+    $it_name = $it['it_name']; // 상품 이름
+    $it_sku = $it['it_id']; // 상품 SKU
+
+    echo '<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "' . $it_name . '",
+      "image": "' . $it_img . '",
+      "description": "' . $it_description . '",
+      "sku": "' . $it_sku . '",
+      "offers": {
+        "@type": "Offer",
+        "url": "' . $it_url . '",
+        "priceCurrency": "KRW",
+        "price": "' . $it_price . '",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "거창한무역"
+        }
+      }
+    }
+    </script>';
+}
 
 ?>
