@@ -85,4 +85,30 @@ echo "<meta name=\"robots\" content=\"index, follow\">\r\n";
 
 ////////////////////////////// SEO 끝 //////////////////////////////
 ////////////////////////////////////////////////////////////////////
+
+
+if ($page_type === 'organization') {
+    echo '<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "거창한무역",
+      "url": "https://myemall.co.kr/",
+      "logo": "https://myemall.co.kr/data/common/logo_img",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+82-70-8829-9906",
+        "contactType": "general inquiry",
+        "availableLanguage": ["Korean", "English"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/wpdlf943",
+        "https://blog.naver.com/wpdlf943",
+        "https://pf.kakao.com/_zKdQxj"
+      ]
+    }
+    </script>';
+}
+
+
 ?>

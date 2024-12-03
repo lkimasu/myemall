@@ -49,6 +49,7 @@ if (G5_IS_MOBILE) {
 
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
+ 
 ?>
 
 <?php
