@@ -57,11 +57,6 @@ if($ca['ca_mobile_skin_dir']) {
 define('G5_SHOP_CSS_URL', str_replace(G5_PATH, G5_URL, $skin_dir));
 ?>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="<?php echo $description; ?>">
-
-
 <script>
 var g5_shop_url = "<?php echo G5_SHOP_URL; ?>";
 </script>
