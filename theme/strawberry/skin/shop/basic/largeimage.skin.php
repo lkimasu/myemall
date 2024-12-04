@@ -6,6 +6,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
 ?>
 
 <div id="sit_pvi_nw" class="new_win">
+    <title> 상품 크게보기 - 거창한무역</title>
     <h1 id="win_title">상품 이미지 새창 보기</h1>
 
     <div id="sit_pvi_nwbig">
