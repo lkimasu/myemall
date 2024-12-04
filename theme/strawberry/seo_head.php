@@ -9,7 +9,7 @@ $seo_Publisher = "거창한무역"; // 발행자 이름
 $seo_theme_color = "#0a81a8"; // 브라우저 테마 색상 (브랜드 색상)
 $seo_language = "kr"; // 사이트 언어
 $seo_locale = "ko_KR"; // 로케일 (국가+언어)
-$seo_domain_addr = "https://myemall.co.kr/"; // 대표 도메인
+$seo_domain_addr = "https://myemall.co.kr"; // 대표 도메인
 
 // 기본 이미지 경로
 $seo_image = $seo_domain_addr . "/img/default_image.png"; // 기본 대표 이미지
@@ -18,9 +18,20 @@ $seo_image_height = "800"; // 기본 이미지 높이
 
 // 기본 정보 (메인 페이지)
 $seo_head_title = "거창한무역"; // 기본 제목
-$seo_descriptionS = "신선한 농수산물을 제공하는 거창한무역 쇼핑몰"; // 80자 이내
-$seo_descriptionL = "거창한무역 쇼핑몰은 지역 농가와 직접 협력하여 신선하고 믿을 수 있는 농산물을 제공합니다. 사과, 양파,샤인머스켓,사과주스 등 계절 과일부터 곡물, 채소까지 다양한 제품을 합리적인 가격으로 만나보세요."; // 200자 이내
+$seo_descriptionS = "산지직송으로 신선한 농산물을 빠르게! 거창한무역에서 오늘 바로 신선배송 받아보세요."; // 80자 이내
+$seo_descriptionL = "거창한무역 쇼핑몰은 산지 직송으로 고객님께 신선한 농산물을 제공합니다. 사과, 샤인머스켓, 양파 등 계절 농산물을 새벽배송과 신선배송으로 빠르게 받아보세요!"; // 200자 이내
 $seo_keywords = "산지직송,아오리,홍로,부사,시나노골드,프리미엄,선물세트,샤인머스켓,수출용,가정용,사과주스,착즙,햇양파,만생양파,함양양파,경남양파,양파 소,양파 대,양파 장아찌"; // 키워드 목록
+
+
+// Canonical URL 설정
+$canonical_url = $seo_domain_addr; // 기본 도메인
+if (isset($it_id)) {
+    $canonical_url .= '/shop/item.php?it_id=' . $it_id; // 상품 상세 페이지 URL
+} elseif (isset($ca_id)) {
+    $canonical_url .= '/shop/list.php?ca_id=' . $ca_id; // 카테고리 페이지 URL
+} else {
+    $canonical_url .= strtok($_SERVER['REQUEST_URI'], '?'); // 기본 페이지 URL
+}
 
 // 페이지별 SEO 처리
 if (isset($it_id)) { // 상품 상세 페이지
@@ -28,9 +39,9 @@ if (isset($it_id)) { // 상품 상세 페이지
     $seo_row = sql_fetch_array($seo_qry);
 
     if ($seo_row) {
-        $seo_head_title = $seo_row['it_name']; // 상품명
-        $seo_descriptionS = cut_str(strip_tags($seo_row['it_basic']), 80); // 상품 설명 (짧게)
-        $seo_descriptionL = cut_str(strip_tags($seo_row['it_basic']), 200); // 상품 설명 (자세히)
+        $seo_head_title = $seo_row['it_name'] . " - 거창한무역"; // 상품명
+        $seo_descriptionS = cut_str(strip_tags($seo_row['it_basic']), 80) . " | 거창한무역에서 가격, 배송, 후기 등 상품 관련 다양한 정보를 확인해보세요!"; // 상품 설명 (짧게)
+        $seo_descriptionL = cut_str(strip_tags($seo_row['it_basic']), 200) . " | 거창한무역에서 가격, 배송, 후기 등 상품 관련 다양한 정보를 확인해보세요!"; // 상품 설명 (자세히)
         $seo_keywords = "{$seo_row['it_name']}, {$seo_row['it_maker']}, {$seo_row['it_brand']}"; // 키워드
         $seo_image = "{$seo_domain_addr}/data/item/{$seo_row['it_id']}_m"; // 상품 썸네일 이미지
     }
@@ -40,8 +51,8 @@ if (isset($it_id)) { // 상품 상세 페이지
 
     if ($category_row) {
         $seo_head_title = $category_row['ca_name']; // 카테고리 이름
-        $seo_descriptionS = "다양한 {$category_row['ca_name']} 상품을 만나보세요."; // 간략 설명
-        $seo_descriptionL = "다양한 {$category_row['ca_name']} 상품을 쇼핑몰에서 확인해보세요."; // 자세한 설명
+        $seo_descriptionS = "다양한 {$category_row['ca_name']} 상품을 거창한무역에서 만나보세요."; // 간략 설명
+        $seo_descriptionL = "다양한 {$category_row['ca_name']} 상품을 거창한무역에서 만나보세요."; // 자세한 설명
         $seo_keywords = "{$category_row['ca_name']}, 상품, 쇼핑몰"; // 키워드
     }
 }
@@ -51,7 +62,7 @@ $seo_datetime = date("Y-m-d");
 
 // 메타 태그 출력
 echo "<meta http-equiv=\"content-language\" content=\"{$seo_language}\">\r\n";
-echo "<link rel=\"canonical\" href=\"{$seo_domain_addr}{$_SERVER['REQUEST_URI']}\">\r\n";
+echo "<link rel=\"canonical\" href=\"{$canonical_url}\">\r\n";
 
 echo "<meta name=\"Author\" content=\"{$seo_Author}\">\r\n";
 echo "<meta name=\"Publisher\" content=\"{$seo_Publisher}\">\r\n";
@@ -150,5 +161,40 @@ if ($page_type == 'product') {
     }
     </script>';
 }
+
+
+if ($page_type === 'category') {
+  $category_name = $category_row['ca_name']; // 카테고리 이름
+  $category_url = $seo_domain_addr . '/shop/list.php?ca_id=' . $ca_id; // 카테고리 URL
+  $items = []; // 상품 데이터를 담을 배열
+
+  // 상품 리스트 가져오기
+  $item_qry = sql_query("SELECT * FROM {$g5['g5_shop_item_table']} WHERE ca_id = '{$ca_id}' LIMIT 10");
+  while ($item_row = sql_fetch_array($item_qry)) {
+      $items[] = [
+          '@type' => 'ListItem',
+          'position' => count($items) + 1,
+          'url' => shop_item_url($item_row['it_id']),
+          'name' => $item_row['it_name'],
+          'image' => $item_row['it_img1'],
+          'price' => $item_row['it_price'],
+          'priceCurrency' => 'KRW',
+          'availability' => 'https://schema.org/InStock'
+      ];
+  }
+
+  // JSON-LD 생성
+  $json_ld = [
+      '@context' => 'https://schema.org',
+      '@type' => 'ItemList',
+      'name' => $category_name,
+      'url' => $category_url,
+      'itemListElement' => $items
+  ];
+
+  // JSON-LD 출력
+  echo '<script type="application/ld+json">' . json_encode($json_ld, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . '</script>';
+}
+
 
 ?>
