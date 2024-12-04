@@ -7,6 +7,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
 
 <!-- 상품문의 쓰기 시작 { -->
 <div id="sit_qa_write" class="new_win">
+    <title> 상품문의 - 거창한무역 </title>
     <h1 id="win_title">상품문의 쓰기</h1>
 
     <form name="fitemqa" method="post" action="./itemqaformupdate.php" onsubmit="return fitemqa_submit(this);" autocomplete="off">
