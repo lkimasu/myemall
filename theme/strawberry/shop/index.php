@@ -19,7 +19,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 <!-- 메인 배너 끝 -->
 
 <div class="main_wrap">
-        <h2>카테고리별 추천 상품</h2>
+        <h1>카테고리별 추천 상품</h1>
 </div>
 
 <!-- 카테고리별 추천 상품 시작 -->
@@ -39,7 +39,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <section class="sct_wrap">
       
         <header>
-            <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h2>
+            <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h1>
         </header>
         
         <?php
@@ -62,7 +62,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <!-- 인기상품 시작 -->
     <section class="sct_wrap">
         <header>
-            <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4">인기상품</a></h2>
+            <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4">인기상품</a></h1>
         </header>
         <?php
         $list = new item_list();
@@ -92,7 +92,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <!-- 히트상품 시작 -->
     <section class="sct_wrap">
         <header>
-            <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=1">히트상품</a></h2>
+            <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=1">히트상품</a></h1>
         </header>
         <?php
         $list = new item_list();
@@ -114,7 +114,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <!-- 추천상품 시작 -->
     <section class="sct_wrap">
         <header>
-            <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=2">추천상품</a></h2>
+            <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=2">추천상품</a></h1>
         </header>
         <?php
         $list = new item_list();
@@ -136,7 +136,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <!-- 할인상품 시작 -->
     <section class="sct_wrap">
         <header>
-            <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=5">할인상품</a></h2>
+            <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=5">할인상품</a></h1>
         </header>
         <?php
         $list = new item_list();

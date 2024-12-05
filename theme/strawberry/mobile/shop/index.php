@@ -16,7 +16,7 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 <!-- 메인 배너 끝 -->
 
 <div class="main_wrap">
-        <h2>카테고리별 추천 상품</h2>
+        <h1>카테고리별 추천 상품</h1>
 </div>
 
 <!-- 카테고리별 추천 상품 시작 -->
@@ -32,7 +32,7 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 
 <?php if($default['de_mobile_type1_list_use']) { ?>
 <div class="sct_wrap">
-    <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=1">히트상품</a></h2>
+    <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=1">히트상품</a></h1>
     <?php
     $list = new item_list();
     $list->set_mobile(true);
@@ -49,7 +49,7 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 
 <?php if($default['de_mobile_type2_list_use']) { ?>
 <div class="sct_wrap">
-    <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=2">추천상품</a></h2>
+    <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=2">추천상품</a></h1>
     <?php
     $list = new item_list();
     $list->set_mobile(true);
@@ -92,7 +92,7 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 
 <?php if($default['de_mobile_type4_list_use']) { ?>
 <div class="sct_wrap">
-    <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4">인기상품</a></h2>
+    <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4">인기상품</a></h1>
     <?php
     $list = new item_list();
     $list->set_mobile(true);
@@ -109,7 +109,7 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 
 <?php if($default['de_mobile_type5_list_use']) { ?>
 <div class="sct_wrap">
-    <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=5">할인상품</a></h2>
+    <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=5">할인상품</a></h1>
     <?php
     $list = new item_list();
     $list->set_mobile(true);

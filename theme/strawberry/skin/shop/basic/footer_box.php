@@ -9,21 +9,21 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
 <div class="footer_list">
     <!-- 첫 번째 영역 -->
     <div class="footer_div">
-        <h3 class="icon-text-group">
+        <h2 class="icon-text-group">
             <img src="/theme/strawberry/shop/img/icon-notice.png">
             <a href="/bbs/board.php?bo_table=notice">
             공지사항
             </a>
-        </h3>
+        </h2>
 	    <?php echo latest('theme/shop_basic', 'notice', 3, 30); ?>
     </div>
 
     <!-- 두 번째 영역 -->
     <div class="footer_div">
-        <h3 class="icon-text-group">
+        <h2 class="icon-text-group">
             <img src="/theme/strawberry/shop/img/icon-cscenter.png">
             고객센터
-        </h3>
+        </h2>
         <div class="inline-text-group">
             <p class="phone">070-8829-9906</p>
             <p>평일 AM 09:00 - PM 05:30</p>
@@ -33,10 +33,10 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
 
     <!-- 세 번째 영역 -->
     <div class="footer_div">
-        <h3 class="icon-text-group">
+        <h2 class="icon-text-group">
             <img src="/theme/strawberry/shop/img/icon-bamk.png">
             계좌안내
-        </h3>
+        </h2>
         <div class="inline-text-group">
             <p class="bank">농협 301-0329-2845-01</p>
             <p class="bank">농업회사법인거창한무역(주)</p>
