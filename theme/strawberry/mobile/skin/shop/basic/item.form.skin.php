@@ -58,7 +58,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
         <h2>상품간략정보</h2>
         <div class="sit_ov_wr">
 
-            <strong id="sit_title"><?php echo stripslashes($it['it_name']); ?></strong>
+            <h1 id="sit_title"><?php echo stripslashes($it['it_name']); ?></h1>
             <?php if($it['it_basic']) { ?><p id="sit_desc"><?php echo $it['it_basic']; ?></p><?php } ?>
             <?php if($is_orderable) { ?>
             <p id="sit_opt_info">

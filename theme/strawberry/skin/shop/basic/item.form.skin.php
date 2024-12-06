@@ -69,14 +69,14 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
     <section id="sit_ov" class="2017_renewal_itemform">
         <div class="sit_ov_wr">
             
-            <h2 id="sit_title"><?php echo stripslashes($it['it_name']); ?> <span class="sound_only">요약정보 및 구매</span></h2>
+            <h1 id="sit_title"><?php echo stripslashes($it['it_name']); ?> <span class="sound_only">요약정보 및 구매</span></h1>
             <?php if ($star_score) { ?>
             <span class="sound_only">고객평점</span> 
             <img src="<?php echo G5_SHOP_URL; ?>/img/s_star<?php echo $star_score?>.png" alt="" class="sit_star" width="100">
             <?php } ?>
            <div class="sit_icon_wr"><?php echo item_icon2($it); ?><?php echo item_icon3($it); ?></div>
 
-            <p id="sit_desc"><?php echo $it['it_basic']; ?></p>
+            <h2 id="sit_desc"><?php echo $it['it_basic']; ?></h2>
             <?php if($is_orderable) { ?>
             <p id="sit_opt_info">
                 상품 선택옵션 <?php echo $option_count; ?> 개, 추가옵션 <?php echo $supply_count; ?> 개

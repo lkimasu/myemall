@@ -87,7 +87,7 @@ border: 1px solid #558ab7 !important;
 #hd #hd_btn a{position:absolute;top:0;right:5px}
 #hd #btn_hdmy{position:absolute;top:0;right:45px}
 #hd #logo{text-align:center}
-#hd #logo img{height:auto;max-height:107px;width:auto}
+#hd #logo img{height:auto;max-height:97px;width:auto}
 
 /*카테고리*/
 .menu {display:none;position:fixed;top:0;height:100%;;z-index:99999;-webkit-backface-visibility: hidden;width:100%}

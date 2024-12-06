@@ -20,6 +20,8 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 
 <div class="main_wrap">
         <h1>카테고리별 추천 상품</h1>
+        <h2>신선함 그대로, 믿을 수 있는 직배송</h2>
+        <h3>100% 산지 직송, 신선함 그대로! - 신선 과일 직배송</h3>
 </div>
 
 <!-- 카테고리별 추천 상품 시작 -->
@@ -27,8 +29,9 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 <!-- 카테고리별 추천 상품 시작 -->
 
 
-<div class="main_wrap">
+<div class="main_wrap_real">
         <h2>실시간 후기</h2>
+        <h3>고객님의 생생한 리뷰를 확인하세요!</h3>
 </div>
 
 <?php include(G5_SHOP_SKIN_PATH.'/reviews.php');?>
@@ -50,7 +53,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -63,6 +65,8 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <section class="sct_wrap">
         <header>
             <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4">인기상품</a></h1>
+            <h2> 가장 많이 선택된 상품 </h2>
+            <h3> 베스트셀러 상품, 후회 없는 선택! - 고객 인기 상품 </h3>
         </header>
         <?php
         $list = new item_list();
@@ -72,7 +76,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', false);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -102,7 +105,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', false);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -124,7 +126,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', false);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -146,7 +147,6 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -156,8 +156,9 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 
 
 <!-- SNS 배너 시작 -->
-    <div class="main_wrap">
+    <div class="main_wrap_story">
         <h2>거창한무역 현장 스토리</h2>
+        <h3>사진으로 만나는 거창한무역의 제품과 여정을 확인해보세요.</h3>
     </div>
 
     <div class="container_card">
