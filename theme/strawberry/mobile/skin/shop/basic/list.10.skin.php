@@ -38,8 +38,6 @@ $type = isset($_REQUEST['type']) ? (int) preg_replace("/[^0-9]/", "", $_REQUEST[
             case 11: // 제철 과일
                 echo "제철 과일";
                 break;
-            default:
-                echo "다양한 과일과 농산물";
         }
         ?>
     </h1>
@@ -65,8 +63,6 @@ $type = isset($_REQUEST['type']) ? (int) preg_replace("/[^0-9]/", "", $_REQUEST[
             case 11: // 제철 과일
                 echo "지금 가장 맛있는 제철 과일을 만나보세요. 자연 그대로의 풍미!";
                 break;
-            default:
-                echo "신선함이 가득한 다양한 과일과 농산물을 확인해보세요.";
         }
         ?>
     </p>
