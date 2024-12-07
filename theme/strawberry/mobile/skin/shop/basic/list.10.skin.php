@@ -3,6 +3,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">', 0);
+$type = isset($_REQUEST['type']) ? (int) preg_replace("/[^0-9]/", "", $_REQUEST['type']) : 1;
 ?>
 
 <?php if(!defined('G5_IS_SHOP_AJAX_LIST') && $config['cf_kakao_js_apikey']) { ?>
@@ -13,6 +14,64 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
     Kakao.init("<?php echo $config['cf_kakao_js_apikey']; ?>");
 </script>
 <?php } ?>
+
+<div class="list_title"> 
+    <h1>
+        <?php
+        // $type 값에 따라 제목을 다르게 설정
+        switch ($type) {
+            case 6: // 국산과일
+                echo "국산 과일";
+                break;
+            case 7: // 수입과일
+                echo "수입 과일";
+                break;
+            case 8: // 과일 선물
+                echo "과일 선물 세트";
+                break;
+            case 9: // 과일 주스
+                echo "과일 주스";
+                break;
+            case 10: // 대용량 과일
+                echo "대용량 과일";
+                break;
+            case 11: // 제철 과일
+                echo "제철 과일";
+                break;
+            default:
+                echo "다양한 과일과 농산물";
+        }
+        ?>
+    </h1>
+    <p>
+        <?php
+        // $type 값에 따라 문구를 다르게 설정
+        switch ($type) {
+            case 6: // 국산과일
+                echo "국내의 신선하고 품질 좋은 과일을 만나보세요. 자연의 풍미를 담았습니다!";
+                break;
+            case 7: // 수입과일
+                echo "전 세계에서 엄선된 고품질의 수입 과일! 다양한 맛을 경험하세요.";
+                break;
+            case 8: // 과일 선물
+                echo "소중한 사람을 위한 특별한 과일 선물 세트를 준비했습니다.";
+                break;
+            case 9: // 과일 주스
+                echo "신선한 과일로 만든 건강하고 맛있는 주스를 만나보세요!";
+                break;
+            case 10: // 대용량 과일
+                echo "대가족이나 행사에 적합한 대용량 과일을 준비했습니다.";
+                break;
+            case 11: // 제철 과일
+                echo "지금 가장 맛있는 제철 과일을 만나보세요. 자연 그대로의 풍미!";
+                break;
+            default:
+                echo "신선함이 가득한 다양한 과일과 농산물을 확인해보세요.";
+        }
+        ?>
+    </p>
+</div>
+
 
 <!-- 메인상품진열 10 시작 { -->
 <?php

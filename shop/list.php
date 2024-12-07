@@ -75,6 +75,34 @@ var itemlist_ca_id = "<?php echo $ca_id; ?>";
 </script>
 <script src="<?php echo G5_JS_URL; ?>/shop.list.js"></script>
 
+<div class="list_title"> 
+    <h1><?php echo $ca['ca_name']; ?></h1>
+    <p>
+        <?php
+        // 카테고리 이름에 따라 문구를 다르게 설정
+        switch ($ca['ca_name']) {
+            case '사과':
+                echo "거창, 경남, 경북의 풍요로운 자연에서 자란 아삭하고 달콤한 사과를 만나보세요!";
+                break;
+            case '양파':
+                echo "청정한 환경에서 재배된 신선한 양파를 직접 만나보세요.";
+                break;
+            case '사과주스':
+                echo "100% 국내산 사과로 만든 신선하고 건강한 사과주스!";
+                break;
+            case '포도':
+                echo "청정지역 경남,경북 김천에서 자란 고당도 포도를 준비했습니다.";
+                break;
+            case '수입과일':
+                echo "전 세계에서 엄선된 고품질 수입 과일을 만나보세요.";
+                break;
+            default:
+                echo "신선함이 가득한 다양한 과일과 농산물을 확인해보세요.";
+        }
+        ?>
+    </p>
+</div>
+
 <!-- 상품 목록 시작 { -->
 <div id="sct">
 
