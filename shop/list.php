@@ -36,7 +36,7 @@ if(!$is_admin && $config['cf_cert_use']) {
         alert($msg, G5_SHOP_URL);
 }
 
-$g5['title'] = $ca['ca_name'].' - 거창한무역';
+$g5['title'] = $ca['ca_name'];
 
 
 if ($ca['ca_include_head'] && is_include_path_check($ca['ca_include_head']))
