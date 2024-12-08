@@ -30,7 +30,7 @@ if(!$is_admin) {
         alert($msg, G5_SHOP_URL);
 }
 
-$g5['title'] = $ca['ca_name'].' - 거창한무역';
+$g5['title'] = $ca['ca_name'];
 
 
 include_once(G5_MSHOP_PATH.'/_head.php');
