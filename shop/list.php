@@ -76,7 +76,7 @@ var itemlist_ca_id = "<?php echo $ca_id; ?>";
 <script src="<?php echo G5_JS_URL; ?>/shop.list.js"></script>
 
 <div class="list_title"> 
-    <h1><?php echo $ca['ca_name']; ?></h1>
+    <h2><?php echo $ca['ca_name']; ?></h2>
     <p>
         <?php
         // 카테고리 이름에 따라 문구를 다르게 설정

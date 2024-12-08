@@ -16,7 +16,7 @@ $type = isset($_REQUEST['type']) ? (int) preg_replace("/[^0-9]/", "", $_REQUEST[
 <?php } ?>
 
 <div class="list_title"> 
-    <h1>
+    <h2>
         <?php
         // $type 값에 따라 제목을 다르게 설정
         switch ($type) {
@@ -40,7 +40,7 @@ $type = isset($_REQUEST['type']) ? (int) preg_replace("/[^0-9]/", "", $_REQUEST[
                 break;
         }
         ?>
-    </h1>
+    </h2>
     <p>
         <?php
         // $type 값에 따라 문구를 다르게 설정

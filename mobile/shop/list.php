@@ -63,7 +63,7 @@ var g5_shop_url = "<?php echo G5_SHOP_URL; ?>";
 <script src="<?php echo G5_JS_URL; ?>/shop.mobile.list.js"></script>
 
 <div class="list_title"> 
-    <h1><?php echo $ca['ca_name']; ?></h1>
+    <h2><?php echo $ca['ca_name']; ?></h2>
     <p>
         <?php
         // 카테고리 이름에 따라 문구를 다르게 설정
