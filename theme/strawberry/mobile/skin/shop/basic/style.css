@@ -382,8 +382,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 
 /* 상품 상세보기 - 간략정보  */
 #sit_ov {position:relative;background:#fff;padding:20px;;height:auto !important;}
-#sit_ov h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
-#sit_ov h3 {margin:0 0 10px;color:#5772d5}
+
 
 #sit_title {display:block;margin: 10px 0;font-size:1.5em;line-height:1.3em}
 #sit_desc {margin:10px 0 ;color:#666;line-height:1.25em}
