@@ -21,7 +21,7 @@ $q = isset($_GET['q']) ? clean_xss_tags($_GET['q'], 1, 1) : '';
 
 <!-- 상단 시작 { -->
 <div id="hd">
-    <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
+    <h1 id="hd_h1"><?php echo $g5_head_title ?></h1>
     <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
 
     <?php if(defined('_INDEX_')) { // index에서만 실행
