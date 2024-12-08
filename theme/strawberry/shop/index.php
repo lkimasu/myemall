@@ -19,9 +19,8 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 <!-- 메인 배너 끝 -->
 
 <div class="main_wrap">
-        <h1>카테고리별 추천 상품</h1>
-        <h2>신선함 그대로, 믿을 수 있는 직배송</h2>
-        <h3>100% 산지 직송, 신선함 그대로! - 신선 과일 직배송</h3>
+        <h2>카테고리별 추천 상품</h2>
+        <h3>신선함 그대로, 믿을 수 있는 직배송</h3>
 </div>
 
 <!-- 카테고리별 추천 상품 시작 -->
@@ -64,8 +63,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
     <!-- 인기상품 시작 -->
     <section class="sct_wrap">
         <header>
-            <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4">인기상품</a></h1>
-            <h2> 가장 많이 선택된 상품 </h2>
+            <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=4">인기상품</a></h2>
             <h3> 베스트셀러 상품, 후회 없는 선택! - 고객 인기 상품 </h3>
         </header>
         <?php

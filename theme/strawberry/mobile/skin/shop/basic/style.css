@@ -91,15 +91,15 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 
 
 .main_wrap h1 {text-align:center;font-size:28px;margin:0 0 5px;letter-spacing:-0.1em;line-height:1em;}
-.main_wrap h2 {text-align:center;font-size:22px;margin:0 0 5px;letter-spacing:-0.1em;line-height:2em; color: #444;}
+.main_wrap h2 {text-align:center;font-size:28px;margin:0 0 5px;letter-spacing:-0.1em;line-height:2em; color: #444;}
 .main_wrap h3 {text-align:center;font-size:18px;margin:0 0 10px;letter-spacing:-0.1em;line-height:1em; color: #666;}
 
 .main_wrap_real h1 {text-align:center;font-size:28px;margin:0 0 5px;letter-spacing:-0.1em;line-height:1em;}
-.main_wrap_real h2 {text-align:center;font-size:22px;margin:0 0 5px;letter-spacing:-0.1em;line-height:2em; color: #444;}
+.main_wrap_real h2 {text-align:center;font-size:28px;margin:0 0 5px;letter-spacing:-0.1em;line-height:2em; color: #444;}
 .main_wrap_real h3 {text-align:center;font-size:18px;margin:0 0 10px;letter-spacing:-0.1em;line-height:2em; color: #666;}
 
 .main_wrap_story h1 {text-align:center;font-size:28px;margin:0 0 5px;letter-spacing:-0.1em;line-height:1em;}
-.main_wrap_story h2 {text-align:center;font-size:22px;margin:0 0 5px;letter-spacing:-0.1em;line-height:2em; color: #444;}
+.main_wrap_story h2 {text-align:center;font-size:28px;margin:0 0 5px;letter-spacing:-0.1em;line-height:2em; color: #444;}
 .main_wrap_story h3 {text-align:center;font-size:18px;margin:0 0 10px;letter-spacing:-0.1em;line-height:1em; color: #666;}
 
 
@@ -111,7 +111,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
 
 .sct_wrap h1 {text-align:center;font-size:28px;margin:0 0 5px; line-height:1em;}
-.sct_wrap h2 {text-align:center;font-size:22px;margin:0 0 5px; color: #444; line-height:2em;} 
+.sct_wrap h2 {text-align:center;font-size:28px;margin:0 0 5px; color: #444; line-height:2em;} 
 .sct_wrap h3 {text-align:center;font-size:18px;margin:0 0 10px; line-height:1em; color: #666;} 
 
 .sct {margin: 10px 0 ;padding:0;list-style:none;zoom:1;clear:both;}
