@@ -53,7 +53,7 @@ border: 1px solid #558ab7 !important;
 
 /* 상단 레이아웃 */
 #hd {position:relative;top:0;left:0;width:100%;z-index:999;height:50px}
-#hd h1 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
+#hd_h1 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #hd_wr{position:relative;margin:0 auto;padding:10px 0;width:100%;zoom:1}
 
 
