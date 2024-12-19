@@ -287,8 +287,8 @@ if($is_kakaopay_use) {
         <div class="odf_list">
             <ul>
                 <li>
-                    <label for="od_name">이름<strong class="sound_only"> 필수</strong></label>
-                    <input type="text" name="od_name" value="<?php echo isset($member['mb_name']) ? get_text($member['mb_name']) : ''; ?>" id="od_name" required class="frm_input required" maxlength="20">
+                <label for="od_name">이름<strong class="sound_only"> 필수</strong></label>
+                <input type="text" name="od_name" value="" id="od_name" required class="frm_input required" maxlength="20">
                 </li>
 
                 <?php if (!$is_member) { // 비회원이면 ?>
