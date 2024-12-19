@@ -10,16 +10,6 @@ include_once(G5_LIB_PATH.'/latest.lib.php');
 add_javascript('<script src="'.G5_JS_URL.'/jquery.bxslider.js"></script>', 10);
 ?>
 
-<title>
-    <?php 
-    if (isset($g5['title']) && $g5['title']) { 
-        echo $g5['title']; 
-    } else { 
-        echo "거창한무역"; 
-    } 
-    ?>
-</title>
-
 <header id="hd">
     <?php if ((!$bo_table || $w == 's' ) && defined('_INDEX_')) { ?><h1><?php echo $config['cf_title'] ?></h1><?php } ?>
 

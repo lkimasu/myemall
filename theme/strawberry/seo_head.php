@@ -17,7 +17,7 @@ $seo_image_width = "800"; // 기본 이미지 너비
 $seo_image_height = "800"; // 기본 이미지 높이
 
 // 기본 정보 (메인 페이지)
-$seo_head_title = "신선한 사과·양파·샤인머스켓 - 산지직송 거창한무역 쇼핑몰"; // 기본 제목
+$seo_head_title = "거창한무역"; // 기본 제목
 $seo_descriptionS = "산지직송으로 신선식품을 빠르게! 
 사과, 양파, 샤인머스켓 등 다양한 과일과 채소를 거창한무역에서 만나보세요. 
 오늘 주문하면 신선배송으로 빠르게 도착합니다. 
@@ -62,6 +62,31 @@ if (isset($it_id)) { // 상품 상세 페이지
         $seo_keywords = "{$category_row['ca_name']}, 상품, 쇼핑몰"; // 키워드
     }
 }
+
+// 회사 소개 페이지
+if (strpos($_SERVER['REQUEST_URI'], 'content.php?co_id=company') !== false) {
+    $seo_head_title = "회사 소개 - 거창한무역";
+    $seo_descriptionS = "거창한무역은 경남 거창에서 신선한 과일과 채소를 산지 직송으로 제공하는 신뢰받는 쇼핑몰입니다. 회사 연혁과 비전을 확인하세요.";
+    $seo_descriptionL = "거창한무역은 경남 거창에서 신선한 과일과 채소를 산지 직송으로 제공하는 신뢰받는 쇼핑몰입니다. 우리의 연혁과 목표는 고객에게 최상의 품질과 서비스를 제공하는 데 중점을 둡니다.";
+    $seo_keywords = "거창한무역, 회사 소개, 연혁, 비전, 경남 거창, 신선식품, 산지 직송";
+}
+
+// 연혁 페이지
+if (strpos($_SERVER['REQUEST_URI'], 'content.php?co_id=history') !== false) {
+    $seo_head_title = "회사 연혁 - 거창한무역";
+    $seo_descriptionS = "거창한무역의 주요 연혁을 소개합니다. 신뢰받는 신선식품 브랜드로의 성장 과정을 확인하세요.";
+    $seo_descriptionL = "거창한무역은 고객 신뢰를 바탕으로 지속 성장해온 신선식품 유통 전문 기업입니다. 주요 연혁과 성과를 확인하세요.";
+    $seo_keywords = "거창한무역, 회사 연혁, 성장 스토리, 신선식품, 브랜드 역사";
+}
+
+// 오시는 길 페이지
+if (strpos($_SERVER['REQUEST_URI'], 'content.php?co_id=maps') !== false) {
+    $seo_head_title = "오시는 길 - 거창한무역";
+    $seo_descriptionS = "거창한무역 본사와 매장 위치를 안내합니다. 정확한 주소와 연락처 정보를 확인하세요.";
+    $seo_descriptionL = "거창한무역의 본사 및 매장 방문을 위한 교통 정보를 제공합니다. 위치와 연락처 정보를 통해 손쉽게 찾아오실 수 있습니다.";
+    $seo_keywords = "거창한무역, 오시는 길, 매장 위치, 본사 주소, 경남 거창";
+}
+
 
 // 오늘 날짜
 $seo_datetime = date("Y-m-d");

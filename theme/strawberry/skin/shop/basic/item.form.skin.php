@@ -72,7 +72,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
             <?php } ?>
            <div class="sit_icon_wr"><?php echo item_icon2($it); ?><?php echo item_icon3($it); ?></div>
 
-            <h3 id="sit_desc"><?php echo $it['it_basic']; ?></h3>
+            <p id="sit_desc"><?php echo $it['it_basic']; ?></p>
             <?php if($is_orderable) { ?>
             <p id="sit_opt_info">
                 상품 선택옵션 <?php echo $option_count; ?> 개, 추가옵션 <?php echo $supply_count; ?> 개

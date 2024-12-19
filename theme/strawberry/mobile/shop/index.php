@@ -108,6 +108,12 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
     echo $list->run();
     ?>
 </div>
+
+<div class="link-container">
+    <a id="dynamic-link" href="<?php echo G5_MSHOP_URL; ?>/listtype.php?type=4" class="styled-link">
+        전체보기 (링크)
+    </a>
+</div>
 <?php } ?>
 
 <?php if($default['de_mobile_type5_list_use']) { ?>
