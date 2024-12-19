@@ -264,9 +264,13 @@ if($is_kakaopay_use) {
                 <table>
                 <tbody>
                 <tr>
-                    <th scope="row"><label for="od_name">이름<strong class="sound_only"> 필수</strong></label></th>
-                    <td><input type="text" name="od_name" value="<?php echo isset($member['mb_name']) ? get_text($member['mb_name']) : ''; ?>" id="od_name" required class="frm_input required" maxlength="20"></td>
-                </tr>
+                <th scope="row"><label for="od_name">이름<strong class="sound_only"> 필수</strong></label></th>
+                <td>
+                    <input type="text" name="od_name" 
+                        value="" 
+                        id="od_name" required class="frm_input required" maxlength="20">
+                </td>
+            </tr>
 
                 <?php if (!$is_member) { // 비회원이면 ?>
                 <tr>
