@@ -56,19 +56,7 @@ for ($i=0; $row=sql_fetch_array($result); $i++)
     echo $item_html;
 }
 
-if ($i > 0) {
-    echo '</div>'.PHP_EOL;
-        echo '<div class="owl_pager">
-    <ul class="carousel-custom-dots owl-dots">';
-		$k = 0;
-		foreach( $main_banners as $row ){
-			echo '<li class="owl-dot"><a data-slide-index="'.$k.'" href="#">'.get_text($row['bn_alt']).'</a></li>'.PHP_EOL;
-			$k++;
-			}
-		
-    echo '</ul>
-    </div>'.PHP_EOL;
-    echo '</div>'.PHP_EOL;
+
 ?>
 
 <script>
@@ -132,5 +120,5 @@ jQuery(function($){
 });
 </script>
 <?php
-}
+
 ?>
