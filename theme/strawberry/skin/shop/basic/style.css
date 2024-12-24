@@ -49,7 +49,7 @@
 #scomm li a:hover{color:#be334a}
 
 /* 메인배너 */
-#main_bn {padding:15px 0; margin: 0 auto; max-width: 1200px; position: relative;}
+#main_bn {padding:15px 0; margin: 0 auto; max-width: 1240px; position: relative;}
 #main_bn .slide-wrap-wr{margin:0 auto;max-width:1240px;position:relative}
 #main_bn .slide-wrap{display:none}
 #main_bn .slide-wrap li{padding:20px}
@@ -57,6 +57,10 @@
 -webkit-box-shadow:0 5px 15px rgba(0, 0, 0, .2);
 -moz-box-shadow:0 5px 15px rgba(0, 0, 0, .2);
 box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
+#main_bn .swiper-slide img {
+    width: 1240px; /* 이미지 너비 설정 */
+    height: auto; /* 이미지 비율 유지 */
+}
 #main_bn .bx-prev{position:absolute;top:50%;left:20px;margin-top:-28px;z-index:99;background:url(img/prev.png) no-repeat 50% 50% rgba(0,0,0,0.4);width:35px;height:56px;;text-indent:-999px;overflow:hidden;opacity:0.6;z-index:9}
 #main_bn .bx-prev:hover{opacity:1}
 #main_bn .bx-next{position:absolute;top:50%;right:20px;margin-top:-28px;z-index:99;background:url(img/next.png) no-repeat 50% 50% rgba(0,0,0,0.4);width:35px;height:56px;;text-indent:-999px;overflow:hidden;opacity:0.6;z-index:9}
