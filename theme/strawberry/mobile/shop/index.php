@@ -71,7 +71,8 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 
     <div class="sct_wrap">
 
-        <h1><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h1>
+        <h2><a href="<?php echo G5_SHOP_URL; ?>/listtype.php?type=3">최신상품</a></h2>
+        <h3> 가장 먼저 만나보는 최신 트렌드 상품! </h3>
     <?php
     $list = new item_list();
     $list->set_mobile(true);
@@ -134,14 +135,18 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 <?php } ?>
 
     <div class="main_wrap_story">
-        <h2>거창한무역 현장 스토리</h2>
-        <h3>사진으로 만나는 거창한무역의 제품과 여정을 확인해보세요.</h3>
+        <h2>거창한무역의 오늘, SNS에서 확인하세요</h2>
+        <h3>현장에서 촬영한 제품 여정과 비하인드 스토리를 사진으로 만날 수 있습니다.</h3>
     </div>
 
 <div class="container">
     <!-- 카드 슬라이더 시작 -->
     <?php include_once(G5_MSHOP_SKIN_PATH.'/card_slider.skin.php'); ?>
-    <!-- 카드 슬라이더 끝 -->
+    <!-- 카드 슬라이더 끝 -->     
+</div>
+
+<div class="container_card">
+<?php echo display_banner('왼쪽'); ?>
 </div>
 
 <div>

@@ -41,6 +41,9 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
             ?>
         </li>
         <?php } ?>
+        <li class="gnb_1dli" style="z-index:<?php echo $gnb_zindex; ?>"> 
+        <a href="/bbs/board.php?bo_table=gallery" class="gnb_1da<?php if ($count) echo ' gnb_1dam'; ?>">스토리</a>
+        </li>
     </ul>
 </nav>
 <!-- } 쇼핑몰 카테고리 끝 -->
