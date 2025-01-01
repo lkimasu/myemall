@@ -28,8 +28,8 @@ function get_mshop_category($ca_id, $len)
                     <li class="cate_li_2"><a href="/bbs/content.php?co_id=company">회사소개</a></li>
                     <li class="cate_li_2"><a href="/bbs/content.php?co_id=history">연혁</a></li>
                     <li class="cate_li_2"><a href="/bbs/content.php?co_id=maps">오시는길</a></li>
-                    <li class="cate_li_2"><a href="/bbs/board.php?bo_table=gallery">스토리</a></li>
-                    <li class="cate_li_2"><a href="https://blog.naver.com/wpdlf943">블로그</a></li>
+                    <li class="cate_li_2"><a href="/bbs/board.php?bo_table=gallery">갤러리</a></li>
+                    <li class="cate_li_2"><a href="/bbs/board.php?bo_table=story">스토리</a></li>
                 </ul>
             </li>
     </ul>
