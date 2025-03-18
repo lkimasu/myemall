@@ -16,22 +16,6 @@ if (!$bo_table) {
     alert($msg);
 }
 
-// SEO를 위한 메타 태그 추가
-function add_meta_tags($title, $description, $keywords) {
-    echo "<meta name='description' content='{$description}'>" . PHP_EOL;
-    echo "<meta name='keywords' content='{$keywords}'>" . PHP_EOL;
-    echo "<meta property='og:title' content='{$title}'>" . PHP_EOL;
-    echo "<meta property='og:description' content='{$description}'>" . PHP_EOL;
-    echo "<meta property='og:type' content='website'>" . PHP_EOL;
-    echo "<meta property='og:url' content='" . "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] . "'>" . PHP_EOL;
-}
-
-// 갤러리 주제에 맞는 제목, 설명, 키워드 설정
-$seo_title = isset($g5['title']) ? $g5['title'] : '사과, 양파, 용과 사진 갤러리';
-$seo_description = "다양한 사과, 양파, 용과 사진을 감상할 수 있는 갤러리입니다.";
-$seo_keywords = "사과 사진, 양파 사진, 용과 사진, 과일 갤러리, 이미지 갤러리";
-
-add_meta_tags($seo_title, $seo_description, $seo_keywords);
 
 // SEO 제목 설정
 $g5['title'] = strip_tags(conv_subject($write['wr_subject'], 255))." > ".$g5['board_title'];

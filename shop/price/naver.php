@@ -38,7 +38,7 @@ $tab = "\t";
 
 ob_start();
 
-echo "id{$tab}title{$tab}price_pc{$tab}link{$tab}image_link{$tab}category_name1{$tab}category_name2{$tab}category_name3{$tab}category_name4{$tab}brand{$tab}maker{$tab}origin{$tab}point{$tab}review_count{$tab}shipping{$tab}class{$tab}update_time";
+echo "id{$tab}title{$tab}price_pc{$tab}link{$tab}image_link{$tab}category_name1{$tab}category_name2{$tab}category_name3{$tab}category_name4{$tab}brand{$tab}maker{$tab}origin{$tab}point{$tab}review_count{$tab}shipping{$tab}class{$tab}event_words{$tab}update_time";
 
 $sql =" select * from {$g5['g5_shop_item_table']} where it_use = '1' and it_soldout = '0' and it_tel_inq = '0' and it_price > '0' order by ca_id";
 $result = sql_query($sql);
@@ -94,7 +94,14 @@ for ($i=0; $row=sql_fetch_array($result); $i++)
     // 리뷰 카운트
     $review_count = (int) $row['it_use_cnt'];
 
-    echo "\n{$row['it_id']}{$tab}{$row['it_name']}{$tab}{$row['it_price']}{$tab}{$item_link}{$tab}{$img_url}{$tab}{$cate1}{$tab}{$cate2}{$tab}{$cate3}{$tab}{$cate4}{$tab}{$row['it_brand']}{$tab}{$row['it_maker']}{$tab}{$row['it_origin']}{$tab}{$it_point}{$tab}{$review_count}{$tab}{$delivery}{$tab}{$class}{$tab}{$row['it_update_time']}";
+    //이벤트
+
+    $event_words = " 회원가입하고 3,000포인트 받으세요!";
+
+    echo "\n{$row['it_id']}{$tab}{$row['it_name']}{$tab}{$row['it_price']}{$tab}{$item_link}{$tab}{$img_url}{$tab}{$cate1}{$tab}{$cate2}{$tab}{$cate3}{$tab}{$cate4}{$tab}{$row['it_brand']}{$tab}{$row['it_maker']}{$tab}{$row['it_origin']}{$tab}{$it_point}{$tab}{$review_count}{$tab}{$delivery}{$tab}{$class}{$tab}{$event_words}{$tab}{$row['it_update_time']}";
+
+
+
 }
 
 $content = ob_get_contents();

@@ -264,9 +264,13 @@ if($is_kakaopay_use) {
                 <table>
                 <tbody>
                 <tr>
-                    <th scope="row"><label for="od_name">이름<strong class="sound_only"> 필수</strong></label></th>
-                    <td><input type="text" name="od_name" value="<?php echo isset($member['mb_name']) ? get_text($member['mb_name']) : ''; ?>" id="od_name" required class="frm_input required" maxlength="20"></td>
-                </tr>
+                <th scope="row"><label for="od_name">이름<strong class="sound_only"> 필수</strong></label></th>
+                <td>
+                    <input type="text" name="od_name" 
+                        value="" 
+                        id="od_name" required class="frm_input required" maxlength="20">
+                </td>
+            </tr>
 
                 <?php if (!$is_member) { // 비회원이면 ?>
                 <tr>
@@ -1321,12 +1325,6 @@ function forderform_check(f)
         {
             if (temp_point > od_price) {
                 alert("상품 주문금액(배송비 제외) 보다 많이 포인트결제할 수 없습니다.");
-                f.od_temp_point.select();
-                return false;
-            }
-
-            if (temp_point > 0 && od_price < 40000) {
-                alert("주문 금액 40,000원 이상 포인트 사용 가능합니다.");
                 f.od_temp_point.select();
                 return false;
             }
