@@ -52,9 +52,6 @@ window.onscroll = function() {
 </script>
 
 <!-- 커뮤니티 최신글 시작 { -->
-<section id="sidx_lat">
-	<?php echo latest('theme/shop_basic', 'notice', 3, 30); ?>
-</section>
 <div id="ft">
     <h2><?php echo $config['cf_title']; ?> 정보</h2>
     <div id="ft_company">

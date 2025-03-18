@@ -87,7 +87,7 @@ border: 1px solid #558ab7 !important;
 #hd #hd_btn a{position:absolute;top:0;right:5px}
 #hd #btn_hdmy{position:absolute;top:0;right:45px}
 #hd #logo{text-align:center}
-#hd #logo img{height:auto;max-height:107px;width:auto}
+#hd #logo img{height:auto;max-height:97px;width:auto}
 
 /*카테고리*/
 .menu {display:none;position:fixed;top:0;height:100%;;z-index:99999;-webkit-backface-visibility: hidden;width:100%}
@@ -931,7 +931,7 @@ box-shadow: 0 0 8px rgba(65,98,255,0.8);}
 
 #od_pay_sl input[type="radio"]{position:absolute;width:0;height:0;overflow:hidden;visibility:hidden;text-indent:-999px;left: 0;z-index: -1px;}
 #od_pay_sl .lb_icon {display: inline-block;float:left;width:150px;background:#fff;border:1px solid #eceff4;margin:-1px 0 0 -1px;cursor: pointer;height:60px;position:relative;padding-left:65px;padding-top:20px;z-index:1}
-#od_pay_sl input[type="radio"]:checked+.lb_icon {border:1px solid #ff006c;z-index:3}
+#od_pay_sl input[type="radio"]:checked+.lb_icon {border:1px solid #ff006c;z-index:3; background: url(../../../img/ico-default-naverpay.png) no-repeat 17px 50% #fff;}
 
 #sod_frm_paysel {}
 #sod_frm_paysel legend {position:absolute;font-size:0;line-height:0;overflow:hidden}

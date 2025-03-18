@@ -49,7 +49,7 @@
 #scomm li a:hover{color:#be334a}
 
 /* 메인배너 */
-#main_bn {padding:15px 0; margin: 0 auto; max-width: 1200px; position: relative;}
+#main_bn {padding:15px 0; margin: 0 auto; max-width: 1240px; position: relative;}
 #main_bn .slide-wrap-wr{margin:0 auto;max-width:1240px;position:relative}
 #main_bn .slide-wrap{display:none}
 #main_bn .slide-wrap li{padding:20px}
@@ -57,6 +57,10 @@
 -webkit-box-shadow:0 5px 15px rgba(0, 0, 0, .2);
 -moz-box-shadow:0 5px 15px rgba(0, 0, 0, .2);
 box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
+#main_bn .swiper-slide img {
+    width: 1240px; /* 이미지 너비 설정 */
+    height: auto; /* 이미지 비율 유지 */
+}
 #main_bn .bx-prev{position:absolute;top:50%;left:20px;margin-top:-28px;z-index:99;background:url(img/prev.png) no-repeat 50% 50% rgba(0,0,0,0.4);width:35px;height:56px;;text-indent:-999px;overflow:hidden;opacity:0.6;z-index:9}
 #main_bn .bx-prev:hover{opacity:1}
 #main_bn .bx-next{position:absolute;top:50%;right:20px;margin-top:-28px;z-index:99;background:url(img/next.png) no-repeat 50% 50% rgba(0,0,0,0.4);width:35px;height:56px;;text-indent:-999px;overflow:hidden;opacity:0.6;z-index:9}
@@ -69,12 +73,12 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 /*서브배너*/
 #sbn_side {position:relative;margin:30px 0}
 .sb_bn { display:none}
-.sb_bn img{width:100%;height:auto;}
+.sb_bn img{max-width: 1240px; margin: 0 auto;}
 #sbn_side h2{position:absolute;font-size:0;line-height:0;overflow:hidden}
-#sbn_side .bx-prev{display:block;float:left;background:url(img/btn_sb_prev.png) no-repeat 50% 50% #fff;width:15px;height:15px;text-indent:-999px;overflow:hidden;border:1px solid #ccc;}
-#sbn_side .bx-next{display:block;margin-left:-1px;float:left;background:url(img/btn_sb_next.png) no-repeat 50% 50% #fff;width:15px;height:15px;text-indent:-999px;overflow:hidden;border:1px solid #ccc;}
+#sbn_side .bx-prev{display:none;float:left;background:url(img/btn_sb_prev.png) no-repeat 50% 50% #fff;width:15px;height:15px;text-indent:-999px;overflow:hidden;border:1px solid #ccc;}
+#sbn_side .bx-next{display:none;margin-left:-1px;float:left;background:url(img/btn_sb_next.png) no-repeat 50% 50% #fff;width:15px;height:15px;text-indent:-999px;overflow:hidden;border:1px solid #ccc;}
 #sbn_side .bx-pager{text-align:center;position:absolute;bottom:10px;right:10px}
-#sbn_side .bx-pager-item {display:inline-block}
+#sbn_side .bx-pager-item {display:none}
 #sbn_side .bx-pager-item a {display:block;width:7px;height:7px;text-indent:-999px;overflow:hidden;margin:0 5px;background:#000;border-radius:5px;opacity:0.3}
 #sbn_side .bx-pager-item .active{opacity:1}
 
@@ -102,12 +106,21 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 #sbsk .cart_alafter {display:block;visibility:hidden;clear:both;content:""}
 #sbsk .cart_al strong{float:right;}
 
-
-
 .main_wrap {position:relative;height:auto !important;margin:20px auto;width:1240px;zoom:1;}
-.main_wrap h1 {text-align:left;font-size:38px;letter-spacing:-0.1em;line-height:1em;}
-.main_wrap h2 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:1em;}
-.main_wrap h3 {text-align:left;font-size:16px;letter-spacing:-0.1em;line-height:1em;color: #f9bb00 ;}
+.main_wrap h1 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:1em;}
+.main_wrap h2 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:3em; color: #444;}
+.main_wrap h3 {text-align:left;font-size:16px;letter-spacing:-0.1em;line-height:1em;color: #666;}
+
+.main_wrap_real {position:relative;height:auto !important;margin:20px auto;width:1240px;zoom:1;}
+.main_wrap_real h1 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:1em;}
+.main_wrap_real h2 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:1em; color: #444;}
+.main_wrap_real h3 {text-align:left;font-size:16px;letter-spacing:-0.1em;line-height:3em;color: #666 ;}
+
+.main_wrap_story {position:relative;height:auto !important;margin:20px auto;width:1240px;zoom:1;}
+.main_wrap_story h1 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:1em;}
+.main_wrap_story h2 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:3em; color: #444;}
+.main_wrap_story h3 {text-align:left;font-size:16px;letter-spacing:-0.1em;line-height:1em;color: #666;}
+
 
 /* ##### main(nn).skin.php, list.(nn).skin.php 공통 적용 시작 ##### */
 /* 공통 */
@@ -116,9 +129,10 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_wrap:after {display:block;visibility:hidden;clear:both;content:""}
 .sct_wrap header {margin:0 0 20px;zoom:1}
 
-.sct_wrap h1 {text-align:left;font-size:30px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;}
-.sct_wrap h2 {text-align:left;font-size:25px;margin:0 0 35px;letter-spacing:-0.1em;line-height:1em;}
+.sct_wrap h1 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:1em;}
+.sct_wrap h2 {text-align:left;font-size:25px;letter-spacing:-0.1em;line-height:3em; color: #444;}
 .sct_wrap h2 a {text-decoration:none}
+.sct_wrap h3 {text-align:left;font-size:16px;letter-spacing:-0.1em;line-height:1em;color: #666; }
 
 
 #sct {clear:both}
@@ -179,10 +193,10 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .sct_10 .sct_cost {margin:10px 0;font-size:22px;font-weight:bold;color: red; border-top: 1px solid #e5e5e5;}
 .sct_10 .sct_cost .sct_discount{display:inline-block;color:#999;font-size:0.92em;text-decoration:line-through;font-weight:normal}
 .sct_10 .sct_cost h3 {margin:10px 0;font-size:22px;font-weight:bold;color: red;}
-.sct_10 .sct_txt{margin: 10px 0;font-size: 18px;font-weight: 400;display: -webkit-box; -webkit-box-orient: vertical; line-height: 1.8em; /* 한 줄의 높이 */}
-.sct_10 .sct_txt h2 {margin: 10px 0;font-size: 15px;font-weight: 400;display: -webkit-box; -webkit-box-orient: vertical; line-height: 1.8em; /* 한 줄의 높이 */}
-.sct_10 .sct_basic{color:#888;margin:5px 0;font-size:0.92em}
-.sct_10 .sct_basic h3 {color:#888;margin:5px 0;font-size:0.92em}
+.sct_10 .sct_txt{margin: 10px 0;font-size: 13px;font-weight: 400;display: -webkit-box; -webkit-box-orient: vertical; line-height: 1.8em; /* 한 줄의 높이 */ height: 3.6em; /* 2줄 높이로 고정 */overflow: hidden; }
+.sct_10 .sct_txt h2 {font-size: 13px;font-weight: 400;display: -webkit-box;-webkit-box-orient: vertical;line-height: 1.8em;height: 3.6em; /* 2줄 높이로 고정 */overflow: hidden;}
+.sct_10 .sct_basic{color:#888;margin:5px 0;font-size:11px; line-height: 1.5em;height: 3em; /* 2줄 높이로 고정 */overflow: hidden;}
+.sct_10 .sct_basic h3 {color: #888;font-size: 11px;line-height: 1.5em; /* 줄 간격 설정 */height: 3em; /* 2줄 높이로 고정 */overflow: hidden;}
 .sct_10 .sct_star {display:none; margin-top:5px;width:75px}
 .sct_10 .sct_star img{width:100%;height:auto}
 
@@ -846,3 +860,23 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 .review-title {font-weight: bold;margin-bottom: 5px;}
 .review-score {color: #ff9900; font-size: 14px;}
 .review-author { color: #888; font-size: 12px;}
+
+
+/*하단 */
+.footer_list {display: flex;flex-wrap: wrap;gap: 20px;max-width: 1240px;margin: 0 auto;padding: 15px;}
+.footer_div {flex: 1;width: calc(50% - 15px);padding: 30px;border-radius: 8px;border: 1px #ddd solid;box-sizing: border-box;display: inline-block;vertical-align: top;}
+.footer_div h2 {font-size: 20px; letter-spacing: -0.8px; color: #222; line-height: 22px; height: 22px; margin: 0 0 18px; display: flex; align-items: center; /* 아이콘과 텍스트를 수직 정렬 */ gap: 10px; /* 아이콘과 텍스트 간격 */}
+.footer_div p {margin: 5px 0;font-size: 0.95em;color: #555;}
+.footer_div .phone {font-size: 24px;font-weight: 700;color: #00a139;line-height: 1;}
+.footer_div .bank { margin-bottom: 27px; font-size: 0.95em;color: #555;}
+.footer_div .icon-text-group {display: flex;align-items: center;gap: 10px; /* 아이콘과 텍스트 간격 */}
+.footer_div .inline-text-group { display: flex;flex-wrap: wrap;gap: 20px; /* 각 라인 사이 간격 */align-items: center;}
+
+
+
+
+
+/* 리스트 */
+
+.list_title h2 {font-weight: 500;font-size: 28px;color: rgb(51, 51, 51);line-height: 35px;letter-spacing: -1px; text-align: center;}
+.list_title p {font-size: 16px;color: #555;margin-top: 10px;margin-bottom: 20px; text-align: center;}

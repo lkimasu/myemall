@@ -79,7 +79,6 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
 ?>
@@ -93,7 +92,6 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
 ?>
@@ -107,7 +105,6 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
 ?>
@@ -121,7 +118,6 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
 ?>
@@ -135,7 +131,6 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
 ?>
@@ -149,7 +144,6 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
-        $list->set_view('it_icon', true);
         $list->set_view('sns', true);
         echo $list->run();
 ?>

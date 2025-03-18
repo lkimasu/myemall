@@ -19,18 +19,9 @@ $q = isset($_GET['q']) ? clean_xss_tags($_GET['q'], 1, 1) : '';
 
 ?>
 
-<title>
-    <?php 
-    if (isset($g5['title']) && $g5['title']) { 
-        echo $g5['title']; 
-    } else { 
-        echo "거창한무역"; 
-    } 
-    ?>
-</title>
-
 <!-- 상단 시작 { -->
 <div id="hd">
+    <h1 id="hd_h1"><?php echo $g5_head_title ?></h1>
     <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
 
     <?php if(defined('_INDEX_')) { // index에서만 실행

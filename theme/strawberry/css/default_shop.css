@@ -49,7 +49,7 @@ outline: none;
 
 /* 상단 레이아웃 */
 #hd {min-width:1200px;}
-#hd_h1 {position:absolute;font-size:0;line-height:0;overflow:hidden}
+#hd_h1 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #hd_qnb {border-bottom:1px solid #e9e9e9;background:#f2f5f9;zoom:1}
 #hd_qnb:after {display:block;visibility:hidden;clear:both;content:""}
 #hd_qnb h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
@@ -210,6 +210,9 @@ border-color: transparent transparent transparent rgba(0,0,0,0.7);}
     overflow: hidden;
     margin-bottom: 20px;             /* 각 카드 사이의 세로 간격 */
     transition: transform 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .card img {
@@ -732,8 +735,8 @@ box-shadow: 1px 2px 2px #eee;}
 #od_pay_sl h3{font-size:1.167em;margin:20px 0 5px}
 
 #od_pay_sl input[type="radio"]{position:absolute;width:0;height:0;overflow:hidden;visibility:hidden;text-indent:-999px;left: 0;z-index: -1px;}
-#od_pay_sl .lb_icon {display: inline-block;float:left;width:50%;background:#fff;border:1px solid #eceff4;margin:-1px 0 0 -1px;cursor: pointer;height:60px;position:relative;padding-left:65px;padding-top:20px;z-index:1}
-#od_pay_sl input[type="radio"]:checked+.lb_icon {border:1px solid #ff006c;z-index:3}
+#od_pay_sl .lb_icon {display: inline-block;float:left;width:50%;background:#fff;border:1px solid #eceff4;margin:-1px 0 0 -1px;cursor: pointer;height:60px;position:relative;padding-left:65px;padding-top:20px;z-index:1; background: url(../../../img/ico-default-naverpay.png) no-repeat 50% 50%}
+#od_pay_sl input[type="radio"]:checked+.lb_icon {border:1px solid #ff006c;z-index:3; background: url(../../../img/ico-default-naverpay.png) no-repeat 50% 50% #fff;}
 
 #sod_frm_paysel {}
 #sod_frm_paysel legend {position:absolute;font-size:0;line-height:0;overflow:hidden}

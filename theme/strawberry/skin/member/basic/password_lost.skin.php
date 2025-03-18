@@ -7,7 +7,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 
 <!-- 회원정보 찾기 시작 { -->
 <div id="find_info" class="new_win">
-    <h1 id="win_title">회원정보 찾기</h1>
+    <h2 id="win_title">회원정보 찾기</h2>
     <div class="new_win_con">
         <form name="fpasswordlost" action="<?php echo $action_url ?>" onsubmit="return fpasswordlost_submit(this);" method="post" autocomplete="off">
         <fieldset id="info_fs">

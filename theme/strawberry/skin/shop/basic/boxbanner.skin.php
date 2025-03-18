@@ -40,10 +40,11 @@ if ($i>0) echo '</ul></aside>'.PHP_EOL;
 <script>
 $(document).ready(function(){
     $('.sb_bn').show().bxSlider({
-        speed:800,
-        pager:true, 
-        controls:false,
-        auto:true
+        minSlides: 2,
+        maxSlides: 2,
+        slideWidth: '620px',
+        controls:true,
+        infiniteLoop: true,
 
     });
 });

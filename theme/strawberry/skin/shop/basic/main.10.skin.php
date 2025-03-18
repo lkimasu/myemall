@@ -5,8 +5,6 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_SKIN_URL.'/style.css">', 0);
 add_javascript('<script src="'.G5_THEME_JS_URL.'/jquery.shop.list.js"></script>', 10);
 
-add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/swiper/swiper.min.css">', 1);
-add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 10);
 ?>
 
 <div class="swiper-container sw1 sct_10"> <!-- sct_10 클래스 추가 -->
@@ -118,10 +116,7 @@ for ($i=1; $row=sql_fetch_array($result); $i++) {
 if ($i > 1) echo "</div>\n"; // swiper-wrapper 닫기
 if($i == 1) echo "<p class=\"sct_noitem\">등록된 상품이 없습니다.</p>\n";
 ?>
-<br>
-  <div class="swiper-pagination"></div>
-  <br>
-    </div> <!-- swiper-wrapper 끝 -->
+  </div>
 </div> <!-- swiper-container 끝 -->
 
 <script>
@@ -137,23 +132,6 @@ $('.sct_sns .bg').click(function(){
     $('.sct_sns').hide();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.sw1', {
-        slidesPerView: 4,
-        spaceBetween: 10,
-        loop: false,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
-        autoplay: {
-        delay: 10000, // 10초 (10000ms) 간격
-        disableOnInteraction: false, // 사용자 인터랙션 후에도 autoplay가 계속 진행되도록 설정
-    },
-    
-    });
-});
 
 </script>
 <!-- } 상품진열 10 끝 -->
