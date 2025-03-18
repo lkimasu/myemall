@@ -10,7 +10,11 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
     <!-- 첫 번째 영역: 공지사항 -->
     <div class="footer_div">
         <h2 class="icon-text-group">
+<<<<<<< HEAD
             <img src="/theme/strawberry/shop/img/icon-notice.png" alt="공지사항">
+=======
+            <img src="/theme/strawberry/shop/img/icon-notice.png">
+>>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
             <a href="/bbs/board.php?bo_table=notice">
             공지사항
             </a>
@@ -21,7 +25,11 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
     <!-- 두 번째 영역: 고객센터 -->
     <div class="footer_div">
         <h2 class="icon-text-group">
+<<<<<<< HEAD
             <img src="/theme/strawberry/shop/img/icon-cscenter.png" alt="고객센터">
+=======
+            <img src="/theme/strawberry/shop/img/icon-cscenter.png">
+>>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
             고객센터
         </h2>
         <div class="inline-text-group">
@@ -34,7 +42,11 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
     <!-- 세 번째 영역: 계좌안내 -->
     <div class="footer_div">
         <h2 class="icon-text-group">
+<<<<<<< HEAD
             <img src="/theme/strawberry/shop/img/icon-bamk.png" alt="계좌안내">
+=======
+            <img src="/theme/strawberry/shop/img/icon-bamk.png">
+>>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
             계좌안내
         </h2>
         <div class="inline-text-group">

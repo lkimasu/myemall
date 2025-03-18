@@ -138,6 +138,7 @@ echo run_replace('shop_it_head_html', '<div id="sit_hhtml">'.conv_content($it['i
 
 // 보안서버경로
 if (G5_HTTPS_DOMAIN)
+
     $action_url = G5_HTTPS_DOMAIN.'/'.G5_SHOP_DIR.'/cartupdate.php';
 else
     $action_url = G5_SHOP_URL.'/cartupdate.php';
