@@ -4,13 +4,8 @@
 //////////////////////////////////////////////////////////////////////
 
 // 공통 설정
-<<<<<<< HEAD
 $seo_Author = "유씨네 농장"; // 제작자/운영사 이름
 $seo_Publisher = "유씨네 농장"; // 발행자 이름
-=======
-$seo_Author = "거창한무역"; // 제작자/운영사 이름
-$seo_Publisher = "거창한무역"; // 발행자 이름
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
 $seo_theme_color = "#0a81a8"; // 브라우저 테마 색상 (브랜드 색상)
 $seo_language = "kr"; // 사이트 언어
 $seo_locale = "ko_KR"; // 로케일 (국가+언어)
@@ -22,15 +17,9 @@ $seo_image_width = "800"; // 기본 이미지 너비
 $seo_image_height = "800"; // 기본 이미지 높이
 
 // 기본 정보 (메인 페이지)
-<<<<<<< HEAD
 $seo_head_title = "유씨네 농장 - 신선 과일·농산물 전문몰"; // 기본 제목
 $seo_descriptionS = "유씨네 농장은 신선한 과일, 농산물, 가공식품(사과즙·양파즙)을 판매하는 전문몰입니다."; // 80자 이내
 $seo_descriptionL = "유씨네 농장은 신선한 과일, 농산물, 가공식품(사과즙·양파즙)을 판매하는 전문몰입니다."; // 200자 이내
-=======
-$seo_head_title = "거창한무역 - 신선 과일·농산물 전문몰"; // 기본 제목
-$seo_descriptionS = "거창한무역은 신선한 과일, 농산물, 가공식품(사과즙·양파즙)을 판매하는 전문몰입니다."; // 80자 이내
-$seo_descriptionL = "거창한무역은 신선한 과일, 농산물, 가공식품(사과즙·양파즙)을 판매하는 전문몰입니다."; // 200자 이내
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
 $seo_keywords = "사과, 샤인머스켓, 고구마, 양파, 사과즙, 양파즙, 샤인머스켓즙, 과일, 농산물, 산지직송, 특가상품, 과일선물세트, 흠사과, 가정용 사과, 10kg 과일, 신선채소, 수입과일, 농산물 쇼핑몰, 즙 선물세트, 5kg 과일"; // 키워드 목록
 
 
@@ -50,20 +39,13 @@ if (isset($it_id)) { // 상품 상세 페이지
     $seo_row = sql_fetch_array($seo_qry);
 
     if ($seo_row) {
-<<<<<<< HEAD
         $seo_head_title = $seo_row['it_name'] . " - 유씨네 농장"; // 상품명
         $seo_descriptionS = cut_str(strip_tags($seo_row['it_basic']), 80) . " | 유씨네 농장에서 가격, 배송, 후기 등 상품 관련 다양한 정보를 확인해보세요!"; // 상품 설명 (짧게)
         $seo_descriptionL = cut_str(strip_tags($seo_row['it_basic']), 200) . " | 유씨네 농장에서 가격, 배송, 후기 등 상품 관련 다양한 정보를 확인해보세요!"; // 상품 설명 (자세히)
-=======
-        $seo_head_title = $seo_row['it_name'] . " - 거창한무역"; // 상품명
-        $seo_descriptionS = cut_str(strip_tags($seo_row['it_basic']), 80) . " | 거창한무역에서 가격, 배송, 후기 등 상품 관련 다양한 정보를 확인해보세요!"; // 상품 설명 (짧게)
-        $seo_descriptionL = cut_str(strip_tags($seo_row['it_basic']), 200) . " | 거창한무역에서 가격, 배송, 후기 등 상품 관련 다양한 정보를 확인해보세요!"; // 상품 설명 (자세히)
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
         $seo_keywords = "{$seo_row['it_name']}, {$seo_row['it_maker']}, {$seo_row['it_brand']}"; // 키워드
         $seo_image = "{$seo_domain_addr}/data/item/{$seo_row['it_id']}_m"; // 상품 썸네일 이미지
     }
 } elseif (isset($ca_id)) { // 카테고리 페이지
-<<<<<<< HEAD
 
     // 기본값 설정
     $seo_head_title = "유씨네 농장 - 다양한 상품 쇼핑몰";
@@ -72,14 +54,11 @@ if (isset($it_id)) { // 상품 상세 페이지
     $seo_keywords = "유씨네 농장, 쇼핑몰, 다양한 상품";
 
     // 카테고리 정보 가져오기
-=======
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
     $category_qry = sql_query("SELECT * FROM {$g5['g5_shop_category_table']} WHERE ca_id='{$ca_id}'");
     $category_row = sql_fetch_array($category_qry);
 
     if ($category_row) {
         $seo_head_title = $category_row['ca_name']; // 카테고리 이름
-<<<<<<< HEAD
         $seo_descriptionS = "다양한 {$category_row['ca_name']} 상품을 유씨네 농장에서 만나보세요.";
         $seo_keywords = "{$category_row['ca_name']}, 상품, 쇼핑몰";
 
@@ -102,47 +81,27 @@ if (isset($it_id)) { // 상품 상세 페이지
                 $seo_descriptionS .= " 최근 등록된 상품들을 확인하세요.";
             }
         }
-=======
-        $seo_descriptionS = "다양한 {$category_row['ca_name']} 상품을 거창한무역에서 만나보세요."; // 간략 설명
-        $seo_descriptionL = "다양한 {$category_row['ca_name']} 상품을 거창한무역에서 만나보세요."; // 자세한 설명
-        $seo_keywords = "{$category_row['ca_name']}, 상품, 쇼핑몰"; // 키워드
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
     }
 }
 
 // 회사 소개 페이지
 if (strpos($_SERVER['REQUEST_URI'], 'content.php?co_id=company') !== false) {
-<<<<<<< HEAD
     $seo_head_title = "회사 소개 - 유씨네 농장";
     $seo_descriptionS = "유씨네 농장은 경남 거창에서 신선한 과일과 채소를 산지 직송으로 제공하는 신뢰받는 쇼핑몰입니다. 회사 연혁과 비전을 확인하세요.";
     $seo_descriptionL = "유씨네 농장은 경남 거창에서 신선한 과일과 채소를 산지 직송으로 제공하는 신뢰받는 쇼핑몰입니다. 우리의 연혁과 목표는 고객에게 최상의 품질과 서비스를 제공하는 데 중점을 둡니다.";
     $seo_keywords = "유씨네 농장, 회사 소개, 연혁, 비전, 경남 거창, 신선식품, 산지 직송";
-=======
-    $seo_head_title = "회사 소개 - 거창한무역";
-    $seo_descriptionS = "거창한무역은 경남 거창에서 신선한 과일과 채소를 산지 직송으로 제공하는 신뢰받는 쇼핑몰입니다. 회사 연혁과 비전을 확인하세요.";
-    $seo_descriptionL = "거창한무역은 경남 거창에서 신선한 과일과 채소를 산지 직송으로 제공하는 신뢰받는 쇼핑몰입니다. 우리의 연혁과 목표는 고객에게 최상의 품질과 서비스를 제공하는 데 중점을 둡니다.";
-    $seo_keywords = "거창한무역, 회사 소개, 연혁, 비전, 경남 거창, 신선식품, 산지 직송";
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
 }
 
 // 연혁 페이지
 if (strpos($_SERVER['REQUEST_URI'], 'content.php?co_id=history') !== false) {
-<<<<<<< HEAD
     $seo_head_title = "회사 연혁 - 유씨네 농장";
     $seo_descriptionS = "유씨네 농장의 주요 연혁을 소개합니다. 신뢰받는 신선식품 브랜드로의 성장 과정을 확인하세요.";
     $seo_descriptionL = "유씨네 농장은 고객 신뢰를 바탕으로 지속 성장해온 신선식품 유통 전문 기업입니다. 주요 연혁과 성과를 확인하세요.";
     $seo_keywords = "유씨네 농장, 회사 연혁, 성장 스토리, 신선식품, 브랜드 역사";
-=======
-    $seo_head_title = "회사 연혁 - 거창한무역";
-    $seo_descriptionS = "거창한무역의 주요 연혁을 소개합니다. 신뢰받는 신선식품 브랜드로의 성장 과정을 확인하세요.";
-    $seo_descriptionL = "거창한무역은 고객 신뢰를 바탕으로 지속 성장해온 신선식품 유통 전문 기업입니다. 주요 연혁과 성과를 확인하세요.";
-    $seo_keywords = "거창한무역, 회사 연혁, 성장 스토리, 신선식품, 브랜드 역사";
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
 }
 
 // 오시는 길 페이지
 if (strpos($_SERVER['REQUEST_URI'], 'content.php?co_id=maps') !== false) {
-<<<<<<< HEAD
     $seo_head_title = "오시는 길 - 유씨네 농장";
     $seo_descriptionS = "유씨네 농장 본사와 매장 위치를 안내합니다. 정확한 주소와 연락처 정보를 확인하세요.";
     $seo_descriptionL = "유씨네 농장의 본사 및 매장 방문을 위한 교통 정보를 제공합니다. 위치와 연락처 정보를 통해 손쉽게 찾아오실 수 있습니다.";
@@ -187,14 +146,6 @@ if ($wr_id) {
         $seo_keywords = "유씨네 농장, 기본, 상품 정보, 갤러리,스토리";
     }
 }
-=======
-    $seo_head_title = "오시는 길 - 거창한무역";
-    $seo_descriptionS = "거창한무역 본사와 매장 위치를 안내합니다. 정확한 주소와 연락처 정보를 확인하세요.";
-    $seo_descriptionL = "거창한무역의 본사 및 매장 방문을 위한 교통 정보를 제공합니다. 위치와 연락처 정보를 통해 손쉽게 찾아오실 수 있습니다.";
-    $seo_keywords = "거창한무역, 오시는 길, 매장 위치, 본사 주소, 경남 거창";
-}
-
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
 
 // 오늘 날짜
 $seo_datetime = date("Y-m-d");
@@ -251,11 +202,7 @@ if ($page_type === 'main') {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-<<<<<<< HEAD
       "name": "유씨네 농장",
-=======
-      "name": "거창한무역",
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
       "url": "https://myemall.co.kr/",
       "logo": "https://myemall.co.kr/data/common/logo_img",
       "contactPoint": {
@@ -298,11 +245,7 @@ if ($page_type == 'product') {
         "availability": "https://schema.org/InStock",
         "seller": {
           "@type": "Organization",
-<<<<<<< HEAD
           "name": "유씨네 농장"
-=======
-          "name": "거창한무역"
->>>>>>> 9bc5e129e28d4ff3d475b302999db164dc98a4f0
         }
       }
     }
