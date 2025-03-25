@@ -910,6 +910,8 @@ $(function() {
             return false;
         }
 
+        
+
         $("input[name=sc_cp_id]").val("");
         $("#sc_coupon_btn").text("쿠폰적용");
         $("#sc_coupon_cancel").remove();
@@ -1328,6 +1330,13 @@ function forderform_check(f)
                 f.od_temp_point.select();
                 return false;
             }
+
+            if (temp_point > 0 && od_price < 30000) {
+                alert("총 주문금액이 3만원 이상일때만 포인트 사용이 가능합니다.");
+                f.od_temp_point.select();
+                return false;
+            }
+            
             if (temp_point > <?php echo (int)$member['mb_point']; ?>) {
                 alert("회원님의 포인트보다 많이 결제할 수 없습니다.");
                 f.od_temp_point.select();

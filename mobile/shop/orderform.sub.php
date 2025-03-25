@@ -907,6 +907,7 @@ $(function() {
             alert("쿠폰할인금액이 주문금액보다 크므로 쿠폰을 적용할 수 없습니다.");
             return false;
         }
+        
 
         $("input[name=sc_cp_id]").val("");
         $("#sc_coupon_btn").text("쿠폰적용");
@@ -1578,6 +1579,12 @@ function payment_check(f)
 
             if (temp_point > od_price) {
                 alert("상품 주문금액(배송비 제외) 보다 많이 포인트결제할 수 없습니다.");
+                f.od_temp_point.select();
+                return false;
+            }
+
+            if (temp_point > 0 && od_price < 30000) {
+                alert("총 주문금액이 3만원 이상일때만 포인트 사용이 가능합니다.");
                 f.od_temp_point.select();
                 return false;
             }
