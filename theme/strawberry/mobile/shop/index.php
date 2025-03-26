@@ -135,7 +135,7 @@ include_once(G5_THEME_MSHOP_PATH.'/shop.head.php');
 <?php } ?>
 
     <div class="main_wrap_story">
-        <h2>거창한무역의 오늘, SNS에서 확인하세요</h2>
+        <h2>유씨네농장의 오늘, SNS에서 확인하세요</h2>
         <h3>현장에서 촬영한 제품 여정과 비하인드 스토리를 사진으로 만날 수 있습니다.</h3>
     </div>
 
