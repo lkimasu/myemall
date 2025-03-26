@@ -113,7 +113,7 @@ $(function () {
                 <li><a href="https://blog.naver.com/wpdlf943"><img src="/theme\strawberry\shop\img\sns_icons_blog.png" alt="네이버 블로그"></a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=61572848197584&locale=ko_KR"><img src="/theme\strawberry\shop\img\sns_icons_face.png" alt="페이스북"></a></li>
                 <li><a href="https://www.instagram.com/wpdlf943/"><img src="/theme\strawberry\shop\img\sns_icons_insta.png" alt="인스타그램"></a></li>
-                <li><a href="https://pf.kakao.com/_zKdQxj/"><img src="/theme\strawberry\shop\img\sns_icons_kakao.png" alt="카카오 채널"></a></li>
+                <li><a href="http://pf.kakao.com/_BxgvXn/"><img src="/theme\strawberry\shop\img\sns_icons_kakao.png" alt="카카오 채널"></a></li>
             </ul>
             
             <div class="ft_info">
