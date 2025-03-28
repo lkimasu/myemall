@@ -28,7 +28,7 @@ function get_mshop_category($ca_id, $len)
 
         <ul class="cate">
             <li class="cate_li_1">
-                <a href="/index.php" class="cate_li_1_a">거창한무역</a>
+                <a href="/index.php" class="cate_li_1_a">유씨네농장</a>
                 <button type="button" class="ct_sb_btn"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
                 <ul class="sub_cate sub_cate1">
                     <li class="cate_li_2"><a href="/bbs/content.php?co_id=company">회사소개</a></li>
