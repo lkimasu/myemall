@@ -202,7 +202,7 @@ if ($page_type === 'main') {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "유씨네 농장",
+      "name": "유씨네농장",
       "url": "https://myemall.co.kr/",
       "logo": "https://myemall.co.kr/data/common/logo_img",
       "contactPoint": {
@@ -214,7 +214,8 @@ if ($page_type === 'main') {
       "sameAs": [
         "https://www.instagram.com/wpdlf943",
         "https://blog.naver.com/wpdlf943",
-        "https://pf.kakao.com/_zKdQxj"
+        "http://pf.kakao.com/_BxgvXn"
+        "https://www.facebook.com/profile.php?id=61572848197584&locale=ko_KR"
       ]
     }
     </script>';
