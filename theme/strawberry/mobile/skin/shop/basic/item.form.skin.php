@@ -217,6 +217,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
                 <a href="javascript:popup_item_recommend('<?php echo $it['it_id']; ?>');" id="sit_btn_rec"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="sound_only">추천하기</span></a>
             </div>
             <span class="item_use_count">  (  <?php echo $item_use_count; ?>  ) </span>
+            <span class="item_use_count"> 구매 <?php echo $total_qty; ?> </span>
         </div>
     
         
