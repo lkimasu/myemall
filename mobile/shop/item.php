@@ -106,6 +106,13 @@ $sql = " select count(*) as cnt from `{$g5['g5_shop_item_qa_table']}` where it_i
 $row = sql_fetch($sql);
 $item_qa_count = $row['cnt'];
 
+//구매 횟수를 얻음
+
+$sql = "SELECT SUM(ct_qty) as total_qty FROM g5_shop_cart WHERE it_id = '$it_id' AND ct_status = '완료'";
+$row = sql_fetch($sql);
+$total_qty = isset($row['total_qty']) ? $row['total_qty'] : 0;
+
+
 if ($default['de_mobile_rel_list_use']) {
     // 관련상품의 개수를 얻음
     $sql = " select count(*) as cnt
