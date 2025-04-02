@@ -190,6 +190,13 @@ if($default['de_rel_list_use']) {
     $item_relation_count = $row['cnt'];
 }
 
+//구매횟수를 얻음
+
+$sql = "SELECT SUM(ct_qty) as total_qty FROM g5_shop_cart WHERE it_id = '$it_id' AND ct_status = '완료'";
+$row = sql_fetch($sql);
+$total_qty = isset($row['total_qty']) ? $row['total_qty'] : 0;
+
+
 // 소셜 관련
 $sns_title = get_text($it['it_name']).' | '.get_text($config['cf_title']);
 $sns_url  = shop_item_url($it['it_id']);
