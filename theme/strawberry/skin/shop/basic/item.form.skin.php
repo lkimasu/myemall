@@ -69,6 +69,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
             <?php if ($star_score) { ?>
             <span class="sound_only">고객평점</span> 
             <img src="<?php echo G5_SHOP_URL; ?>/img/s_star<?php echo $star_score?>.png" alt="" class="sit_star" width="100">
+            <span class="item_use_count">  (  <?php echo $item_use_count; ?>  ) </span>
+            
             <?php } ?>
            <div class="sit_icon_wr"><?php echo item_icon2($it); ?><?php echo item_icon3($it); ?></div>
 
