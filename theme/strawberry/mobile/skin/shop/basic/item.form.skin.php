@@ -202,7 +202,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
             $sns_title = get_text($it['it_name']).' | '.get_text($config['cf_title']);
             $sns_url  = G5_SHOP_URL.'/item.php?it_id='.$it['it_id'];
             if ($score = get_star_image($it['it_id'])) { ?>
-                <img src="<?php echo G5_SHOP_URL; ?>/img/s_star<?php echo $score?>.png" alt="" class="sit_star" width="100"><span class="sound_only">고객평점 </span><span class="score"><?php echo $score?>점</span>
+                <img src="<?php echo G5_SHOP_URL; ?>/img/s_star<?php echo $score?>.png" alt="" class="sit_star" width="100"><span class="sound_only">고객평점 </span>
             <?php } ?>
             <a href="javascript:item_wish(document.fitem, '<?php echo $it['it_id']; ?>');" id="sit_btn_wish"><span class="sound_only">위시리스트</span><i class="fa fa-heart-o" aria-hidden="true"></i></a>
             <button type="button" class="btn_sns_share"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="sound_only">sns 공유</span></button>
@@ -216,8 +216,10 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
                 ?> 
                 <a href="javascript:popup_item_recommend('<?php echo $it['it_id']; ?>');" id="sit_btn_rec"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="sound_only">추천하기</span></a>
             </div>
+            <span class="item_use_count">  (  <?php echo $item_use_count; ?>  ) </span>
         </div>
-
+    
+        
         <script>
         $(".btn_sns_share").click(function(){
             $(".sns_area").show();

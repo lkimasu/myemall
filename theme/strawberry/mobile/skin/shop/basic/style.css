@@ -387,7 +387,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
 #siblings_next{float:right;text-align:right}
 
 /* 상품 상세보기 - sns */
-#sit_star_sns {position:relative;display:block;padding:13px 0;height:45px;color:#ffd506;border-bottom:1px solid #eee;font-weight:bold;}
+#sit_star_sns {position:relative;display:block;padding:13px 0;height:45px;border-bottom:1px solid #eee;font-weight:bold;}
 #sit_star_sns .score{display:inline-block;vertical-align:top;font-size:1.25em;margin-left:7px}
 #sit_star_sns .sit_star {position:relative;;margin:0 5px 0 0;vertical-align:top}
 
