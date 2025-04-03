@@ -546,7 +546,11 @@ box-shadow:0 5px 15px rgba(0, 0, 0, .2);}
 #sit_ov .icon_best {display:inline-block;background:#e0f6e5;padding: 0 5px;color:#27b02e;line-height:20px;margin-right:2px;font-size:0.923em}
 #sit_ov .icon_sale {display:inline-block;background:#fff1e5;padding: 0 5px;color:#ff6f00;line-height:20px;margin-right:2px;font-size:0.923em}
 #sit_ov .icon_new  {display:inline-block;background:#e2e0f6;padding: 0 5px;color:#827ad3;line-height:20px;margin-right:2px;font-size:0.923em}
+
 #sit_title {margin:0 0 10px;padding:0;color:#474747;font-size:2.5em;font-weight:400}
+
+.item_use_count {margin:0 0 10px;padding:0;}
+
 #sit_opt_info {position:absolute;font-size:0;text-indent:-9999em;line-height:0;;overflow:hidden}
 #sit_desc{margin:10px 0;font-size:1.083em;line-height:1.5em}
 #sit_star_sns {clear:both;position:relative;;border-top:0;height:45px;padding:10px;line-height:25px;background:#fff;border-top:1px solid #e6e6e6; }
