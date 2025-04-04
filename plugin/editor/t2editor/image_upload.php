@@ -16,30 +16,41 @@ function check_and_set_permission($file_path) {
     return true;
 }
 
-// Imagick을 사용한 WebP 변환 함수
-function convert_to_webp_with_imagick($file_path, $save_filepath, $quality = 85) {
-    try {
-        // Imagick 객체 생성
-        $image = new Imagick($file_path);
-        
-        // WebP 형식으로 변환
-        $image->setImageFormat('webp');
-        
-        // 품질 설정
-        $image->setImageCompressionQuality($quality);
-        
-        // WebP로 저장
-        $image->writeImage($save_filepath);
-        
-        // 이미지 객체 해제
-        $image->clear();
-        $image->destroy();
-        
-        return true;
-    } catch (Exception $e) {
-        // 오류 처리
-        return false;
+
+function convert_to_webp_with_gd($file_path, $save_filepath, $quality = 85) {
+    // 원본 이미지 확장자 확인
+    $file_ext = strtolower(pathinfo($file_path, PATHINFO_EXTENSION));
+    
+    // 원본 이미지 불러오기
+    switch ($file_ext) {
+        case 'jpeg':
+        case 'jpg':
+            $image = imagecreatefromjpeg($file_path);
+            break;
+        case 'png':
+            $image = imagecreatefrompng($file_path);
+            imagepalettetotruecolor($image); // PNG 투명도 유지
+            imagealphablending($image, true);
+            imagesavealpha($image, true);
+            break;
+        case 'gif':
+            $image = imagecreatefromgif($file_path);
+            break;
+        default:
+            return false; // 지원하지 않는 형식
     }
+
+    if (!$image) {
+        return false; // 이미지 로딩 실패
+    }
+
+    // WebP 형식으로 저장
+    $result = imagewebp($image, $save_filepath, $quality);
+    
+    // 메모리 해제
+    imagedestroy($image);
+
+    return $result;
 }
 
 // 현재 스크립트의 경로 확인
@@ -126,7 +137,7 @@ for ($i = 0; $i < $file_count; $i++) {
     $save_filepath = $upload_dir . '/' . $save_filename;
 
     // Imagick을 사용한 WebP 변환 시도
-    $success = convert_to_webp_with_imagick($temp_filepath, $save_filepath, $webp_quality);
+    $success = convert_to_webp_with_gd($temp_filepath, $save_filepath, $webp_quality);
 
     if ($success) {
         // WebP 저장 성공 시 처리

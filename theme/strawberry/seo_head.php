@@ -214,7 +214,7 @@ if ($page_type === 'main') {
       "sameAs": [
         "https://www.instagram.com/wpdlf943",
         "https://blog.naver.com/wpdlf943",
-        "http://pf.kakao.com/_BxgvXn"
+        "http://pf.kakao.com/_BxgvXn",
         "https://www.facebook.com/profile.php?id=61572848197584&locale=ko_KR"
       ]
     }
