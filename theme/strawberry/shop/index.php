@@ -54,6 +54,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
+        $list->set_view('it_star_score', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -82,6 +83,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
+        $list->set_view('it_star_score', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -111,6 +113,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', false);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
+        $list->set_view('it_star_score', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -132,6 +135,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', false);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
+        $list->set_view('it_star_score', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>
@@ -153,6 +157,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
         $list->set_view('it_basic', true);
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
+        $list->set_view('it_star_score', true);
         $list->set_view('sns', true);
         echo $list->run();
         ?>

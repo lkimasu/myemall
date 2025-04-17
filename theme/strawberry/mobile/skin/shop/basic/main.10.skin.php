@@ -77,6 +77,13 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
     if ($this->view_it_icon) {
         echo "<div class=\"sct_icon\">".item_icon($row)."</div>\n";
     }
+    if ($this->view_it_star_score) {
+        $star_score = get_star_image($row['it_id']);
+        if ($star_score) {
+            echo "<img src=\"".G5_SHOP_URL."/img/s_star".$star_score.".png\" width=\"100\">&nbsp;";
+            echo $row['it_use_avg'];
+        }
+    }
 
     if ($this->view_sns) {
         $sns_top = $this->img_height + 10;

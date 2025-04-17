@@ -144,6 +144,7 @@ var itemlist_ca_id = "<?php echo $ca_id; ?>";
         $list->set_view('it_cust_price', true);
         $list->set_view('it_price', true);
         $list->set_view('it_icon', true);
+        $list->set_view('it_star_score', true);
         $list->set_view('sns', true);
         echo $list->run();
 
