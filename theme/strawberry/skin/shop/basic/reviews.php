@@ -40,7 +40,13 @@ if (sql_num_rows($result) == 0) {
                     <div class="review-details">
                         <p class="review-title"><?php echo get_text($row['is_subject']); ?></p>
                         <p class="review-score"><img src="<?php echo G5_URL; ?>/shop/img/s_star<?php echo $star; ?>.png" alt="별<?php echo $star; ?>개" width="80"></p>
-                        <p class="review-author"><?php echo $row['is_name']; ?> (<?php echo substr($row['is_time'], 0, 10); ?>)</p>
+                        <p class="review-author">
+                            <?php
+                            $mb_id = $row['mb_id'];
+                            $visible = mb_substr($mb_id, 0, 3); // 앞 3글자 가져오기 (멀티바이트 문자도 처리 가능)
+                            $masked = str_repeat('*', mb_strlen($mb_id) - 3); // 나머지 길이만큼 * 표시
+                            echo $visible . $masked;
+                            ?> (<?php echo substr($row['is_time'], 0, 10); ?>)</p>
                     </div>
                 </a>
             </div>

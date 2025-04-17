@@ -18,7 +18,6 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
             <option value="a.it_id"     <?php echo get_selected($sfl, "a.it_id"); ?>>상품코드</option>
             <option value="a.is_subject"<?php echo get_selected($sfl, "a.is_subject"); ?>>후기제목</option>
             <option value="a.is_content"<?php echo get_selected($sfl, "a.is_content"); ?>>후기내용</option>
-            <option value="a.is_name"   <?php echo get_selected($sfl, "a.is_name"); ?>>작성자명</option>
             <option value="a.mb_id"     <?php echo get_selected($sfl, "a.mb_id"); ?>>작성자아이디</option>
         </select>
         <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
@@ -46,6 +45,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
 
         $row2 = sql_fetch(" select it_name from {$g5['g5_shop_item_table']} where it_id = '{$row['it_id']}' ");
         $it_href = G5_SHOP_URL."/item.php?it_id={$row['it_id']}";
+        $nickname = get_member($row['mb_id'], 'mb_nick');
 
         if ($i == 0) echo '<ol>';
     ?>
@@ -65,7 +65,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
                 <dt>평가점수</dt>
                 <dd class="sps_star"><img src="<?php echo G5_SHOP_URL; ?>/img/s_star<?php echo $star; ?>.png" alt="별<?php echo $star; ?>개" width="80"></dd> 
                 <dt>작성자</dt>
-                <dd><i class="fa fa-user" aria-hidden="true"></i> <?php echo get_text($row['is_name']); ?></dd>
+                <dd><i class="fa fa-user" aria-hidden="true"></i> <?php echo $nickname['mb_nick']; ?></dd>
                 <dt>작성일</dt>
                 <dd><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo substr($row['is_time'],2,8); ?></dd>
 

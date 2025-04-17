@@ -31,6 +31,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
         $is_reply_content = !empty($row['is_reply_content']) ? get_view_thumbnail(conv_content($row['is_reply_content'], 1), $thumbnail_width) : '';
         $is_time    = substr($row['is_time'], 2, 8);
         $is_href    = './itemuselist.php?bo_table=itemuse&amp;wr_id='.$row['is_id'];
+        $nickname = get_member($row['mb_id'], 'mb_nick');
 
         $hash = md5($row['is_id'].$row['is_time'].$row['is_ip']);
 
@@ -41,9 +42,9 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_MSHOP_SKIN_URL.'/style.css">',
             <button type="button" class="sit_use_li_title"><?php echo $is_subject; ?></button>
             <dl class="sit_use_dl">
                 <dt>작성자</dt>
-                <dd><?php echo $is_name; ?></dd>
+                <dd><?php echo $nickname['mb_nick']; ?></dd>
                 <dt>작성일</dt>
-                <dd><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $is_time; ?></dd>
+                <dd><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $nickname['mb_nick']; ?></dd>
                 <dt>선호도<dt>
                 <dd class="sit_use_star"><img src="<?php echo G5_SHOP_URL; ?>/img/s_star<?php echo $is_star; ?>.png" alt="별<?php echo $is_star; ?>개"></dd>
             </dl>
